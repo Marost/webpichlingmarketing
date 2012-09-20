@@ -1,0 +1,14 @@
+/* Marco Antonio López Sotomayor */
+
+/* FORMULARIO - INSCRIPCION */
+form{ width:420px; float:left; padding:15px 0 0 0;}
+form h1{ font-size:18px; }
+form fieldset{ width:420px; float:left; padding:10px 0; }
+form fieldset.sin_borde{ border:none; }
+form fieldset.boton{ text-align:center; }
+form fieldset label{ width:170px; float:left; text-align:right; padding:0 3px 0 0; font-size:14px; }
+form fieldset input.inputtext{ width:202px; height:15px; padding:5px; background:url(../imagenes/fondo-input-text2.jpg) no-repeat; border:none;}
+form fieldset input.inputtext.error-iptx{ width:202px; height:15px; padding:5px; background:url(../imagenes/fondo-input-text2-error.jpg) no-repeat; border:none;}
+form fieldset button.fc_enviar{ width:200px !important; height:61px !important; background:url(../imagenes/fondo-input-button.png) no-repeat; border:none; cursor:pointer; }
+.ocultar{ display:none;}
+#msj_enviado{ width:420px; height:200px; }
