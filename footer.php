@@ -7,7 +7,7 @@
     </div>
     
     <div id="footer_der">
-        <p>Diseño y Desarrollo Web: <a href="http://marostsac.com">Marost SAC</a></p>
+        <p>Diseño y Desarrollo Web: <a target="_blank" href="http://marostsac.com">Marost SAC</a></p>
         <img src="imagenes/icon-html5.png" width="79" height="35" alt="Html5">
     </div>
 

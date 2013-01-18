@@ -2,12 +2,14 @@ Options +FollowSymLinks
 RewriteEngine On
 RewriteRule ^contacto$											/contacto.php
 RewriteRule ^eventos$											/eventos.php
+RewriteRule ^galeria/([0-9]*)-(.*)$								/galeria.php?id=$1&url=$2
 RewriteRule ^nosotros$											/nosotros.php
 RewriteRule ^noticias$											/noticias.php
 RewriteRule ^servicios$											/servicios.php
 RewriteRule ^socios$											/socios.php
 RewriteRule ^noticia/([0-9]*)-(.*)$								/nota.php?id=$1&url=$2
 RewriteRule ^servicios/(.*)$									/servicios.php?url=$1
+RewriteRule ^evento/(.*)$										/evento_nota.php?url=$1
 
 RewriteEngine On 
 RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [OR] 

@@ -9,16 +9,22 @@ $script_galeria_fotos=true;
 $script_socios=true;
 $script_ie=true;
 $script_menu_servicios=true;
+$script_slider_superior=true;
 $wg_slider=true;
 
 //NOTICIAS
 $rst_noticias=mysql_query("SELECT * FROM pmkt_noticia WHERE id>0 ORDER BY fecha_publicacion DESC LIMIT 4;", $conexion);
+
+//SOCIOS ESTRATEGICOS
+$rst_socios=mysql_query("SELECT * FROM pmkt_socios WHERE id>0 ORDER BY orden ASC;", $conexion);
 
 ?>
 <!DOCTYPE HTML>
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="description" content="Somos una Agencia de Marketing Deportivo con años de experiencia en el mercado, gestionando negocios, patrocinios y activación BTL.">
+<meta http-equiv="keywords" content="activaciones, acuatlón, agencias de marketing, agencias de publicidad, btl, campeonatos, deportivos, carrera a pie, carrera pedestre, ciclismo, congresos deportivos, deporte, duatlón, empresas marketing peru, estrategias deportivas, eventos, eventos deportivos, eventos empresariales, maratón, marketing deportivo, natación, olimpiadas empresariales, patrocinios deportivos, pichling representaciones, pichling sports marketing, sports marketing, sports marketing peru, triatlón">
 <title>Pichling Sports Marketing</title>
 
 <?php require_once("header-scripts.php"); ?>
@@ -69,65 +75,13 @@ $rst_noticias=mysql_query("SELECT * FROM pmkt_noticia WHERE id>0 ORDER BY fecha_
                     
                 </div><!-- FIN SECTION NOTICIAS PRINCIPAL -->
                 
-                <div id="snews_socios">
-                	
-                    <div id="snwsc_cabecera">Socios</div>
-                    
-                    <div id="snwsc_lista">
-                    	
-                        <div id="snwscl_logos">
-                        	
-                        	<img src="imagenes/socios/pichling.png" width="182" height="100" alt="Pichling Representaciones">
-                            
-                            <img src="imagenes/socios/jpd.png" width="100" height="100" alt="J. Pichling D. Contratistas Generales">
-                            
-                            <img src="imagenes/socios/unique.png" width="224" height="100" alt="UNIQUE">
-                            
-                            <img src="imagenes/socios/marost.png" width="270" height="100" alt="Marost SAC">
-                            
-                        </div><!-- FIN SECTION SOCIOS LISTA LOGOS -->
-                        
-                    </div><!-- FIN SECTION SOCIOS LISTA -->
-                    
-                </div><!-- FIN SECTION SOCIOS -->
-                
             </div><!-- FIN SECTION NEWS -->
             
             <div id="sec_sidebar">
             	
-                <aside>
-                	<h3>Eventos</h3>
-                    
-                  <div id="evnt_titulo">
-                    	<h2><a href="#">Triatlon Cross Punta Hermosa 2012</a></h2>
-                    </div>
-                    
-                    <div id="evnt_datos">
-                    	<p>Lugar: Punta Hermosa</p>
-                        <p>20 de Septiembre, 2012 - 11:00 am</p>
-                    </div>
-                    
-                </aside><!-- FIN SECTION SIDEBAR ASIDE -->
+                <?php require_once("widgets/wg_eventos.php"); ?>
                 
-            	<aside>
-                	<h3>Galeria de Fotos</h3>
-                    
-                    <div id="wg_galeria" class="svwp">
-                        <ul>                            
-                            <li><a href="#" title="Galería de Fotos">
-                                <img width="290" height="210" src="imagenes/galeria/copa-latina.jpg" alt="Conferencia de Prensa - Copa Latina" /></a></li>
-                            <li><a href="#" title="Galería de Fotos">
-                                <img width="290" height="210" src="imagenes/galeria/noche-crema.jpg" alt="La Noche del Hincha Crema - Presentación Universitario de Deportes" /></a></li>
-                            <li><a href="#" title="Galería de Fotos">
-                                <img width="290" height="210" src="imagenes/galeria/triatlon.jpg" alt="Triatlon 2012" /></a></li>
-                            <li><a href="#" title="Galería de Fotos">
-                                <img width="290" height="210" src="imagenes/galeria/voley.jpg" alt="Conferencia de Prensa - Federación Peruana de Voley - UNIQUE" /></a></li>    
-                            <li><a href="#" title="Galería de Fotos">
-                                <img width="290" height="210" src="imagenes/galeria/zona-impacto.jpg" alt="Imagen" /></a></li>    
-                        </ul>
-                    </div><!-- GALERIA WEB GALERIA -->
-                    
-                </aside><!-- FIN SECTION SIDEBAR ASIDE -->
+            	<?php require_once("widgets/wg_galeria.php"); ?>
             
             </div><!-- FIN SECTION SIDEBAR -->
         

@@ -10,14 +10,14 @@ $script_ie=true;
 $script_menu_servicios=true;
 
 //NOTICIAS
-$rst_noticias=mysql_query("SELECT * FROM pmkt_noticia WHERE id>0 ORDER BY fecha_publicacion DESC;", $conexion);
+$rst_noticias=mysql_query("SELECT * FROM pmkt_evento WHERE id>0 ORDER BY fecha_publicacion DESC;", $conexion);
 
 ?>
 <!DOCTYPE HTML>
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<title>Noticias</title>
+<title>Eventos</title>
 
 <?php require_once("header-scripts.php"); ?>
 
@@ -37,7 +37,7 @@ $rst_noticias=mysql_query("SELECT * FROM pmkt_noticia WHERE id>0 ORDER BY fecha_
             	
                 <div id="snews_notprin">
                 	
-                    <div id="snwnp_cabecera"> Noticias</div>
+                    <div id="snwnp_cabecera">Eventos</div>
                     
                     <div id="snwnp_noticias">
                     	
@@ -53,10 +53,10 @@ $rst_noticias=mysql_query("SELECT * FROM pmkt_noticia WHERE id>0 ORDER BY fecha_
 						?>
                         <article>
                         	<div class="art_imagen">
-                            	<img src="imagenes/upload/<?php echo $noticia_imagen_carpeta."thumb/".$noticia_imagen; ?>" alt="<?php echo $noticia_titulo; ?>" >
-                            </div>
+                            	<img src="imagenes/upload/<?php echo $noticia_imagen_carpeta."".$noticia_imagen; ?>" alt="<?php echo $noticia_titulo; ?>" width="150" >
+                          </div>
                             <div class="art_contenido">
-                            	<h2><a href="noticia/<?php echo $noticia_id."-".$noticia_url; ?>">
+                            	<h2><a href="evento/<?php echo $noticia_url; ?>">
 									<?php echo $noticia_titulo; ?></a></h2>
                                 <?php echo primerParrafo($noticia_contenido)."</p>" ?>
                             </div>

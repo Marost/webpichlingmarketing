@@ -11,25 +11,18 @@ $script_ie=true;
 $script_menu_servicios=true;
 
 //NOTICIA REQUEST
-$id_noticia=$_REQUEST["id"];
 $url_noticia=$_REQUEST["url"];
+$url_web=$web."evento/".$url_noticia;
 
 //NOTICIA
-$rst_noticia=mysql_query("SELECT * FROM pmkt_noticia WHERE id=$id_noticia", $conexion);
+$rst_noticia=mysql_query("SELECT * FROM pmkt_evento WHERE url='$url_noticia'", $conexion);
 $fila_noticia=mysql_fetch_array($rst_noticia);
 
 //NOTICIA VARIABLES
-$noticia_url=$fila_noticia["url"];
 $noticia_titulo=$fila_noticia["titulo"];
 $noticia_contenido=$fila_noticia["contenido"];
 $noticia_imagen=$fila_noticia["imagen"];
 $noticia_imagen_carpeta=$fila_noticia["carpeta_imagen"];
-$noticia_imagen_mostrar=$fila_noticia["mostrar_imagen"];
-$noticia_video=$fila_noticia["video"];
-$noticia_video_carpeta=$fila_noticia["carpeta_video"];
-$noticia_video_tipo=$fila_noticia["tipo_video"];
-$noticia_video_mostrar=$fila_noticia["mostrar_video"];
-
 ?>
 <!DOCTYPE HTML>
 <html lang="es">
@@ -56,24 +49,20 @@ $noticia_video_mostrar=$fila_noticia["mostrar_video"];
             	
                 <h2 class="news_titulo_nota"><?php echo $noticia_titulo; ?></h2>
                 
-                <?php if($noticia_imagen_mostrar==1){ ?>
                 	<div id="snw_player">
                     	<img src="imagenes/upload/<?php echo $noticia_imagen_carpeta."".$noticia_imagen; ?>" alt="<?php echo $noticia_titulo; ?>">
                     </div>
-                <?php }elseif($noticia_video_mostrar==1){ ?>
-                	<div id="snw_player"></div>
-                <?php } ?>
                 	
                     <div id="snw_social">
                     	
                         <div class="snws_twitter">
-                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $web."noticia/".$id_noticia."-".$url_noticia; ?>" data-text="<?php echo $noticia_titulo; ?>" data-via="pichlingmkt" data-lang="es">Twittear</a>
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $url_web; ?>" data-text="<?php echo $noticia_titulo; ?>" data-via="pichlingmkt" data-lang="es">Twittear</a>
                             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                         </div>
                         
                         <div class="snws_google">
                         	
-                        	<g:plusone href="<?php echo $web."noticia/".$id_noticia."-".$url_noticia; ?>"></g:plusone>
+                        	<g:plusone href="<?php echo $url_web; ?>"></g:plusone>
 							<script type="text/javascript">
 							  window.___gcfg = {lang: 'es-419'};
 							
@@ -84,6 +73,13 @@ $noticia_video_mostrar=$fila_noticia["mostrar_video"];
 							  })();
 							</script>
                         	
+                        </div>
+                        
+                        <div class="snws_pinterest">
+                        	
+                            <a href="http://pinterest.com/pin/create/button/?url=<?php echo $url_web; ?>&media=<?php echo $web."imagenes/upload/".$noticia_imagen_carpeta."".$noticia_imagen; ?>&description=<?php echo $noticia_titulo; ?>" class="pin-it-button" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a>
+                            <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+                            
                         </div>
                         
                         <div class="snws_facebook">
@@ -97,7 +93,7 @@ $noticia_video_mostrar=$fila_noticia["mostrar_video"];
                               fjs.parentNode.insertBefore(js, fjs);
                             }(document, 'script', 'facebook-jssdk'));</script>
                             
-                            <div class="fb-like" data-href="<?php echo $web."noticia/".$id_noticia."-".$url_noticia; ?>" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false"></div>
+                            <div class="fb-like" data-href="<?php echo $url_web; ?>" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false"></div>
                             
                         </div>
                         
@@ -111,7 +107,7 @@ $noticia_video_mostrar=$fila_noticia["mostrar_video"];
             <div id="sec_sidebar">
             	
                 <?php require_once("widgets/wg_eventos.php"); ?>
-                
+            	                
             	<?php require_once("widgets/wg_galeria.php"); ?>
             
             </div><!-- FIN SECTION SIDEBAR -->

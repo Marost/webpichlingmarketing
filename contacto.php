@@ -33,14 +33,14 @@ $script_menu_servicios=true;
         
         	<div id="sec_news">
             	
-                <h2 class="news_titulo">Conactenos</h2>
+                <h2 class="news_titulo_nota">Conactenos</h2>
                 
                 <div id="msj_enviado" class="ocultar">
                     <div class="mensaje">
                         <img src="imagenes/img-contactenos.png" width="600" height="200" alt="Contactenos">
                         <ul id="smedia_contatenos">
-                            <li><a target="_blank" href="http://www.facebook.com/pages/Femip-Per%C3%BA/213709345386192" class="wgsmdcon_facebook">Facebook</a></li>
-                            <li><a target="_blank" href="http://twitter.com/femip_peru" class="wgsmdcon_twitter">Twitter</a></li>
+                            <li><a target="_blank" href="http://www.facebook.com/pichlingmarketing" class="wgsmdcon_facebook">Facebook</a></li>
+                            <li><a target="_blank" href="http://twitter.com/pichlingmkt" class="wgsmdcon_twitter">Twitter</a></li>
                   		</ul>
                   </div>
                 </div>
@@ -48,32 +48,32 @@ $script_menu_servicios=true;
                 <form method="post" id="form_contacto">
                 	        	
                   <fieldset class="sin_borde">
-                      <label for="fc_asoc_nombre">Nombre y Apellidos: </label>
+                      <label for="fc_nombre_apellidos">Nombre y Apellidos: </label>
                         <input class="inputtext1" name="fc_nombre_apellidos" id="fc_nombre_apellidos" size="50" />
                     </fieldset>
                     
                     <fieldset class="sin_borde">
-                        <label for="fc_asoc_pais">Empresa: </label>
+                        <label for="fc_empresa">Empresa: </label>
                         <input class="inputtext2" name="fc_empresa" id="fc_empresa" size="50" />
                     </fieldset>
                     
                     <fieldset class="sin_borde">
-                      <label for="fc_asoc_direccion">Dirección: </label>
+                      <label for="fc_direccion">Dirección: </label>
                         <input class="inputtext1" name="fc_direccion" id="fc_direccion" size="50" />
                     </fieldset>
                     
                     <fieldset class="sin_borde">
-                        <label for="fc_asoc_telcasa">Teléfono: </label>
+                        <label for="fc_telefono">Teléfono: </label>
                         <input class="inputtext2" name="fc_telefono" id="fc_telefono" size="50" />
                     </fieldset>
                                           
                     <fieldset class="sin_borde">
-                        <label for="fc_asoc_email">Email: </label>
+                        <label for="fc_email">Email: </label>
                         <input class="inputtext2" name="fc_email" id="fc_email" size="50" />
                     </fieldset>
                     
                   	<fieldset class="sin_borde">
-                        <label for="fc_asoc_email">Comentario: </label>
+                        <label for="fc_comentario">Comentario: </label>
                         <textarea name="fc_comentario" id="fc_comentario" cols="10" rows="7"></textarea>
                     </fieldset>
                     
@@ -89,39 +89,9 @@ $script_menu_servicios=true;
             
             <div id="sec_sidebar">
             	
-                <aside>
-                	<h3>Eventos</h3>
-                    
-                  <div id="evnt_titulo">
-                    	<h2><a href="#">Triatlon Cross Punta Hermosa 2012</a></h2>
-                    </div>
-                    
-                    <div id="evnt_datos">
-                    	<p>Lugar: Punta Hermosa</p>
-                        <p>20 de Septiembre, 2012 - 11:00 am</p>
-                    </div>
-                    
-                </aside><!-- FIN SECTION SIDEBAR ASIDE -->
+                <?php require_once("widgets/wg_eventos.php"); ?>
                 
-            	<aside>
-                	<h3>Galeria de Fotos</h3>
-                    
-                    <div id="wg_galeria" class="svwp">
-                        <ul>                            
-                            <li><a href="#" title="Galería de Fotos">
-                                <img width="290" height="210" src="imagenes/galeria/copa-latina.jpg" alt="Conferencia de Prensa - Copa Latina" /></a></li>
-                            <li><a href="#" title="Galería de Fotos">
-                                <img width="290" height="210" src="imagenes/galeria/noche-crema.jpg" alt="La Noche del Hincha Crema - Presentación Universitario de Deportes" /></a></li>
-                            <li><a href="#" title="Galería de Fotos">
-                                <img width="290" height="210" src="imagenes/galeria/triatlon.jpg" alt="Triatlon 2012" /></a></li>
-                            <li><a href="#" title="Galería de Fotos">
-                                <img width="290" height="210" src="imagenes/galeria/voley.jpg" alt="Conferencia de Prensa - Federación Peruana de Voley - UNIQUE" /></a></li>    
-                            <li><a href="#" title="Galería de Fotos">
-                                <img width="290" height="210" src="imagenes/galeria/zona-impacto.jpg" alt="Imagen" /></a></li>    
-                        </ul>
-                    </div><!-- GALERIA WEB GALERIA -->
-                    
-                </aside><!-- FIN SECTION SIDEBAR ASIDE -->
+            	<?php require_once("widgets/wg_galeria.php"); ?>
             
             </div><!-- FIN SECTION SIDEBAR -->
         
