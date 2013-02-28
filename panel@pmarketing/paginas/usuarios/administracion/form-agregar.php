@@ -31,7 +31,7 @@ j(function(){
 });
 </script>
 
-<script>
+<script type="text/javascript">
 function passwordStrength(password)
 {
 	var desc = new Array();

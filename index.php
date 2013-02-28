@@ -13,7 +13,7 @@ $script_slider_superior=true;
 $wg_slider=true;
 
 //NOTICIAS
-$rst_noticias=mysql_query("SELECT * FROM pmkt_noticia WHERE id>0 ORDER BY fecha_publicacion DESC LIMIT 4;", $conexion);
+$rst_noticias=mysql_query("SELECT * FROM pmkt_noticia WHERE fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 4;", $conexion);
 
 //SOCIOS ESTRATEGICOS
 $rst_socios=mysql_query("SELECT * FROM pmkt_socios WHERE id>0 ORDER BY orden ASC;", $conexion);

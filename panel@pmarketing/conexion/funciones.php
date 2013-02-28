@@ -407,4 +407,14 @@ function primerParrafo($texto){
 	}
 }
 
+function soloDescripcion($texto){
+	$b_superior="</p>";
+	$e_parrafo="<p>";
+	if(ereg($b_superior, $texto)){
+		$total=explode($b_superior, $texto);
+		$parrafo=explode($e_parrafo,$total[0]);
+		return $parrafo[1];
+	}
+}
+
 ?>

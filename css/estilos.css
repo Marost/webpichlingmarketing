@@ -88,6 +88,7 @@ border-radius: 10px 10px 0px 0px; -moz-border-radius: 10px 10px 0px 0px; -webkit
 #snw_social .snws_facebook,
 #snw_social .snws_pinterest{ width:120px; float:left; }
 #scnw_contenido{ width:100%; float:left; }
+#scnw_contenido ul li{ line-height: 170%; }
 
 /* SECTION NEWS - SOCIOS */
 #snews_socios{ width:100%; float:left; }

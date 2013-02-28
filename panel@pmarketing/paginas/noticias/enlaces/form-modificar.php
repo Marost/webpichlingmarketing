@@ -31,7 +31,7 @@ $rst_categoria=mysql_query("SELECT * FROM ".$tabla_suf."_empresa_enlaces_categor
 <script type="text/javascript" src="http://bp.yahooapis.com/2.4.21/browserplus-min.js"></script>
 <script type="text/javascript" src="../../../js/plupload/plupload.full.min.js"></script>
 <script type="text/javascript" src="../../../js/plupload/jquery.plupload.queue.min.js"></script>
-<script>
+<script type="text/javascript">
 var jq = jQuery.noConflict();
 jq(function() {
 	jq("#flash_uploader").pluploadQueue({
