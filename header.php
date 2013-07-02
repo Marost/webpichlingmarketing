@@ -3,7 +3,7 @@
 $rst_menu_servicios=mysql_query("SELECT * FROM pmkt_servicios ORDER BY titulo ASC;", $conexion);
 
 //SLIDER SUPERIOR
-$rst_slider_superior=mysql_query("SELECT * FROM pmkt_slide_superior ORDER BY orden ASC LIMIT 4;", $conexion);
+$rst_slider_superior=mysql_query("SELECT * FROM pmkt_slide_superior ORDER BY orden ASC;", $conexion);
 ?>
 <header class="limpiar">
         
