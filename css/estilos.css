@@ -51,7 +51,7 @@ font-family: 'Open Sans', sans-serif; position:relative; }
 #header_inf{ width:940px; float:left; padding:20px 20px 0 20px; background-color:#EFEFEF; }
 #header_inf .wg_slide{ width:940; float:left; }
 #header_inf .bx-pager, #header_inf .bx-next, #header_inf .bx-prev{ display:none; visibility:hidden; }
-#header_inf .bx-wrapper .bx-window{ height:300px !important; border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; box-shadow: 0px 0px 1px 2px #666; -moz-box-shadow: 0px 0px 1px 2px #666; -webkit-box-shadow: 0px 0px 1px 2px #666;}
+#header_inf .bx-wrapper{ height:300px !important; border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; box-shadow: 0px 0px 1px 2px #666; -moz-box-shadow: 0px 0px 1px 2px #666; -webkit-box-shadow: 0px 0px 1px 2px #666;}
 #header_inf .bx-wrapper{ z-index:2; }
 
 /*====================================== SECTION ======================================*/
