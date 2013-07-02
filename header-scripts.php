@@ -34,26 +34,6 @@ jslsup(document).ready(function(){
 </script>
 <?php } ?>
 
-<?php if($script_socios==true){ ?>
-<!-- SOCIOS -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="libs/caroufredsel/jquery.carouFredSel-5.5.0.js" type="text/javascript"></script>
-<script type="text/javascript">
-var jsocios = jQuery.noConflict();
-jsocios(document).ready(function(){
-    jsocios("#snwscl_logos").carouFredSel({
-		auto	: {
-			items 			: 1,
-			duration		: 7500,
-			easing			: "linear",
-			pauseDuration	: 0,
-			pauseOnHover	: "immediate"
-		}
-	});
-});
-</script>
-<?php } ?>
-
 <?php if($script_ie==true){ ?>
 <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
