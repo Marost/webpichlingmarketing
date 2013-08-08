@@ -32,8 +32,35 @@ $script_menu_servicios=true;
         <div id="section_sup">
         
         	<div id="sec_news">
+
+                <h2 class="news_titulo_nota">Ubicanos</h2>
+                
+                <div id="mapa">
+                    
+                    <iframe width="620" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com.pe/maps/ms?msa=0&amp;msid=217338416310728973847.0004c1d8fdb4ead94c443&amp;ie=UTF8&amp;t=m&amp;z=17&amp;output=embed"></iframe>
+
+                    <div>
+                        <ul>
+                            <li>
+                                <span class="icon icon-home"></span>
+                                <p>Av. Primavera 1796 - Torre Alpha Of. 701 - Surco</p>
+                            </li>
+
+                            <li>
+                                <span class="icon icon-phone"></span>
+                                <p>(511) 344-2459</p>
+                            </li>
+
+                            <li>
+                                <span class="icon icon-email"></span>
+                                <p>contacto@pichlingmarketing.com</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
             	
-                <h2 class="news_titulo_nota">Conactenos</h2>
+                <h2 class="news_titulo_nota">Contactenos</h2>
                 
                 <div id="msj_enviado" class="ocultar">
                     <div class="mensaje">
@@ -90,8 +117,6 @@ $script_menu_servicios=true;
             <div id="sec_sidebar">
             	
                 <?php require_once("widgets/wg_eventos.php"); ?>
-                
-            	<?php require_once("widgets/wg_galeria.php"); ?>
             
             </div><!-- FIN SECTION SIDEBAR -->
         
