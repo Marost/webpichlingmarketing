@@ -2,6 +2,7 @@
 <!-- ESTILOS -->
 <link href="css/normalize.css" rel="stylesheet" type="text/css">
 <link href="css/estilos.css" rel="stylesheet" type="text/css">
+<link href="css/icons.css" rel="stylesheet" type="text/css">
 <?php } ?>
 
 <?php if($script_fonts==true){ ?>
