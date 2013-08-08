@@ -116,6 +116,18 @@ form#form_contacto fieldset button.fc_enviar{ width:200px !important; height:61p
 .ocultar{ display:none;}
 #msj_enviado{ width:620px; height:400px; }
 
+#mapa{ width:100%; float:left; padding:15px 0 0 0; }
+#mapa div{
+	padding: 10px;
+	background: #AEC5B8;
+	border-radius: 15px;
+	margin-top: 10px;
+}
+#mapa div ul{
+	list-style: none;
+	margin: 0;
+}
+
 /* SOCIAL MEDIA - FORMULARIO */
 ul#smedia_contatenos{ list-style:none; margin:0; padding:0 0 0 160px; clear: both; float: left;}
 ul#smedia_contatenos li{ margin: 0; padding: 0; overflow: hidden; float: left; text-indent:-1000em; width:90px; height:80px;}
@@ -159,6 +171,11 @@ ul#smedia_contatenos li a.wgsmdcon_blog{ background-position:-280px 0;}
 /* SECTION SIDEBAR - ASIDE - GALERIA */
 #wg_galeria{ width:300px; float:left; overflow:hidden; }
 #wg_galeria ul{ overflow:hidden; }
+
+#galeria-sidebar{
+	width: 300px !important;
+	height: 310px !important;
+}
 
 /*====================================== FOOTER ======================================*/
 #footer_izq, #footer_der{ width:470px; float:left; color:#fff; }
