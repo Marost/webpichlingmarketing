@@ -1,8 +1,5 @@
 <?php
 //CONEXION CON EL SERVIDOR
-//$conexion=mysql_connect("localhost","femiporg_fmpus12","P43Dw9dK48uv");
-//mysql_select_db("femiporg_fmpproyn01-12",$conexion);
-
 $conexion=mysql_connect("localhost","marost2_admin","master@18073");
 mysql_select_db("marost2_pchsptmkt2012",$conexion);
 
