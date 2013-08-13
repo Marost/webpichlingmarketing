@@ -4,10 +4,10 @@ $sc_home=false;
 $sc_slider=false;
 ?>
 <!DOCTYPE HTML>
-<html lang="en-US">
+<html lang="es-ES">
 <head>
 	<meta charset="UTF-8">
-	<title>Contact Us</title>
+	<title>Contáctenos | Pichling Sports Marketing</title>
 
 	<?php require_once("wg-script-header.php"); ?>
 	
@@ -31,13 +31,13 @@ $sc_slider=false;
 				<div class="l-submain for_pagehead">
 					<div class="l-submain-h g-html i-cf">
 						<div class="w-pagehead">
-							<h1>Contact Us</h1>
-							<p>Small Caption Allowed Here</p>
+							<h1>Contáctenos</h1>
+							<p></p>
 							<!-- breadcrums -->
 							<div class="g-breadcrumbs">
-								<a href="index.html" class="g-breadcrumbs-item">Home</a>
+								<a href="/" class="g-breadcrumbs-item">Inicio</a>
 								<span class="g-breadcrumbs-separator">&raquo;</span>
-								<span class="g-breadcrumbs-item">Contact</span>
+								<span class="g-breadcrumbs-item">Contacto</span>
 							</div>
 						</div>
 					</div>
@@ -332,12 +332,12 @@ $sc_slider=false;
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
 			jQuery('.w-map-h').gMap({
-				address: "1600 Amphitheatre Parkway, Mountain View, CA 94043, United States",
-				zoom: 13,
+				zoom: 17,
 				markers:[
 					{
-						address: "1600 Amphitheatre Parkway, Mountain View, CA 94043, United States",
-						html: "Our office",
+						latitude: -12.108236566532314,
+            			longitude: -76.9694588672508,
+						html: "Av. Primavera 1796 Of. 701 - Surco",
 						popup: true
 					}
 				]
