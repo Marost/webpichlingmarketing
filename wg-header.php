@@ -37,12 +37,12 @@
 								</div>
 									<div class="w-nav-item level_1">
 									<div class="w-nav-item-h">
-										<a href="elements.html" class="w-nav-anchor level_1">Blog</a>
+										<a href="noticias" class="w-nav-anchor level_1">Noticias</a>
 									</div>
 								</div>
 									<div class="w-nav-item level_1">
 									<div class="w-nav-item-h">
-										<a href="contact.php" class="w-nav-anchor level_1">Contact</a>
+										<a href="contacto" class="w-nav-anchor level_1">Contacto</a>
 									</div>
 								</div>
 							</div>
@@ -58,7 +58,7 @@
 
 				<div class="w-logo sloganat_bottom">
 					<div class="w-logo-h">
-						<a class="w-logo-link" href="index.html">
+						<a class="w-logo-link" href="/">
 							<img class="w-logo-img" src="imagenes/logo.png" alt="Pichling Sports Marketing">
 							<span class="w-logo-title">
 								<span class="w-logo-title-h">Pichling Sports Marketing</span>
