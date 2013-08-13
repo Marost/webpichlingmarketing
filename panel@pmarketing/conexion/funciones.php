@@ -88,6 +88,23 @@ function nombreMes($numero_mes){
 	}
 }
 
+function nombreMesCorto($numero_mes){
+	switch($numero_mes){
+   		case 01: return "ENE"; break;
+		case 02: return "FEB"; break;
+		case 03: return "MAR"; break;
+		case 04: return "ABR"; break;
+		case 05: return "MAY"; break;
+		case 06: return "JUN"; break;
+		case 07: return "JUL"; break;
+		case 08: return "AGO"; break;
+		case 09: return "SET"; break;
+		case 10: return "OCT"; break;
+		case 11: return "NOV"; break;
+		case 12: return "DIC"; break;
+	}
+}
+
 function nombreMesSC($numero_mes){
 	switch($numero_mes){
    		case 1: return "Enero"; break;
