@@ -36,6 +36,9 @@ $web=$fila_empresa["web"];
 $web_nombre=$fila_empresa["nombre"];
 $web_nosotros=$fila_empresa["nosotros"];
 
+//URL DE ARCHIVOS
+$url_admin=$web."".$carpeta_admin."/";
+
 if ($_SESSION["user-".$sesion_pre.""]<>""){
 	$usuario_user=$_SESSION["user-".$sesion_pre.""];
 	$usuario_nombre=$_SESSION["user_nombre-".$sesion_pre.""];
