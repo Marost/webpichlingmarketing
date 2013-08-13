@@ -16,28 +16,12 @@ $nota_nombre=$fila_nota["titulo"];
 $nota_imagen=$fila_nota["imagen"];
 $nota_imagen_carpeta=$fila_nota["imagen_carpeta"];
 $nota_contenido=$fila_nota["contenido"];
-$nota_video=$fila_nota["video"];
-$nota_video_tipo=$fila_nota["tipo_video"];
-$nota_categoria=$fila_nota["categoria"];
-$nota_destacada=$fila_nota["destacada"];
-$nota_superior1=$fila_nota["superior_1"];
-$nota_superior2=$fila_nota["superior_2"];
-$nota_superior3=$fila_nota["superior_3"];
-$nota_superior4=$fila_nota["superior_4"];
-$nota_superior5=$fila_nota["superior_5"];
-$nota_superior6=$fila_nota["superior_6"];
-$nota_superior7=$fila_nota["superior_7"];
-$nota_superior8=$fila_nota["superior_8"];
-$nota_superior9=$fila_nota["superior_9"];
 $nota_publicar=$fila_nota["publicar"];
 
 /* FECHA */
 $nota_fecha_pub=explode(" ", $fila_nota["fecha_publicacion"]);
 $nota_pub_fecha=$nota_fecha_pub[0];
 $nota_pub_hora=$nota_fecha_pub[1];
-
-//CATEGORIA
-$rst_cat=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_categoria ORDER BY categoria ASC;", $conexion);
 
 //TAGS
 $tags=explode(",", $fila_nota["tags"]);    //SEPARACION DE ARRAY CON COMAS
@@ -114,113 +98,6 @@ $rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre
                                 <input type="hidden" name="imagen" value="<?php echo $nota_imagen; ?>">
                                 <input type="hidden" name="imagen_carpeta" value="<?php echo $nota_imagen_carpeta; ?>">
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="formRow">
-                        <div class="grid3"><label>Video (Youtube):</label> </div>
-                        <div class="grid9">http://www.youtube.com/watch?v=
-                            <input type="text" name="video_youtube" value="<?php echo $nota_video; ?>" style="width: 300px;">
-                        </div>
-                    </div>
-
-                    <div class="formRow">
-                        <div class="grid3"><label>Categoria:</label></div>
-                        <div class="grid9">
-                            <select name="categoria" class="styled">
-                                <option>Selecciona</option>
-                                <?php while($fila_cat=mysql_fetch_array($rst_cat)){
-                                        $cat_id=$fila_cat["id"];
-                                        $cat_nombre=$fila_cat["categoria"];
-
-                                        if ($nota_categoria==$cat_id){
-                                ?>
-                                <option value="<?php echo $cat_id; ?>" selected><?php echo $cat_nombre; ?></option>
-                                <?php }else{ ?>
-                                <option value="<?php echo $cat_id; ?>"><?php echo $cat_nombre; ?></option>
-                                <?php }} ?>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="formRow">
-                        <div class="grid3"><label>Tipo de noticia: </label></div>
-                        <div class="grid9 yes_no">
-                            <div class="floatL mr10">Destacada
-                                <?php if($nota_destacada==1){ ?>
-                                <input type="radio" name="tipo_noticia" value="not_destacada" checked /></div>
-                                <?php }else{ ?>
-                                <input type="radio" name="tipo_noticia" value="not_destacada" /></div>
-                                <?php } ?>
-                            <div class="floatL mr10">Superior 1
-                                <?php if($nota_superior1==1){ ?>
-                                <input type="radio" name="tipo_noticia" value="not_superior1" checked /></div>
-                                <?php }else{ ?>
-                                <input type="radio" name="tipo_noticia" value="not_superior1" /></div>
-                                <?php } ?>
-                            <div class="floatL mr10">Superior 2
-                                <?php if($nota_superior2==1){ ?>
-                                <input type="radio" name="tipo_noticia" value="not_superior2" checked /></div>
-                                <?php }else{ ?>
-                                <input type="radio" name="tipo_noticia" value="not_superior2" /></div>
-                                <?php } ?>
-                            <div class="floatL mr10">Superior 3
-                                <?php if($nota_superior3==1){ ?>
-                                <input type="radio" name="tipo_noticia" value="not_superior3" checked /></div>
-                                <?php }else{ ?>
-                                <input type="radio" name="tipo_noticia" value="not_superior3" /></div>
-                                <?php } ?>
-                            <div class="floatL mr10">Superior 4
-                                <?php if($nota_superior4==1){ ?>
-                                <input type="radio" name="tipo_noticia" value="not_superior4" checked /></div>
-                                <?php }else{ ?>
-                                <input type="radio" name="tipo_noticia" value="not_superior4" /></div>
-                                <?php } ?>
-                            <div class="floatL mr10">Superior 5
-                                <?php if($nota_superior5==1){ ?>
-                                <input type="radio" name="tipo_noticia" value="not_superior5" checked /></div>
-                                <?php }else{ ?>
-                                <input type="radio" name="tipo_noticia" value="not_superior5" /></div>
-                                <?php } ?>
-                            <div class="floatL mr10">Superior 6
-                                <?php if($nota_superior6==1){ ?>
-                                <input type="radio" name="tipo_noticia" value="not_superior6" checked /></div>
-                                <?php }else{ ?>
-                                <input type="radio" name="tipo_noticia" value="not_superior6" /></div>
-                                <?php } ?>
-                            <div class="floatL mr10">Superior 7
-                                <?php if($nota_superior7==1){ ?>
-                                <input type="radio" name="tipo_noticia" value="not_superior7" checked /></div>
-                                <?php }else{ ?>
-                                <input type="radio" name="tipo_noticia" value="not_superior7" /></div>
-                                <?php } ?>
-                            <div class="floatL mr10">Superior 8
-                                <?php if($nota_superior8==1){ ?>
-                                <input type="radio" name="tipo_noticia" value="not_superior8" checked /></div>
-                                <?php }else{ ?>
-                                <input type="radio" name="tipo_noticia" value="not_superior8" /></div>
-                                <?php } ?>
-                            <div class="floatL mr10">Superior 9
-                                <?php if($nota_superior9==1){ ?>
-                                <input type="radio" name="tipo_noticia" value="not_superior9" checked /></div>
-                                <?php }else{ ?>
-                                <input type="radio" name="tipo_noticia" value="not_superior9" /></div>
-                                <?php } ?>
-                            <div class="floatL mr10">Normal
-                                <?php if($nota_destacada<>1 and 
-                                    $nota_superior1<>1 and 
-                                    $nota_superior2<>1 and 
-                                    $nota_superior3<>1 and 
-                                    $nota_superior4<>1 and 
-                                    $nota_superior5<>1 and 
-                                    $nota_superior6<>1 and 
-                                    $nota_superior7<>1 and 
-                                    $nota_superior8<>1 and 
-                                    $nota_superior9<>1){ ?>
-                                <input type="radio" name="tipo_noticia" value="not_normal" checked /></div>
-                                <?php }else{ ?>
-                                <input type="radio" name="tipo_noticia" value="not_normal" /></div>
-                                <?php } ?>
                         </div>
                     </div>
 
