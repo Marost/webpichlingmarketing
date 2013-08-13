@@ -7,7 +7,7 @@ $sc_slider=true;
 <html lang="es-ES">
 <head>
 	<meta charset="UTF-8">
-	<title>Vittoria HTML Template</title>
+	<title>Pichling Sports Marketing</title>
 
 	<?php require_once("wg-script-header.php"); ?>
 

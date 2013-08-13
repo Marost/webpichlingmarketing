@@ -16,7 +16,7 @@
 							<div class="w-nav-list-h">
 								<div class="w-nav-item level_1 active">
 									<div class="w-nav-item-h">
-										<a href="index.html" class="w-nav-anchor level_1">Inicio</a>
+										<a href="/" class="w-nav-anchor level_1">Inicio</a>
 									</div>
 								</div>
 									<div class="w-nav-item level_1">
@@ -42,7 +42,7 @@
 								</div>
 									<div class="w-nav-item level_1">
 									<div class="w-nav-item-h">
-										<a href="contact.html" class="w-nav-anchor level_1">Contact</a>
+										<a href="contact.php" class="w-nav-anchor level_1">Contact</a>
 									</div>
 								</div>
 							</div>
