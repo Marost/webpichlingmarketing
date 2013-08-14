@@ -327,27 +327,27 @@ $sc_slider=false;
 <?php require_once("wg-script-footer.php"); ?>
 
 <!-- GMap-->
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-	<script type="text/javascript" src="js/jquery.gmap.min.js"></script>
-	<script type="text/javascript">
-		jQuery(document).ready(function(){
-			jQuery('.w-map-h').gMap({
-				zoom: 17,
-				markers:[
-					{
-						latitude: -12.108236566532314,
-            			longitude: -76.9694588672508,
-						html: "Av. Primavera 1796 Of. 701 - Surco",
-						popup: true
-					}
-				]
-			});
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="js/jquery.gmap.min.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery('.w-map-h').gMap({
+			zoom: 17,
+			markers:[
+				{
+					latitude: -12.108236566532314,
+        			longitude: -76.9694588672508,
+					html: "Av. Primavera 1796 Of. 701 - Surco",
+					popup: true
+				}
+			]
 		});
-	</script>
-	
-	<script type="text/javascript">var switchTo5x=true;</script>
-	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-	<script type="text/javascript">stLight.options({publisher: "ur-b6bcdd5b-dde-cce8-a00c-478890414ff", doNotHash: true, doNotCopy: false, hashAddressBar: true});</script>
+	});
+</script>
+
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "ur-b6bcdd5b-dde-cce8-a00c-478890414ff", doNotHash: true, doNotCopy: false, hashAddressBar: true});</script>
 
 </body>
 </html>
