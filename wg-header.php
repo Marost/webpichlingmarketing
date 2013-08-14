@@ -32,7 +32,7 @@
 								</div>
 									<div class="w-nav-item level_1">
 									<div class="w-nav-item-h">
-										<a href="blog.html" class="w-nav-anchor level_1">Eventos</a>
+										<a href="eventos" class="w-nav-anchor level_1">Eventos</a>
 									</div>
 								</div>
 									<div class="w-nav-item level_1">
