@@ -134,6 +134,7 @@ jQuery(document).ready(function(){
 	}
 
 	// Video iframes z-index fix
+	/*
 	jQuery('iframe').each(function(){
 		var url = jQuery(this).attr("src");console.log(jQuery(this).attr("src"));
 		var character = "?";
@@ -147,6 +148,7 @@ jQuery(document).ready(function(){
 
 		jQuery(this).attr("src",url+character+"wmode=transparent");console.log(jQuery(this).attr("src"));
 	});
+	*/
 
 	// Tweet feed
 

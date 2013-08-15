@@ -46,7 +46,7 @@ $sc_slider=false;
 				<div class="l-submain">
 					<div class="l-submain-h g-html">
 
-						<div class="w-portfolio columns_4 type_sortable">
+						<div class="w-portfolio columns_3 type_sortable">
 							<div class="w-portfolio-h">
 								<div class="w-portfolio-list">
 								<div class="w-portfolio-list-h">
