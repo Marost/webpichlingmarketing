@@ -63,7 +63,8 @@ $rst_noticia=mysql_query("SELECT * FROM pmkt_noticia WHERE fecha_publicacion<='$
 												$noticia_url=$fila_noticia["url"];
 												$noticia_titulo=$fila_noticia["titulo"];
 												$noticia_contenido=primerParrafo($fila_noticia["contenido"], 150);
-												$noticia_fechapub=$fila_noticia["fecha_publicacion"];
+												$noticia_fechaGen=explode(" ", $fila_noticia["fecha_publicacion"]);
+												$noticia_fechaPub=explode("-", $noticia_fechaGen[0]);
 
 												//URLS
 												$noticia_WebURL=$web."noticia/".$noticia_id."-".$noticia_url;
@@ -80,9 +81,9 @@ $rst_noticia=mysql_query("SELECT * FROM pmkt_noticia WHERE fecha_publicacion<='$
 													<div class="w-blog-entry-meta">
 														<div class="w-blog-entry-meta-date">
 															<i class="icon-time"></i>
-															<span class="w-blog-entry-meta-date-month">APR</span>
-															<span class="w-blog-entry-meta-date-day">7</span>
-															<span class="w-blog-entry-meta-date-year">2013</span>
+															<span class="w-blog-entry-meta-date-month"><?php echo nombreMesCorto($noticia_fechaPub[1]); ?></span>
+															<span class="w-blog-entry-meta-date-day"><?php echo $noticia_fechaPub[2]; ?></span>
+															<span class="w-blog-entry-meta-date-year"><?php echo $noticia_fechaPub[0]; ?></span>
 														</div>
 
 													</div>
