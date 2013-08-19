@@ -1,7 +1,13 @@
 <?php
+include("panel@pmarketing/conexion/conexion.php");
+include("panel@pmarketing/conexion/funciones.php");
+
 //VARIABLES
 $sc_home=true;
 $sc_slider=true;
+
+//NOTICIAS
+$rst_noticias=mysql_query("SELECT * FROM pmkt_noticia WHERE fecha_publicacion<='$fechaActual' AND publicar=1 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
 ?>
 <!DOCTYPE HTML>
 <html lang="es-ES">
@@ -411,50 +417,44 @@ $sc_slider=true;
 				<div class="l-submain">
 					<div class="l-submain-h g-html i-cf">
 					
-						<h3>Latest Posts</h3>
+						<h3>Últimas Noticias</h3>
 						
 						<div class="w-shortblog columns_2 date_atleft">
 							<div class="w-shortblog-h">
+																
 								<div class="w-shortblog-list">
+
+									<?php while($fila_noticias=mysql_fetch_array($rst_noticias)){
+										$noticias_id=$fila_noticias["id"];
+										$noticias_url=$fila_noticias["url"];
+										$noticias_titulo=$fila_noticias["titulo"];
+										$noticias_contenido=primerParrafo($fila_noticias["contenido"]);
+										$noticias_fechaGen=explode(" ", $fila_noticias["fecha_publicacion"]);
+										$noticias_fechaPub=explode("-", $noticias_fechaGen[0]);
+
+										//URL
+										$noticias_UrlWeb=$web."noticia/".$noticias_id."-".$noticias_url;
+									?>
 									<div class="w-shortblog-entry">
 										<div class="w-shortblog-entry-h">
-											<a class="w-shortblog-entry-link" href="blog-post.html">
+											<a class="w-shortblog-entry-link" href="<?php echo $noticias_UrlWeb; ?>">
 												<h4 class="w-shortblog-entry-title">
-													<span class="w-shortblog-entry-title-h">This is Just a Single Clean Post</span>
+													<span class="w-shortblog-entry-title-h"><?php echo $noticias_titulo; ?></span>
 												</h4>
 											</a>
 											<div class="w-shortblog-entry-meta">
 												<div class="w-shortblog-entry-meta-date">
-													<span class="w-shortblog-entry-meta-date-month">mar</span>
-													<span class="w-shortblog-entry-meta-date-day">07</span>
-													<span class="w-shortblog-entry-meta-date-year">2013</span>
+													<span class="w-shortblog-entry-meta-date-month"><?php echo nombreMesCorto($noticias_fechaPub[1]); ?></span>
+													<span class="w-shortblog-entry-meta-date-day"><?php echo $noticias_fechaPub[2]; ?></span>
+													<span class="w-shortblog-entry-meta-date-year"><?php echo $noticias_fechaPub[0]; ?></span>
 												</div>
 											</div>
 											<div class="w-shortblog-entry-short">
-											<p>Integer libero lectus, porta acean pulvinar ac, facilisis non arcu. Maecenas enim orci, adipiscing dictum sit amet gusce	dapibus. Integer libero lectus, porta acean pulvinar...</p>
+											<p><?php echo $noticias_contenido; ?></p>
 											</div>
 										</div>
 									</div>
-									
-									<div class="w-shortblog-entry">
-										<div class="w-shortblog-entry-h">
-											<a class="w-shortblog-entry-link" href="blog-post-2.html">
-												<h4 class="w-shortblog-entry-title">
-													<span class="w-shortblog-entry-title-h">Single Post Without Sidebar</span>
-												</h4>
-											</a>
-											<div class="w-shortblog-entry-meta">
-												<div class="w-shortblog-entry-meta-date">
-													<span class="w-shortblog-entry-meta-date-month">feb</span>
-													<span class="w-shortblog-entry-meta-date-day">23</span>
-													<span class="w-shortblog-entry-meta-date-year">2013</span>
-												</div>
-											</div>
-											<div class="w-shortblog-entry-short">
-											<p>Integer libero lectus, porta acean pulvinar ac, facilisis non arcu. Maecenas enim orci, adipiscing dictum sit amet gusce	dapibus. Integer libero lectus, porta acean pulvinar...</p>
-											</div>
-										</div>
-									</div>
+									<?php } ?>
 									
 								</div>
 							</div>
