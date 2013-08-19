@@ -34,7 +34,7 @@ $noticia_WebIMG=$web."imagenes/upload/".$noticia_imagen_carpeta."".$noticia_imag
 <html lang="es-ES">
 <head>
 	<meta charset="UTF-8">
-	<title>Blog Post Alternate</title>
+	<title><?php echo $noticia_titulo; ?></title>
 
 	<?php require_once("wg-script-header.php"); ?>
 	
