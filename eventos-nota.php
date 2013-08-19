@@ -122,7 +122,7 @@ $sc_slnota=true;
 							</span>
 						</div>
 					
-						<div class="w-portfolio columns_4">
+						<div class="w-portfolio columns_3">
 							<div class="w-portfolio-h">
 								<div class="w-portfolio-list">
 								<div class="w-portfolio-list-h">
