@@ -341,6 +341,7 @@ FileETag None
 
 RewriteRule ^contacto$                                    /contacto.php
 RewriteRule ^noticias$                                    /noticias.php
+RewriteRule ^nosotros$                                    /nosotros.php
 RewriteRule ^eventos$                                    /eventos.php
 RewriteRule ^noticia/([0-9]*)-(.*)$                       /nota.php?id=$1&url=$2
 RewriteRule ^seccion/([0-9]*)/(.*)$                       /categoria.php?id=$1&url=$2

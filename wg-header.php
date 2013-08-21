@@ -21,7 +21,7 @@
 								</div>
 									<div class="w-nav-item level_1">
 									<div class="w-nav-item-h">
-										<a href="about.html" class="w-nav-anchor level_1">Nosotros</a>
+										<a href="nosotros" class="w-nav-anchor level_1">Nosotros</a>
 									</div>
 								</div>
 
