@@ -2215,7 +2215,7 @@ hr {
 				color: #f26500;
 				}
 .w-timeline-sections {
-	border: 1px solid #ddd;
+	/*border: 1px solid #ddd;*/
 	}
 .w-timeline.type_vertical .w-timeline-sections {
 	border: none;

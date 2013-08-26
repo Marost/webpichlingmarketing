@@ -1,3 +1,11 @@
+<?php
+include("panel@pmarketing/conexion/conexion.php");
+include("panel@pmarketing/conexion/funciones.php");
+
+//VARIABLES
+$sc_home=true;
+
+?>
 <!DOCTYPE HTML>
 <html lang="es-ES">
 <head>
@@ -41,173 +49,24 @@
 				<div class="l-submain">
 					<div class="l-submain-h g-html">
 					
-						<h2 style="text-align: center;">Our History</h2>
-						
 						<div class="w-timeline">
 							<div class="w-timeline-h">
-
-								<div class="w-timeline-list">
-									<div class="w-timeline-list-h">
-								
-										<div class="w-timeline-item active">
-											<span class="w-timeline-item-bullet"></span>
-											<span class="w-timeline-item-title">2009</span>
-										</div>
-
-										<div class="w-timeline-item">
-											<span class="w-timeline-item-bullet"></span>
-											<span class="w-timeline-item-title">2010</span>
-										</div>
-
-										<div class="w-timeline-item">
-											<span class="w-timeline-item-bullet"></span>
-											<span class="w-timeline-item-title">2011</span>
-										</div>
-
-										<div class="w-timeline-item">
-											<span class="w-timeline-item-bullet"></span>
-											<span class="w-timeline-item-title">2012</span>
-										</div>
-
-										<div class="w-timeline-item">
-											<span class="w-timeline-item-bullet"></span>
-											<span class="w-timeline-item-title">2013</span>
-										</div>
-										
-									</div>
-								</div>
 
 								<div class="w-timeline-sections">
 									<div class="w-timeline-section active animate_afr">
 										<div class="w-timeline-section-h">
 										
-											<div class="w-timeline-section-title">
-												<span class="w-timeline-section-title-bullet"></span>
-												<span class="w-timeline-section-title-text">2009</span>
-											</div>
 											<div class="w-timeline-section-content">
 												<div class="g-cols">
 													<div class="one-third">
-														<h4>Our Birth</h4>
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
-														<p>Suspendisse consectetur fringilla suctus. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor. Morbi sagittis, sem quis lacinia faucibus orci.</p>
-													</div>
-													<div class="one-third">
-														<h4>Primary Skills</h4>
-														<p>Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
-														<ul>
-															<li>Design</li>
-															<li>HTML + CSS</li>
-															<li>Coding</li>
-															<li>Illustration</li>
-														</ul>
-													</div>
-													<div class="one-third">
-														<img src="imagenes/placeholder/500x500.gif" alt="">
-													</div>
-												</div>
-											</div>
-											
-										</div>
-									</div>
-
-									<div class="w-timeline-section">
-										<div class="w-timeline-section-h">
-										
-											<div class="w-timeline-section-title">
-												<span class="w-timeline-section-title-bullet"></span>
-												<span class="w-timeline-section-title-text">2010</span>
-											</div>
-											<div class="w-timeline-section-content">
-												<div class="g-cols">
-													<div class="one-third">
-														<img src="imagenes/placeholder/540x320.gif" alt="">
+														<p>Somos una Agencia de Marketing Deportivo con años de experiencia en el mercado, gestionando negocios, patrocinios, activaciones BTL y siendo también representantes de deportistas.</p>
 													</div>
 													<div class="two-thirds">
-														<h4>One Year Later</h4>
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor.</p>
+														<img src="imagenes/oficina/oficina-interior.jpg" alt="">
 													</div>
 												</div>
 											</div>
 											
-										</div>
-									</div>
-
-									<div class="w-timeline-section">
-										<div class="w-timeline-section-h">
-										
-											<div class="w-timeline-section-title">
-												<span class="w-timeline-section-title-bullet"></span>
-												<span class="w-timeline-section-title-text">2011</span>
-											</div>
-											<div class="w-timeline-section-content">
-												<div class="g-cols">
-													<div class="one-third">
-														<h4>Two Years Later</h4>
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
-														<p>Suspendisse consectetur fringilla suctus. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor. Morbi sagittis, sem quis lacinia faucibus orci.</p>
-													</div>
-													<div class="one-third">
-														<img src="imagenes/placeholder/500x500.gif" alt="">
-													</div>
-													<div class="one-third">
-														<h4>Our Skills</h4>
-														<p>Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
-														<ul>
-															<li>Powerfull Design</li>
-															<li>HTML + CSS</li>
-															<li>Clean Coding</li>
-															<li>Excellent Illustration</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-											
-										</div>
-									</div>
-
-									<div class="w-timeline-section">
-										<div class="w-timeline-section-h">
-										
-											<div class="w-timeline-section-title">
-												<span class="w-timeline-section-title-bullet"></span>
-												<span class="w-timeline-section-title-text">2012</span>
-											</div>
-											<div class="w-timeline-section-content">
-												<div class="g-cols">
-													<div class="two-thirds">
-														<h4>Halfway Between the Gutter and the Stars</h4>
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor.</p>
-													</div>
-													<div class="one-third">
-														<img src="imagenes/placeholder/540x320.gif" alt="">
-													</div>
-												</div>
-											</div>
-											
-										</div>
-									</div>
-
-									<div class="w-timeline-section">
-										<div class="w-timeline-section-h">
-										
-											<div class="w-timeline-section-title">
-												<span class="w-timeline-section-title-bullet"></span>
-												<span class="w-timeline-section-title-text">2013</span>
-											</div>
-											<div class="w-timeline-section-content">
-												<div class="g-cols">
-													<div class="one-third">
-														<img src="imagenes/placeholder/540x360.gif" alt="">
-													</div>
-													<div class="two-thirds">
-														<h4>Welcome to Vittoria</h4>
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis.</p>
-														<p>Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis.</p>
-													</div>
-												</div>
-											</div>
-
 										</div>
 									</div>
 
@@ -228,255 +87,7 @@
 
 					</div>
 				</div>
-				
-				<div class="l-submain">
-					<div class="l-submain-h g-html">
-					
-						<h2 style="text-align: center;">Meet Our Team</h2>
-						
-						<div class="hr hr_short">
-							<span class="hr-h">
-								<span class="hr-hh"></span>
-							</span>
-						</div>
-						
-						<div class="w-team">
-							<div class="w-team-h">
-								<div class="w-team-list">
-									<div class="w-team-member type_main animate_afb">
-									<div class="w-team-member-h">
-									<div class="w-team-member-hh">
-										<div class="w-team-member-image">
-											<img src="imagenes/placeholder/500x500.gif" alt="Item picture" />
-										</div>
-										<div class="w-team-member-meta">
-										<div class="w-team-member-meta-h">
-											<h4 class="w-team-member-name">Robert Smith</h4>
-											<div class="w-team-member-role">Chief Executive Officer / CEO</div>
-											<div class="w-team-member-description">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
-											</div>
-											<div class="w-team-member-links">
-												<div class="w-team-member-links-list">
-													<a class="w-team-member-links-item" href="#" target="_blank"><i class="icon-envelope"></i></a>
-													<a class="w-team-member-links-item" href="http://www.fb.com/" target="_blank"><i class="icon-facebook"></i></a>
-													<a class="w-team-member-links-item" href="http://www.twitter.com/" target="_blank"><i class="icon-twitter"></i></a>
-													<a class="w-team-member-links-item" href="http://www.linkedin.com/" target="_blank"><i class="icon-linkedin"></i></a>
-												</div>
-											</div>
-										</div>
-										</div>
-									</div>
-									</div>
-									</div>
 
-									<div class="w-team-member type_half animate_afl">
-									<div class="w-team-member-h">
-									<div class="w-team-member-hh">
-										<div class="w-team-member-image">
-											<img src="imagenes/placeholder/500x500.gif" alt="Item picture" />
-										</div>
-										<div class="w-team-member-meta">
-										<div class="w-team-member-meta-h">
-											<h4 class="w-team-member-name">Jane Smith</h4>
-											<div class="w-team-member-role">Project Manager</div>
-											<div class="w-team-member-description">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor.</p>						
-											</div>
-											<div class="w-team-member-links">
-												<div class="w-team-member-links-list">
-													<a class="w-team-member-links-item" href="http://www.twitter.com/" target="_blank"><i class="icon-twitter"></i></a>
-													<a class="w-team-member-links-item" href="http://www.linkedin.com/" target="_blank"><i class="icon-linkedin"></i></a>
-												</div>
-											</div>
-										</div>
-										</div>
-									</div>
-									</div>
-									</div>
-
-									<div class="w-team-member type_half animate_afr">
-									<div class="w-team-member-h">
-									<div class="w-team-member-hh">
-										<div class="w-team-member-image">
-											<img src="imagenes/placeholder/500x500.gif" alt="Item picture" />
-										</div>
-										<div class="w-team-member-meta">
-										<div class="w-team-member-meta-h">
-											<h4 class="w-team-member-name">John Doe</h4>
-											<div class="w-team-member-role">Senior Developer</div>
-											<div class="w-team-member-description">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor.</p>						
-											</div>
-											<div class="w-team-member-links">
-												<div class="w-team-member-links-list">
-													<a class="w-team-member-links-item" href="http://www.fb.com/" target="_blank"><i class="icon-facebook"></i></a>
-													<a class="w-team-member-links-item" href="http://www.twitter.com/" target="_blank"><i class="icon-twitter"></i></a>
-													<a class="w-team-member-links-item" href="http://www.linkedin.com/" target="_blank"><i class="icon-linkedin"></i></a>
-												</div>
-											</div>
-										</div>
-										</div>
-									</div>
-									</div>
-									</div>
-
-									<div class="w-team-member type_small animate_afc">
-									<div class="w-team-member-h">
-									<div class="w-team-member-hh">
-										<div class="w-team-member-image">
-											<img src="imagenes/placeholder/500x500.gif" alt="Item picture" />
-										</div>
-										<div class="w-team-member-meta">
-										<div class="w-team-member-meta-h">
-											<h4 class="w-team-member-name">Michael Doe</h4>
-											<div class="w-team-member-role">Developer</div>
-											<div class="w-team-member-description">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor.</p>						
-											</div>
-											<div class="w-team-member-links">
-												<div class="w-team-member-links-list">
-													<a class="w-team-member-links-item" href="http://www.linkedin.com/" target="_blank"><i class="icon-linkedin"></i></a>
-												</div>
-											</div>
-										</div>
-										</div>
-									</div>
-									</div>
-									</div>
-
-									<div class="w-team-member type_small animate_afc d1">
-									<div class="w-team-member-h">
-									<div class="w-team-member-hh">
-										<div class="w-team-member-image">
-											<img src="imagenes/placeholder/500x500.gif" alt="Item picture" />
-										</div>
-										<div class="w-team-member-meta">
-										<div class="w-team-member-meta-h">
-											<h4 class="w-team-member-name">Jane Doe</h4>
-											<div class="w-team-member-role">Web Designer</div>
-											<div class="w-team-member-description">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor.</p>						
-											</div>
-											<div class="w-team-member-links">
-												<div class="w-team-member-links-list">
-													<a class="w-team-member-links-item" href="http://www.fb.com/" target="_blank"><i class="icon-facebook"></i></a>
-													<a class="w-team-member-links-item" href="http://www.linkedin.com/" target="_blank"><i class="icon-linkedin"></i></a>
-												</div>
-											</div>
-										</div>
-										</div>
-									</div>
-									</div>
-									</div>
-
-									<div class="w-team-member type_small animate_afc d2">
-									<div class="w-team-member-h">
-									<div class="w-team-member-hh">
-										<div class="w-team-member-image">
-											<img src="imagenes/placeholder/500x500.gif" alt="Item picture" />
-										</div>
-										<div class="w-team-member-meta">
-										<div class="w-team-member-meta-h">
-											<h4 class="w-team-member-name">David Smith</h4>
-											<div class="w-team-member-role">Designer</div>
-											<div class="w-team-member-description">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor.</p>						
-											</div>
-											<div class="w-team-member-links">
-												<div class="w-team-member-links-list">
-													<a class="w-team-member-links-item" href="http://www.fb.com/" target="_blank"><i class="icon-facebook"></i></a>
-													<a class="w-team-member-links-item" href="http://www.twitter.com/" target="_blank"><i class="icon-twitter"></i></a>
-													<a class="w-team-member-links-item" href="http://www.linkedin.com/" target="_blank"><i class="icon-linkedin"></i></a>
-												</div>
-											</div>
-										</div>
-										</div>
-									</div>
-									</div>
-									</div>
-									
-									<div class="w-team-member type_small animate_afc d3">
-									<div class="w-team-member-h">
-									<div class="w-team-member-hh">
-										<div class="w-team-member-image">
-											<img src="imagenes/placeholder/500x500.gif" alt="Item picture" />
-										</div>
-										<div class="w-team-member-meta">
-										<div class="w-team-member-meta-h">
-											<h4 class="w-team-member-name">Robert Doe</h4>
-											<div class="w-team-member-role">Developer</div>
-											<div class="w-team-member-description">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor.</p>						
-											</div>
-											<div class="w-team-member-links">
-												<div class="w-team-member-links-list">
-													<a class="w-team-member-links-item" href="http://www.linkedin.com/" target="_blank"><i class="icon-linkedin"></i></a>
-												</div>
-											</div>
-										</div>
-										</div>
-									</div>
-									</div>
-									</div>
-
-									<div class="w-team-member type_small animate_afc d4">
-									<div class="w-team-member-h">
-									<div class="w-team-member-hh">
-										<div class="w-team-member-image">
-											<img src="imagenes/placeholder/500x500.gif" alt="Item picture" />
-										</div>
-										<div class="w-team-member-meta">
-										<div class="w-team-member-meta-h">
-											<h4 class="w-team-member-name">Jane Doe</h4>
-											<div class="w-team-member-role">Web Designer</div>
-											<div class="w-team-member-description">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor.</p>						
-											</div>
-											<div class="w-team-member-links">
-												<div class="w-team-member-links-list">
-													<a class="w-team-member-links-item" href="http://www.fb.com/" target="_blank"><i class="icon-facebook"></i></a>
-													<a class="w-team-member-links-item" href="http://www.linkedin.com/" target="_blank"><i class="icon-linkedin"></i></a>
-												</div>
-											</div>
-										</div>
-										</div>
-									</div>
-									</div>
-									</div>
-
-									<div class="w-team-member type_small animate_afc d5">
-									<div class="w-team-member-h">
-									<div class="w-team-member-hh">
-										<div class="w-team-member-image">
-											<img src="imagenes/placeholder/500x500.gif" alt="Item picture" />
-										</div>
-										<div class="w-team-member-meta">
-										<div class="w-team-member-meta-h">
-											<h4 class="w-team-member-name">Kate Smith</h4>
-											<div class="w-team-member-role">Designer</div>
-											<div class="w-team-member-description">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor.</p>						
-											</div>
-											<div class="w-team-member-links">
-												<div class="w-team-member-links-list">
-													<a class="w-team-member-links-item" href="http://www.fb.com/" target="_blank"><i class="icon-facebook"></i></a>
-													<a class="w-team-member-links-item" href="http://www.twitter.com/" target="_blank"><i class="icon-twitter"></i></a>
-													<a class="w-team-member-links-item" href="http://www.linkedin.com/" target="_blank"><i class="icon-linkedin"></i></a>
-												</div>
-											</div>
-										</div>
-										</div>
-									</div>
-									</div>
-									</div>
-									
-								</div>
-							</div>
-						</div>
-						
-					</div>
-				</div>
 				<div class="l-submain with_shadow">
 					<div class="l-submain-h g-html">
 					
