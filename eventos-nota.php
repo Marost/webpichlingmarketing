@@ -1,12 +1,36 @@
 <?php
+include("panel@pmarketing/conexion/conexion.php");
+include("panel@pmarketing/conexion/funciones.php");
+
 //VARIABLES
 $sc_slnota=true;
+
+//VARIABLES DE URL
+$ReqID=$_REQUEST["id"];
+$ReqURL=$_REQUEST["url"];
+
+//NOTICIA INFERIOR
+$rst_noticia=mysql_query("SELECT * FROM pmkt_evento WHERE id=$ReqID;", $conexion);
+$fila_noticia=mysql_fetch_array($rst_noticia);
+
+//VARIABLES
+$noticia_titulo=$fila_noticia["titulo"];
+$noticia_contenido=$fila_noticia["contenido"];
+$noticia_imagen=$fila_noticia["imagen"];
+$noticia_imagen_carpeta=$fila_noticia["imagen_carpeta"];
+$noticia_cliente=$fila_noticia["ev_cliente"];
+$noticia_lugar=$fila_noticia["ev_lugar"];
+$noticia_fecha=$fila_noticia["ev_fecha"];
+
+//URL
+$noticia_UrlImagen=$web."imagenes/eventos/".$noticia_imagen_carpeta."".$noticia_imagen;
+
 ?>
 <!DOCTYPE HTML>
-<html lang="en-US">
+<html lang="es-ES">
 <head>
 	<meta charset="UTF-8">
-	<title>Single Project</title>
+	<title><?php echo $noticia_titulo; ?></title>
 
 	<?php require_once("wg-script-header.php"); ?>
 	
@@ -30,7 +54,7 @@ $sc_slnota=true;
 				<div class="l-submain for_pagehead">
 					<div class="l-submain-h g-html i-cf">
 						<div class="w-pagehead">
-							<h1>XVIII Campeonato Sudamericano de Menores de Vóley Copa UAP Perú 2012</h1>
+							<h1><?php echo $noticia_titulo; ?></h1>
 						</div>
 					</div>
 				</div>
@@ -44,7 +68,7 @@ $sc_slnota=true;
 									<div class="w-gallery-main-h flexslider flex-loading">
 										<ul class="slides">
 											<li>
-												<img src="imagenes/upload/eventos-img.jpg" alt="">
+												<img src="<?php echo $noticia_UrlImagen; ?>" alt="">
 											</li>
 										</ul>
 									</div>
@@ -55,7 +79,7 @@ $sc_slnota=true;
 						<div class="g-cols">
 							<div class="two-thirds">
 								<h3>Descripcion</h3>
-								<p>Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor. Nunc volutpat odio sit amet, consectetur adipiscing elit. </p>
+								<?php echo $noticia_contenido; ?>
 								<div class="w-share">
 									<div class="w-share-h">
 										<!-- AddThis Button BEGIN -->
@@ -78,13 +102,17 @@ $sc_slnota=true;
 								
 									<div class="w-info-item">
 										<h4 class="w-info-item-title">Contratante:</h4>
-										<span class="w-info-item-content">Producción y Comercialización: Federación Peruana de Vóley</span>
-										<span class="w-info-item-content">Activación de Marca: Universidad Alas Peruanas - UAP / Unique S.A.</span>
+										<span class="w-info-item-content"><?php echo $noticia_cliente; ?></span>
 									</div>
-																		
+									
+									<div class="w-info-item">
+										<h4 class="w-info-item-title">Escenario:</h4>
+										<span class="w-info-item-content"><?php echo $noticia_lugar; ?></span>
+									</div>
+
 									<div class="w-info-item">
 										<h4 class="w-info-item-title">Fecha:</h4>
-										<span class="w-info-item-content">Noviembre, 2012</span>
+										<span class="w-info-item-content"><?php echo $noticia_fecha; ?></span>
 									</div>
 									
 								</div>
@@ -92,21 +120,7 @@ $sc_slnota=true;
 							</div>
 						</div>
 						
-						<div class="hr hr_invisible">
-						</div>
-						
-						<div class="w-testimonial">
-							<div class="w-testimonial-h">
-								<blockquote>
-									<q class="w-testimonial-text">To anybody thinking of buying this theme – buy it! The theme itself is amazing, and on top of that, the support is outstanding! I wanted some features put in, and the theme developer was more than willing to help me out!</q>
-									<div class="w-testimonial-person">
-										<i class="icon-user"></i>
-										<span class="w-testimonial-person-name">Anna Zuckerberg</span>,
-										<span class="w-testimonial-person-meta">UpSolution Themes</span>
-									</div>
-								</blockquote>
-							</div>
-						</div>
+						<div class="hr hr_invisible"></div>
 				
 					</div>
 				</div>
