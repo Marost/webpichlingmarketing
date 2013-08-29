@@ -6,42 +6,40 @@ require_once('../../js/plugins/thumbs/ThumbLib.inc.php');
 
 //DECLARACION DE VARIABLES
 $nota_id=$_REQUEST["id"];
-$nombre=$_POST["nombre"];
-$url=getUrlAmigable(eliminarTextoURL($nombre));
+$titulo=$_POST["titulo"];
+$url=getUrlAmigable(eliminarTextoURL($titulo));
 $contenido=$_POST["contenido"];
-$tags=$_POST["tags"];
+$evento_cliente=$_POST["evento_cliente"];
+$evento_fecha=$_POST["evento_fecha"];
+$evento_lugar=$_POST["evento_lugar"];
 
 //FECHA Y HORA
 $pub_fecha=$_POST["pub_fecha"];
 $pub_hora=$_POST["pub_hora"];
 $fecha_publicacion=$pub_fecha." ".$pub_hora;
 
-//TAGS
-$tags=$_POST["tags"];
-if($tags==""){ $union_tags=0; }
-elseif($tags<>""){ $union_tags=implode(",", $tags);}
-
-//PUBLICAR
-if ($_POST["publicar"]<>""){ $publicar=$_POST["publicar"]; }else{ $publicar=0; }
-
 //IMAGEN
-if($_POST['uploader_0_tmpname']<>""){
-	$imagen=$_POST["uploader_0_tmpname"];
-	$imagen_carpeta=fechaCarpeta()."/";	
+if($_POST['uploader_eventos_0_tmpname']<>""){
+	$imagen=$_POST["uploader_eventos_0_tmpname"];
+	$imagen_carpeta=fechaCarpeta()."/";
+	$thumb=PhpThumbFactory::create("../../../imagenes/eventos/".$imagen_carpeta."".$imagen."");
+	$thumb->adaptiveResize(465,465);
+	$thumb->save("../../../imagenes/eventos/".$imagen_carpeta."thumb/".$imagen."", "jpg");
 }else{
 	$imagen=$_POST["imagen"];
 	$imagen_carpeta=$_POST["imagen_carpeta"];
 }
 
-
 //INSERTANDO DATOS
-$rst_guardar=mysql_query("UPDATE ".$tabla_suf."_noticia SET url='$url', titulo='".htmlspecialchars($nombre)."', 
+$rst_guardar=mysql_query("UPDATE ".$tabla_suf."_evento SET url='$url', 
+	titulo='".htmlspecialchars($titulo)."', 
 	contenido='$contenido', 
 	imagen='$imagen', 
 	imagen_carpeta='$imagen_carpeta', 
-	fecha_publicacion='$fecha_publicacion', 
-	publicar=$publicar, 
-	tags='0,$union_tags,0' WHERE id=$nota_id;", $conexion);
+	ev_cliente='$evento_cliente', 
+	ev_lugar='$evento_lugar', 
+	ev_fecha='$evento_fecha', 
+	fecha_publicacion='$fecha_publicacion' WHERE id=$nota_id;", $conexion);
 
 if (mysql_errno()!=0){
 	echo "ERROR: <strong>".mysql_errno()."</strong> - ". mysql_error();

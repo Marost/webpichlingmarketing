@@ -315,6 +315,21 @@ $(function() {
 		]
 	});
 
+	//===== File uploader: EVENTOS =====//
+	
+	$("#uploader_eventos").pluploadQueue({
+		runtimes : 'html5,html4',
+		url : '/panel@pmarketing/php/upload_eventos.php',
+		max_file_size : '100mb',
+		chunk_size : '1mb',
+		unique_names : true,
+		dragdrop: false,
+		resize: {width: 1000, height: 500, quality: 100},
+		filters : [
+			{title : "Imagenes", extensions : "jpg"}
+		]
+	});
+
 	//===== File uploader: PDF =====//
 	
 	$("#uploader_pdf").pluploadQueue({

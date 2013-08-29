@@ -76,7 +76,7 @@ $nota_pub_hora=$nota_fecha_pub[1];
                     
                     <div class="formRow">
                         <div class="grid3"><label>Titulo:</label></div>
-                        <div class="grid9"><input type="text" name="nombre" value="<?php echo $nota_nombre; ?>" /></div>
+                        <div class="grid9"><input type="text" name="titulo" value="<?php echo $nota_nombre; ?>" /></div>
                     </div>
 
                     <div class="widget">
@@ -88,12 +88,12 @@ $nota_pub_hora=$nota_fecha_pub[1];
                         <div class="grid3"><label>Imagen:</label> </div>
                         <div class="grid9">
                             <div class="floatL">
-                                <a href="../../../imagenes/upload/<?php echo $nota_imagen_carpeta."".$nota_imagen; ?>" class="lightbox">
-                                    <img src="../../../imagenes/upload/<?php echo $nota_imagen_carpeta."".$nota_imagen; ?>" width="100" >
+                                <a href="../../../imagenes/eventos/<?php echo $nota_imagen_carpeta."".$nota_imagen; ?>" class="lightbox">
+                                    <img src="../../../imagenes/eventos/<?php echo $nota_imagen_carpeta."".$nota_imagen; ?>" width="100" >
                                 </a>
                             </div>
                             <div class="widget floarL width60 margin1020">    
-                                <div id="uploader">Tu navegador no soporta HTML5.</div>
+                                <div id="uploader_eventos">Tu navegador no soporta HTML5.</div>
                                 <input type="hidden" name="imagen" value="<?php echo $nota_imagen; ?>">
                                 <input type="hidden" name="imagen_carpeta" value="<?php echo $nota_imagen_carpeta; ?>">
                             </div>

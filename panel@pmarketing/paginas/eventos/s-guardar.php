@@ -17,14 +17,13 @@ $pub_fecha=$_POST["pub_fecha"];
 $pub_hora=$_POST["pub_hora"];
 $fecha_publicacion=$pub_fecha." ".$pub_hora;
 
-//SUBIR IMAGEN
-$imagen=$_POST["uploader_0_tmpname"];
-$imagen_carpeta=fechaCarpeta()."/";
-
-while($imagen<>""){
-	$thumb=PhpThumbFactory::create("../../../imagenes/upload/".$imagen_carpeta."".$imagen."");
+//IMAGEN
+if($_POST["uploader_eventos_0_tmpname"]<>""){
+	$imagen=$_POST["uploader_eventos_0_tmpname"];
+	$imagen_carpeta=fechaCarpeta()."/";
+	$thumb=PhpThumbFactory::create("../../../imagenes/eventos/".$imagen_carpeta."".$imagen."");
 	$thumb->adaptiveResize(465,465);
-	$thumb->save("../../../imagenes/upload/".$imagen_carpeta."thumb/".$imagen."", "jpg");
+	$thumb->save("../../../imagenes/eventos/".$imagen_carpeta."thumb/".$imagen."", "jpg");
 }
 
 //INSERTANDO DATOS

@@ -59,19 +59,19 @@ $pub_hora=date("H:i:s");
                     
                     <div class="formRow">
                         <div class="grid3"><label>Titulo:</label></div>
-                        <div class="grid9"><input type="text" name="nombre" class="validate[required]" /></div>
+                        <div class="grid9"><input type="text" name="titulo" /></div>
                     </div>
 
                     <div class="widget">
                         <div class="whead"><h6>Contenido</h6></div>
-                        <textarea class="validate[required] ckeditor" name="contenido" /></textarea>
+                        <textarea class="ckeditor" name="contenido" /></textarea>
                     </div>
 
                     <div class="formRow">
                         <div class="grid3"><label>Imagen:</label> </div>
                         <div class="grid9">
                             <div class="widget nomargin">    
-                                <div id="uploader">Tu navegador no soporta HTML5.</div>                    
+                                <div id="uploader_eventos">Tu navegador no soporta HTML5.</div>                    
                             </div>
                         </div>
                     </div>
