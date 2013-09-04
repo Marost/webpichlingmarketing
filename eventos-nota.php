@@ -25,6 +25,9 @@ $noticia_fecha=$fila_noticia["ev_fecha"];
 //URL
 $noticia_UrlImagen=$web."imagenes/eventos/".$noticia_imagen_carpeta."".$noticia_imagen;
 
+//EVENTOS
+$rst_eventos=mysql_query("SELECT * FROM pmkt_evento WHERE id<>$ReqID AND fecha_publicacion<='$fechaActual' ORDER BY rand() LIMIT 4;", $conexion);
+
 ?>
 <!DOCTYPE HTML>
 <html lang="es-ES">
@@ -128,7 +131,7 @@ $noticia_UrlImagen=$web."imagenes/eventos/".$noticia_imagen_carpeta."".$noticia_
 				<div class="l-submain with_shadow">
 					<div class="l-submain-h g-html">
 
-						<h3 style="text-align: center;">Other Projects</h3>
+						<h3 style="text-align: center;">Otros Eventos Producidos</h3>
 						
 						<div class="hr hr_invisible">
 							<span class="hr-h">
@@ -136,68 +139,37 @@ $noticia_UrlImagen=$web."imagenes/eventos/".$noticia_imagen_carpeta."".$noticia_
 							</span>
 						</div>
 					
-						<div class="w-portfolio columns_3">
+						<div class="w-portfolio columns_4">
 							<div class="w-portfolio-h">
 								<div class="w-portfolio-list">
-								<div class="w-portfolio-list-h">
+									<div class="w-portfolio-list-h">
 
-									<div class="w-portfolio-item order_1 naming webdesign">
-									<div class="w-portfolio-item-h animate_wfc">
-										<a class="w-portfolio-item-anchor" href="project.html">
-											<div class="w-portfolio-item-image">
-												<img src="imagenes/placeholder/500x500.gif" alt=""/>
-												<div class="w-portfolio-item-meta">
-													<h2 class="w-portfolio-item-title">Business Solutions</h2>
-													<span class="w-portfolio-item-text">naming / web design</span>
-												</div>
+										<?php while($fila_eventos=mysql_fetch_array($rst_eventos)){
+												$eventos_id=$fila_eventos["id"];
+												$eventos_url=$fila_eventos["url"];
+												$eventos_titulo=$fila_eventos["titulo"];
+												$eventos_imagen=$fila_eventos["imagen"];
+												$eventos_imagen_carpeta=$fila_eventos["imagen_carpeta"];
+
+												//URLS
+												$eventos_UrlWeb=$web."eventos/".$eventos_id."-".$eventos_url;
+												$eventos_UrlImagen=$web."imagenes/eventos/".$eventos_imagen_carpeta."thumb/".$eventos_imagen;
+										?>
+										<div class="w-portfolio-item order_1 naming webdesign">
+											<div class="w-portfolio-item-h animate_wfc">
+												<a class="w-portfolio-item-anchor" href="<?php echo $eventos_UrlWeb; ?>">
+													<div class="w-portfolio-item-image">
+														<img src="<?php echo $eventos_UrlImagen; ?>" alt="<?php echo $eventos_titulo; ?>"/>
+														<div class="w-portfolio-item-meta">
+															<h2 class="w-portfolio-item-title"><?php echo $eventos_titulo; ?></h2>
+														</div>
+													</div>
+												</a>
 											</div>
-										</a>
-									</div>
-									</div>
+										</div>
+										<?php } ?>
 
-									<div class="w-portfolio-item order_2 naming branding">
-									<div class="w-portfolio-item-h animate_wfc">
-										<a class="w-portfolio-item-anchor" href="project.html">
-											<div class="w-portfolio-item-image">
-												<img src="imagenes/placeholder/500x500.gif" alt=""/>
-												<div class="w-portfolio-item-meta">
-													<h2 class="w-portfolio-item-title">Custom Templates</h2>
-													<span class="w-portfolio-item-text">naming / branding</span>
-												</div>
-											</div>
-										</a>
 									</div>
-									</div>
-
-									<div class="w-portfolio-item order_3 webdesign illustration">
-									<div class="w-portfolio-item-h animate_wfc">
-										<a class="w-portfolio-item-anchor" href="project.html">
-											<div class="w-portfolio-item-image">
-												<img src="imagenes/placeholder/500x500.gif" alt=""/>
-												<div class="w-portfolio-item-meta">
-													<h2 class="w-portfolio-item-title">Website Design</h2>
-													<span class="w-portfolio-item-text">illustration / web design</span>
-												</div>
-											</div>
-										</a>
-									</div>
-									</div>
-
-									<div class="w-portfolio-item order_4 photography naming">
-									<div class="w-portfolio-item-h animate_wfc">
-										<a class="w-portfolio-item-anchor" href="project.html">
-											<div class="w-portfolio-item-image">
-												<img src="imagenes/placeholder/500x500.gif" alt=""/>
-												<div class="w-portfolio-item-meta">
-													<h2 class="w-portfolio-item-title">Old Town Street</h2>
-													<span class="w-portfolio-item-text">photography / naming</span>
-												</div>
-											</div>
-										</a>
-									</div>
-									</div>
-
-								</div>
 								</div>
 							</div>
 						</div>
