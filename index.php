@@ -8,6 +8,10 @@ $sc_slider=true;
 
 //NOTICIAS
 $rst_noticias=mysql_query("SELECT * FROM pmkt_noticia WHERE fecha_publicacion<='$fechaActual' AND publicar=1 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
+
+//EVENTOS
+$rst_eventos=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 4;", $conexion);
+
 ?>
 <!DOCTYPE HTML>
 <html lang="es-ES">
@@ -85,12 +89,45 @@ $rst_noticias=mysql_query("SELECT * FROM pmkt_noticia WHERE fecha_publicacion<='
 
 					</div>
 				</div>
+
+				<div class="l-submain type_grey">
+					<div class="l-submain-h g-html i-cf">
+						<div class="g-cols">
+							<div class="one-half animate_afl">
+								<img src="http://lorempixel.com/500/500/sports/" alt="" style="display: block; margin: 0 auto;"/>
+							</div>
+							<div class="one-half">
+								<h2 style="text-transform:uppercase;">¿Por qué es importante el Marketing Deportivo?</h2>
+								<div class="hr hr_short hr_left">
+									<span class="hr-h">
+										<span class="hr-hh"></span>
+									</span>
+								</div>
+								<p>Permite a las empresas una oportunidad &uacute;nica de comunicaci&oacute;n y fidelizaci&oacute;n:</p>
+								<ul>
+									<li>Supera las barreras culturales y del idioma.</li>
+									<li>Plataforma para la confecci&oacute;n de planes estrat&eacute;gicos.</li>
+									<li>Importante cobertura publicitaria.</li>
+									<li>Entretiene al p&uacute;blico, conexi&oacute;n con las emociones.</li>
+									<li>Mejora la recordaci&oacute;n de la marca.</li>
+									<li>Multiplica contactos con consumidores.</li>
+								</ul>
+
+								<div class="hr hr_short hr_left">
+									<span class="hr-h">
+										<span class="hr-hh"></span>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				
 				<div class="l-submain with_shadow">
 					<div class="l-submain-h g-html">
 					
-						<h1 style="text-align: center;">Perfect Template for Showing Your Products</h1>
-						<p style="text-align: center;">This is Vittoria, a modern, responsive & <strong>super flexible multipurpose</strong> theme that makes it easy to show your work!<br>Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.</p>
+						<h1 style="text-align: center;">Últimos Eventos Producidos</h1>
+						<p style="text-align: center;">En <strong>Pichling Sports Marketing</strong> desarrollamos TÚ evento</p>
 						
 						<div class="hr hr_short">
 							<span class="hr-h">
@@ -101,65 +138,34 @@ $rst_noticias=mysql_query("SELECT * FROM pmkt_noticia WHERE fecha_publicacion<='
 						<div class="w-portfolio columns_4">
 							<div class="w-portfolio-h">
 								<div class="w-portfolio-list">
-								<div class="w-portfolio-list-h">
+									<div class="w-portfolio-list-h">
 
-									<div class="w-portfolio-item order_1 naming webdesign">
-									<div class="w-portfolio-item-h animate_wfc">
-										<a class="w-portfolio-item-anchor" href="project.html">
-											<div class="w-portfolio-item-image">
-												<img src="imagenes/placeholder/500x500.gif" alt=""/>
-												<div class="w-portfolio-item-meta">
-													<h2 class="w-portfolio-item-title">Business Solutions</h2>
-													<span class="w-portfolio-item-text">naming / web design</span>
-												</div>
+										<?php while($fila_eventos=mysql_fetch_array($rst_eventos)){
+												$eventos_id=$fila_eventos["id"];
+												$eventos_url=$fila_eventos["url"];
+												$eventos_titulo=$fila_eventos["titulo"];
+												$eventos_imagen=$fila_eventos["imagen"];
+												$eventos_imagen_carpeta=$fila_eventos["imagen_carpeta"];
+
+												//URLS
+												$eventos_UrlWeb=$web."eventos/".$eventos_id."-".$eventos_url;
+												$eventos_UrlImagen=$web."imagenes/eventos/".$eventos_imagen_carpeta."thumb/".$eventos_imagen;
+										?>
+										<div class="w-portfolio-item order_1 naming webdesign">
+											<div class="w-portfolio-item-h animate_wfc">
+												<a class="w-portfolio-item-anchor" href="<?php echo $eventos_UrlWeb; ?>">
+													<div class="w-portfolio-item-image">
+														<img src="<?php echo $eventos_UrlImagen; ?>" alt="<?php echo $eventos_titulo; ?>"/>
+														<div class="w-portfolio-item-meta">
+															<h2 class="w-portfolio-item-title"><?php echo $eventos_titulo; ?></h2>
+														</div>
+													</div>
+												</a>
 											</div>
-										</a>
-									</div>
-									</div>
+										</div>
+										<?php } ?>
 
-									<div class="w-portfolio-item order_2 naming branding">
-									<div class="w-portfolio-item-h animate_wfc">
-										<a class="w-portfolio-item-anchor" href="project.html">
-											<div class="w-portfolio-item-image">
-												<img src="imagenes/placeholder/500x500.gif" alt=""/>
-												<div class="w-portfolio-item-meta">
-													<h2 class="w-portfolio-item-title">Custom Templates</h2>
-													<span class="w-portfolio-item-text">naming / branding</span>
-												</div>
-											</div>
-										</a>
 									</div>
-									</div>
-
-									<div class="w-portfolio-item order_3 webdesign illustration">
-									<div class="w-portfolio-item-h animate_wfc">
-										<a class="w-portfolio-item-anchor" href="project.html">
-											<div class="w-portfolio-item-image">
-												<img src="imagenes/placeholder/500x500.gif" alt=""/>
-												<div class="w-portfolio-item-meta">
-													<h2 class="w-portfolio-item-title">Website Design</h2>
-													<span class="w-portfolio-item-text">illustration / web design</span>
-												</div>
-											</div>
-										</a>
-									</div>
-									</div>
-
-									<div class="w-portfolio-item order_4 photography naming">
-									<div class="w-portfolio-item-h animate_wfc">
-										<a class="w-portfolio-item-anchor" href="project.html">
-											<div class="w-portfolio-item-image">
-												<img src="imagenes/placeholder/500x500.gif" alt=""/>
-												<div class="w-portfolio-item-meta">
-													<h2 class="w-portfolio-item-title">Old Town Street</h2>
-													<span class="w-portfolio-item-text">photography / naming</span>
-												</div>
-											</div>
-										</a>
-									</div>
-									</div>
-
-								</div>
 								</div>
 							</div>
 						</div>
@@ -170,160 +176,11 @@ $rst_noticias=mysql_query("SELECT * FROM pmkt_noticia WHERE fecha_publicacion<='
 							</span>
 						</div>
 						
-						<p style="text-align: center;"><a class="g-btn type_color" href="portfolio-4.html">View Full Portfolio</a></p>
+						<p style="text-align: center;"><a class="g-btn type_color" href="eventos">Eventos Producidos</a></p>
 					
 					</div>
-				</div>
-
-				<div class="l-submain type_grey">
-					<div class="l-submain-h g-html i-cf">
-						<div class="g-cols">
-							<div class="one-half animate_afl">
-								<img src="imagenes/placeholder/500x500.gif" alt="" style="display: block; margin: 0 auto;"/>
-							</div>
-							<div class="one-half">
-								<h2 style="text-transform:uppercase;">100% Responsive Layout</h2>
-								<div class="hr hr_short hr_left">
-									<span class="hr-h">
-										<span class="hr-hh"></span>
-									</span>
-								</div>
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium.Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
-								<div class="hr hr_short hr_left">
-									<span class="hr-h">
-										<span class="hr-hh"></span>
-									</span>
-								</div>
-								<p><a class="g-btn type_dark" href="features.html">Learn More</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<div class="l-submain">
-					<div class="l-submain-h g-html i-cf">
-						<div class="g-cols">
-							<div class="one-third animate_afl">
-								<h2 style="text-transform:uppercase; text-align: center;">Just Do It</h2>
-								<div class="hr hr_short">
-									<span class="hr-h">
-										<span class="hr-hh"></span>
-									</span>
-								</div>
-								<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium.Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.</p>
-								<p style="text-align: center;"><a class="g-btn type_color" href="portfolio-3.html">Learn More</a></p>
-							</div>
-							<div class="one-third animate_afb">
-								<div class="w-gallery layout_tile size_xs align_center">
-									<div class="w-gallery-h">
-										<div class="w-gallery-tnails">
-											<div class="w-gallery-tnails-h">
-											
-												<a class="w-gallery-tnail order_1" href="imagenes/placeholder/1200x800.gif">
-													<span class="w-gallery-tnail-h">
-														<img class="w-gallery-tnail-img" src="imagenes/placeholder/220x220.gif" alt="Tit 1"/>
-														<span class="w-gallery-tnail-title"><i class="icon-search"></i></span>
-													</span>
-												</a>
-
-												<a class="w-gallery-tnail order_2" href="imagenes/placeholder/600x900.gif">
-													<span class="w-gallery-tnail-h">
-														<img class="w-gallery-tnail-img" src="imagenes/placeholder/220x220.gif" alt="photo"/>
-														<span class="w-gallery-tnail-title"><i class="icon-search"></i></span>
-													</span>
-												</a>
-
-												<a class="w-gallery-tnail order_3" href="imagenes/placeholder/1200x800.gif">
-													<span class="w-gallery-tnail-h">
-														<img class="w-gallery-tnail-img" src="imagenes/placeholder/220x220.gif" alt="photo"/>
-														<span class="w-gallery-tnail-title"><i class="icon-search"></i></span>
-													</span>
-												</a>
-
-												<a class="w-gallery-tnail order_4" href="imagenes/placeholder/600x900.gif">
-													<span class="w-gallery-tnail-h">
-														<img class="w-gallery-tnail-img" src="imagenes/placeholder/220x220.gif" alt="photo"/>
-														<span class="w-gallery-tnail-title"><i class="icon-search"></i></span>
-													</span>
-												</a>
-
-												<a class="w-gallery-tnail order_5" href="imagenes/placeholder/1200x800.gif">
-													<span class="w-gallery-tnail-h">
-														<img class="w-gallery-tnail-img" src="imagenes/placeholder/220x220.gif" alt="photo"/>
-														<span class="w-gallery-tnail-title"><i class="icon-search"></i></span>
-													</span>
-												</a>
-
-												<a class="w-gallery-tnail order_6" href="imagenes/placeholder/600x900.gif">
-													<span class="w-gallery-tnail-h">
-														<img class="w-gallery-tnail-img" src="imagenes/placeholder/220x220.gif" alt="photo"/>
-														<span class="w-gallery-tnail-title"><i class="icon-search"></i></span>
-													</span>
-												</a>
-
-												<a class="w-gallery-tnail order_7" href="imagenes/placeholder/1200x800.gif">
-													<span class="w-gallery-tnail-h">
-														<img class="w-gallery-tnail-img" src="imagenes/placeholder/220x220.gif" alt="photo"/>
-														<span class="w-gallery-tnail-title"><i class="icon-search"></i></span>
-													</span>
-												</a>
-
-												<a class="w-gallery-tnail order_8" href="imagenes/placeholder/600x900.gif">
-													<span class="w-gallery-tnail-h">
-														<img class="w-gallery-tnail-img" src="imagenes/placeholder/220x220.gif" alt="photo"/>
-														<span class="w-gallery-tnail-title"><i class="icon-search"></i></span>
-													</span>
-												</a>
-
-												<a class="w-gallery-tnail order_9" href="imagenes/placeholder/1200x800.gif">
-													<span class="w-gallery-tnail-h">
-														<img class="w-gallery-tnail-img" src="imagenes/placeholder/220x220.gif" alt="photo"/>
-														<span class="w-gallery-tnail-title"><i class="icon-search"></i></span>
-													</span>
-												</a>
-
-												<a class="w-gallery-tnail order_10" href="imagenes/placeholder/600x900.gif">
-													<span class="w-gallery-tnail-h">
-														<img class="w-gallery-tnail-img" src="imagenes/placeholder/220x220.gif" alt="photo"/>
-														<span class="w-gallery-tnail-title"><i class="icon-search"></i></span>
-													</span>
-												</a>
-
-												<a class="w-gallery-tnail order_11" href="imagenes/placeholder/1200x800.gif">
-													<span class="w-gallery-tnail-h">
-														<img class="w-gallery-tnail-img" src="imagenes/placeholder/220x220.gif" alt="photo"/>
-														<span class="w-gallery-tnail-title"><i class="icon-search"></i></span>
-													</span>
-												</a>
-
-												<a class="w-gallery-tnail order_12" href="imagenes/placeholder/600x900.gif">
-													<span class="w-gallery-tnail-h">
-														<img class="w-gallery-tnail-img" src="imagenes/placeholder/220x220.gif" alt="photo"/>
-														<span class="w-gallery-tnail-title"><i class="icon-search"></i></span>
-													</span>
-												</a>
-
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="one-third animate_afr">
-								<h2>Some Features</h2>
-								<ul>
-									<li>Clean and Developer-friendly HTML5 and CSS3 code</li>
-									<li>Optional Search Field and Language Toggler</li>
-									<li><b>Fully Responsive</b> (works on all major browsers, tablets and phones)</li>
-									<li>Boxed and Wide layouts, which can be switched in a moment</li>
-									<li>9 Predefined Color Schemes and ability to easily create your own</li>
-									<li>Font Awesome Icons</li>
-									<li>Built-in Style Switcher</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				
+				</div>				
+								
 				<div class="l-submain type_background with_arrow" style="background-image: url(imagenes/slides/slide7.jpg);">
 					<div class="l-submain-h g-html">
 					
