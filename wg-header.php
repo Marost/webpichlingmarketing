@@ -1,3 +1,6 @@
+<?php
+$urlMenu=$_SERVER["REQUEST_URI"];
+?>
 <div class="l-header type_normal">
 	<div class="l-header-h">
 
@@ -14,33 +17,73 @@
 						</div>
 						<div class="w-nav-list layout_hor width_stretch level_1">
 							<div class="w-nav-list-h">
-								<div class="w-nav-item level_1 active">
+								
+								<div class="w-nav-item level_1 <?php if($urlMenu=="/"){ ?>active<?php } ?>">
 									<div class="w-nav-item-h">
 										<a href="/" class="w-nav-anchor level_1">Inicio</a>
 									</div>
 								</div>
-									<div class="w-nav-item level_1">
+								
+								<div class="w-nav-item level_1 <?php if($urlMenu=="/nosotros"){ ?>active<?php } ?>">
 									<div class="w-nav-item-h">
 										<a href="nosotros" class="w-nav-anchor level_1">Nosotros</a>
 									</div>
 								</div>
 
-									<div class="w-nav-item level_1">
+								<div class="w-nav-item level_1 <?php if($urlMenu=="/servicios"){ ?>active<?php } ?>">
 									<div class="w-nav-item-h">
 										<a href="portfolio-3.html" class="w-nav-anchor level_1">Servicios</a>
+										<div class="w-nav-list place_down show_onhover level_2">
+											<div class="w-nav-list-h">
+												<div class="w-nav-item level_2">
+													<div class="w-nav-item-h">
+														<a href="home-2.html" class="w-nav-anchor level_2">Marketing Deportivo</a>
+													</div>
+												</div>
+												<div class="w-nav-item level_2">
+													<div class="w-nav-item-h">
+														<a href="home-3.html" class="w-nav-anchor level_2">Patrocinio Deportivo</a>
+													</div>
+												</div>
+												<div class="w-nav-item level_2">
+													<div class="w-nav-item-h">
+														<a href="home-3.html" class="w-nav-anchor level_2">Eventos Deportivos</a>
+													</div>
+												</div>
+												<div class="w-nav-item level_2">
+													<div class="w-nav-item-h">
+														<a href="home-3.html" class="w-nav-anchor level_2">Estadística de Retroversión Publicitaria</a>
+													</div>
+												</div>
+												<div class="w-nav-item level_2">
+													<div class="w-nav-item-h">
+														<a href="home-3.html" class="w-nav-anchor level_2">Coaching Deportivo</a>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
-									<div class="w-nav-item level_1">
+								
+								<div class="w-nav-item level_1 <?php if($urlMenu=="/eventos"){ ?>active<?php } ?>">
 									<div class="w-nav-item-h">
 										<a href="eventos" class="w-nav-anchor level_1">Eventos</a>
 									</div>
 								</div>
-									<div class="w-nav-item level_1">
+
+								<div class="w-nav-item level_1 <?php if($urlMenu=="/galeria"){ ?>active<?php } ?>">
+									<div class="w-nav-item-h">
+										<a href="galeria" class="w-nav-anchor level_1">Galería de Fotos</a>
+									</div>
+								</div>
+								
+								<div class="w-nav-item level_1 <?php if($urlMenu=="/noticias"){ ?>active<?php } ?>">
 									<div class="w-nav-item-h">
 										<a href="noticias" class="w-nav-anchor level_1">Noticias</a>
 									</div>
 								</div>
-									<div class="w-nav-item level_1">
+								
+								<div class="w-nav-item level_1 <?php if($urlMenu=="/contacto"){ ?>active<?php } ?>">
 									<div class="w-nav-item-h">
 										<a href="contacto" class="w-nav-anchor level_1">Contacto</a>
 									</div>
