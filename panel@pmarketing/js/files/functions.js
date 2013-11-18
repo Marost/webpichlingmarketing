@@ -299,6 +299,35 @@ $(function() {
 		});
 	});
 
+	//===== File uploader: GALERIA =====//
+	
+	$("#uploader_galeria").pluploadQueue({
+		runtimes : 'html5,html4',
+		url : '/panel@pmarketing/php/upload_galeria.php',
+		max_file_size : '100mb',
+		chunk_size : '1mb',
+		unique_names : true,
+		dragdrop: false,
+		resize: {width: 1200, height: 800, quality: 60},
+		filters : [
+			{title : "Imagenes", extensions : "jpg"}
+		]
+	});
+
+	//===== File uploader: CLIENTES =====//
+	
+	$("#uploader_clientes").pluploadQueue({
+		runtimes : 'html5,html4',
+		url : '/panel@pmarketing/php/upload_clientes.php',
+		max_file_size : '100mb',
+		chunk_size : '1mb',
+		unique_names : true,
+		dragdrop: false,
+		resize: {quality: 90},
+		filters : [
+			{title : "Imagenes", extensions : "jpg"}
+		]
+	});
 
 	//===== File uploader: NOTICIAS =====//
 	
