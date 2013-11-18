@@ -19,8 +19,11 @@ $noticia_titulo=$fila_noticia["titulo"];
 $noticia_contenido=$fila_noticia["contenido"];
 $noticia_imagen=$fila_noticia["imagen"];
 $noticia_imagen_carpeta=$fila_noticia["imagen_carpeta"];
-$noticia_fechapub=$fila_noticia["fecha_publicacion"];
 $noticia_tags=$fila_noticia["tags"];
+
+$noticia_fechapub=$fila_noticia["fecha_publicacion"];
+$noticia_fechaGen=explode(" ", $noticia_fechapub);
+$noticia_fechaPub=explode("-", $noticia_fechaGen[0]);
 
 //TAGS
 $tags=explode(",", $noticia_tags);    //SEPARACION DE ARRAY CON COMAS
@@ -69,9 +72,9 @@ $noticia_WebIMG=$web."imagenes/upload/".$noticia_imagen_carpeta."".$noticia_imag
 										<div class="w-blogpost-meta">
 											<div class="w-blogpost-meta-date">
 												<i class="icon-time"></i>
-												<span class="w-blogpost-meta-date-month">March</span>
-												<span class="w-blogpost-meta-date-day">23</span>
-												<span class="w-blogpost-meta-date-year">2013</span>
+												<span class="w-blogpost-meta-date-month"><?php echo nombreMesSC($noticia_fechaPub[1]); ?></span>
+												<span class="w-blogpost-meta-date-day"><?php echo $noticia_fechaPub[2]; ?></span>
+												<span class="w-blogpost-meta-date-year"><?php echo $noticia_fechaPub[0]; ?></span>
 											</div>
 
 											<!-- AddThis Button BEGIN -->
