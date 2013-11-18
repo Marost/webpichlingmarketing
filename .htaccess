@@ -340,17 +340,21 @@ FileETag None
 </IfModule>
 
 RewriteRule ^contacto$                                    /contacto.php
-RewriteRule ^noticias$                                    /noticias.php
 RewriteRule ^nosotros$                                    /nosotros.php
-RewriteRule ^eventos$                                     /eventos.php
-RewriteRule ^galeria$                                     /galeria.php
-RewriteRule ^eventos/([0-9]*)-(.*)$                       /eventos-nota.php?id=$1&url=$2
-RewriteRule ^noticia/([0-9]*)-(.*)$                       /nota.php?id=$1&url=$2
+RewriteRule ^panel@pmarketing/$                           /panel@pmarketing/login.php
+RewriteRule ^tag/([0-9]*)-(.*)$                           /etiquetas.php?id=$1&url=$2
 RewriteRule ^seccion/([0-9]*)/(.*)$                       /categoria.php?id=$1&url=$2
 
-RewriteRule ^galeria/([0-9]*)-(.*)$                       /galeria-select.php?id=$1&url=$2
-RewriteRule ^tag/([0-9]*)-(.*)$                           /etiquetas.php?id=$1&url=$2
-RewriteRule ^panel@pmarketing/$                           /panel@pmarketing/login.php
+RewriteRule ^noticias$                                    /noticias.php
+RewriteRule ^noticia/([0-9]*)-(.*)$                       /nota.php?id=$1&url=$2
+
+RewriteRule ^eventos$                                     /eventos.php
+RewriteRule ^eventos/([0-9]*)-(.*)$                       /eventos-nota.php?id=$1&url=$2
+
+RewriteRule ^galeria$                                     /galeria.php
+RewriteRule ^galeria/([0-9]*)-(.*)$                       /galeria-seleccionada.php?id=$1&url=$2
+
+RewriteRule ^servicios/(.*)$                              /servicios.php?url=$1
 
 # ----------------------------------------------------------------------
 # Suppress or force the "www." at the beginning of URLs
