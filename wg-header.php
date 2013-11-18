@@ -1,5 +1,9 @@
 <?php
 $urlMenu=$_SERVER["REQUEST_URI"];
+
+//SERVICIOS
+$rst_servicios_menu=mysql_query("SELECT * FROM pmkt_servicios ORDER BY titulo ASC;", $conexion);
+
 ?>
 <div class="l-header type_normal">
 	<div class="l-header-h">
@@ -32,34 +36,25 @@ $urlMenu=$_SERVER["REQUEST_URI"];
 
 								<div class="w-nav-item level_1 <?php if($urlMenu=="/servicios"){ ?>active<?php } ?>">
 									<div class="w-nav-item-h">
-										<a href="portfolio-3.html" class="w-nav-anchor level_1">Servicios</a>
+										<a href="javascript:;" class="w-nav-anchor level_1">Servicios</a>
 										<div class="w-nav-list place_down show_onhover level_2">
 											<div class="w-nav-list-h">
+												
+												<?php while($fila_servicios_menu=mysql_fetch_array($rst_servicios_menu)){
+														$servicios_menu_id=$fila_servicios_menu["id"];
+														$servicios_menu_url=$fila_servicios_menu["url"];
+														$servicios_menu_titulo=$fila_servicios_menu["titulo"];
+
+														//URL
+														$servicios_menu_UrlWeb=$web."servicios/".$servicios_menu_url;
+												?>
 												<div class="w-nav-item level_2">
 													<div class="w-nav-item-h">
-														<a href="home-2.html" class="w-nav-anchor level_2">Marketing Deportivo</a>
+														<a href="<?php echo $servicios_menu_UrlWeb; ?>" class="w-nav-anchor level_2"><?php echo $servicios_menu_titulo; ?></a>
 													</div>
 												</div>
-												<div class="w-nav-item level_2">
-													<div class="w-nav-item-h">
-														<a href="home-3.html" class="w-nav-anchor level_2">Patrocinio Deportivo</a>
-													</div>
-												</div>
-												<div class="w-nav-item level_2">
-													<div class="w-nav-item-h">
-														<a href="home-3.html" class="w-nav-anchor level_2">Eventos Deportivos</a>
-													</div>
-												</div>
-												<div class="w-nav-item level_2">
-													<div class="w-nav-item-h">
-														<a href="home-3.html" class="w-nav-anchor level_2">Estadística de Retroversión Publicitaria</a>
-													</div>
-												</div>
-												<div class="w-nav-item level_2">
-													<div class="w-nav-item-h">
-														<a href="home-3.html" class="w-nav-anchor level_2">Coaching Deportivo</a>
-													</div>
-												</div>
+												<?php } ?>
+												
 											</div>
 										</div>
 									</div>
@@ -120,41 +115,6 @@ $urlMenu=$_SERVER["REQUEST_URI"];
 				<div class="fullwidthbanner-container">
 					<div class="fullwidthbanner">
 						<ul>
-							<li data-transition="fade">
-								<!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
-								<img src="imagenes/slides/slide6.jpg" alt="" />
-
-								<div class="caption lfb"
-									 data-x="340"
-									 data-y="74"
-									 data-speed="600"
-									 data-start="500"
-									 data-easing="easeOutExpo"  ><img src="imagenes/slides/man.png" alt="Image 2"></div>
-								<div class="caption fade"
-									 data-x="360"
-									 data-y="210"
-									 data-speed="600"
-									 data-start="1300"
-									 data-easing="easeOutExpo"  ><img src="imagenes/slides/page.jpg" alt="Image 2"></div>
-								<div class="caption medium_color lfr"
-									 data-x="730"
-									 data-y="200"
-									 data-speed="500"
-									 data-start="1800"
-									 data-easing="easeOutExpo"  >Powerfully Responsive</div>
-								<div class="caption medium_white lfr"
-									 data-x="730"
-									 data-y="238"
-									 data-speed="500"
-									 data-start="2000"
-									 data-easing="easeOutExpo"  >With a Modern Design</div>
-								<div class="caption medium_black lfr"
-									 data-x="730"
-									 data-y="276"
-									 data-speed="500"
-									 data-start="2200"
-									 data-easing="easeOutExpo"  >Multi-Purpose Theme</div>
-							</li>
 							<li data-transition="papercut">
 								<!-- THE MAIN IMAGE IN THE 2 SLIDE -->
 								<img src="imagenes/slides/slide3.jpg" alt="" />
@@ -164,19 +124,21 @@ $urlMenu=$_SERVER["REQUEST_URI"];
 									 data-y="130"
 									 data-speed="300"
 									 data-start="800"
-									 data-easing="easeOutExpo"  >Premium Responsive Template</div>
+									 data-easing="easeOutExpo">Eventos Deportivos</div>
 								<div class="caption medium_text lfr"
 									 data-x="420"
 									 data-y="200"
 									 data-speed="400"
 									 data-start="1000"
-									 data-easing="easeOutExpo"  >New edge of the template experience</div>
+									 data-easing="easeOutExpo">Haz que tus colaboradores se indentifiquen con tu empresa</div>
 								<div class="caption button_color lfb"
 									 data-x="420"
 									 data-y="255"
 									 data-speed="500"
 									 data-start="1200"
-									 data-easing="easeOutExpo"  ><a href="http://themeforest.net/item/vittoria-responsive-html5-template/4751524?ref=upsolution" target="_blank">Purchase Now</a></div>
+									 data-easing="easeOutExpo">
+									 	<a href="<?php echo $web."galeria" ?>" target="_blank">Mira nuestros eventos</a>
+									 	</div>
 							</li>
 							<li data-transition="random">
 								<!-- THE MAIN IMAGE IN THE 3 SLIDE -->
@@ -187,38 +149,13 @@ $urlMenu=$_SERVER["REQUEST_URI"];
 									 data-y="150"
 									 data-speed="500"
 									 data-start="800"
-									 data-easing="easeOutExpo"  >Incredibly Powerful</div>
+									 data-easing="easeOutExpo">Incredibly Powerful</div>
 								<div class="caption medium_white randomrotate"
 									 data-x="480"
 									 data-y="220"
 									 data-speed="500"
 									 data-start="1200"
-									 data-easing="easeOutExpo"  >Modern jQuery Slider Revolution</div>
-							</li>
-							<li data-transition="random">
-								<!-- THE MAIN IMAGE IN THE 4 SLIDE -->
-								<img src="imagenes/slides/slide2.jpg" alt="" />
-								
-								<div class="caption lfl"
-									 data-x="370"
-									 data-y="150"
-									 data-speed="600"
-									 data-start="600"
-									 data-easing="easeOutExpo"  ><img src="imagenes/slides/slide2_01.png" alt="Image 2"></div>
-
-								<div class="caption lfr"
-									 data-x="670"
-									 data-y="150"
-									 data-speed="600"
-									 data-start="800"
-									 data-easing="easeOutExpo"  ><img src="imagenes/slides/slide2_02.png" alt="Image 3"></div>
-
-								<div class="caption lft"
-									 data-x="490"
-									 data-y="100"
-									 data-speed="600"
-									 data-start="1400"
-									 data-easing="easeOutExpo"  ><img src="imagenes/slides/slide2_03.png" alt="Image 4"></div>
+									 data-easing="easeOutExpo">Modern jQuery Slider Revolution</div>
 							</li>
 						</ul>
 					</div>
