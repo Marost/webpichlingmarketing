@@ -64,15 +64,15 @@ $rst_galeria=mysql_query("SELECT * FROM pmkt_galeria ORDER BY fecha_publicacion 
 												$galeria_titulo=$fila_galeria["titulo"];
 
 												//SELECCIONAR IMAGEN DE GALERIA
-												$rst_slide=mysql_query("SELECT * FROM pmkt_galeria_slide WHERE noticia=$galeria_id AND id=0", $conexion);
+												$rst_slide=mysql_query("SELECT * FROM pmkt_galeria_slide WHERE noticia=$galeria_id AND orden=0", $conexion);
 												$fila_slide=mysql_fetch_array($rst_slide);
 
 												$galeria_imagen=$fila_slide["imagen"];
-												$galeria_imagen_carpeta=$fila_slide["carpeta"];
+												$galeria_imagen_carpeta=$fila_slide["imagen_carpeta"];
 
 												//URLS
 												$galeria_UrlWeb=$web."galeria/".$galeria_id."-".$galeria_url;
-												$galeria_UrlImagen=$web."imagenes/galeria/".$galeria_imagen_carpeta."thumb/".$galeria_imagen;
+												$galeria_UrlImagen=$web."imagenes/galeria/".$galeria_imagen_carpeta."thumb465/".$galeria_imagen;
 										?>
 										<div class="w-portfolio-item order_1 naming webdesign">
 											<div class="w-portfolio-item-h">
