@@ -9,7 +9,7 @@ $mensaje=$_REQUEST["msj"];
 $reqId=$_REQUEST["not"];
 
 //NOTICIA
-$rst_noticia=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE id=$reqId;", $conexion);
+$rst_noticia=mysql_query("SELECT * FROM ".$tabla_suf."_galeria WHERE id=$reqId;", $conexion);
 $fila_noticia=mysql_fetch_array($rst_noticia);
 
 //VARIABLES
@@ -72,7 +72,7 @@ function eliminarRegistro(registro, noticia) {
 <!-- Content begins -->
 <div id="content">
     <div class="contentTop">
-        <span class="pageTitle"><span class="icon-screen"></span>Galeria de fotos de Noticia</span>
+        <span class="pageTitle"><span class="icon-screen"></span>Galeria de fotos</span>
     </div>
     
     <!-- Breadcrumbs line -->
@@ -115,7 +115,7 @@ function eliminarRegistro(registro, noticia) {
                     ?>
                     <li id="listItem_<?php echo $galeria_id; ?>" class="alto">
                         <a href="javascript:;" title="">
-                            <img src="../../../imagenes/upload/<?php echo $galeria_imagen_carpeta."thumb/".$galeria_imagen; ?>" alt="" />
+                            <img src="../../../imagenes/galeria/<?php echo $galeria_imagen_carpeta."thumb140/".$galeria_imagen; ?>" alt="" width="110" height="110" />
                         </a>
                         <div class="actions">
                             <a href="f-editar.php?id=<?php echo $galeria_id; ?>&not=<?php echo $reqId; ?>" title="" class="edit">

@@ -37,7 +37,7 @@ $reqId=$_REQUEST["not"];
 <!-- Content begins -->
 <div id="content">
     <div class="contentTop">
-        <span class="pageTitle"><span class="icon-screen"></span>Galeria de fotos de Noticia</span>
+        <span class="pageTitle"><span class="icon-screen"></span>Galeria de fotos</span>
 
     </div>
     
@@ -61,7 +61,7 @@ $reqId=$_REQUEST["not"];
                         <div class="grid3"><label>Imagen:</label> </div>
                         <div class="grid9">
                             <div class="widget nomargin">    
-                                <div id="uploader">Tu navegador no soporta HTML5.</div>                    
+                                <div id="uploader_galeria">Tu navegador no soporta HTML5.</div>                    
                             </div>
                         </div>
                     </div>

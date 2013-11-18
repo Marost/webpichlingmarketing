@@ -10,15 +10,20 @@ $nombre=$_POST["nombre"];
 $noticia=$_POST["not"];
 
 //IMAGEN
-if($_POST['uploader_0_tmpname']==""){
+if($_POST['uploader_galeria_0_tmpname']==""){
 	$imagen=$_POST["imagen_actual"];
 	$carpeta=$_POST["carpeta"];
 }else{
 	$carpeta=fechaCarpeta()."/";
-	$imagen=$_POST['uploader_0_tmpname'];
-	$thumb=PhpThumbFactory::create("../../../imagenes/galeria/".$imagen_carpeta."".$imagen."");
-	$thumb->adaptiveResize(110,110);
-	$thumb->save("../../../imagenes/galeria/".$imagen_carpeta."thumb/".$imagen."", "jpg");
+	$imagen=$_POST['uploader_galeria_0_tmpname'];
+	
+	$thumb140{$cont}=PhpThumbFactory::create("../../../imagenes/galeria/".$imagen_carpeta."".$imagen."");
+	$thumb140{$cont}->adaptiveResize(140,140);
+	$thumb140{$cont}->save("../../../imagenes/galeria/".$imagen_carpeta."thumb140/".$imagen."", "jpg");
+
+	$thumb465{$cont}=PhpThumbFactory::create("../../../imagenes/galeria/".$imagen_carpeta."".$imagen."");
+	$thumb465{$cont}->adaptiveResize(465,465);
+	$thumb465{$cont}->save("../../../imagenes/galeria/".$imagen_carpeta."thumb465/".$imagen."", "jpg");
 }
 
 //INSERTANDO DATOS
