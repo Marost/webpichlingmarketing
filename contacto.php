@@ -1,4 +1,7 @@
 <?php
+include("panel@pmarketing/conexion/conexion.php");
+include("panel@pmarketing/conexion/funciones.php");
+
 //VARIABLES
 $sc_home=false;
 $sc_slider=false;
@@ -48,6 +51,8 @@ $sc_slider=false;
 					
 						<div class="w-map animate_hfc">
 							<div class="w-map-h">
+
+								<iframe src="http://mapsengine.google.com/map/u/0/embed?mid=zuFdaUvznmlA.ktfdpERTdxuc" width="100%" height="100%"></iframe>
 
 							</div>
 						</div>
@@ -135,107 +140,89 @@ $sc_slider=false;
 							
 								<h3>Póngase en contacto con nosotros</h3>
 								<p></p>
+								<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
 								<script type="text/javascript">
-									jQuery(document).ready(function(){
-										jQuery("#contacts_send").click(function(){
-											var name = jQuery('#name').val(),
-												email = jQuery('#email').val(),
-												phone = jQuery('#phone').val(),
-												message = jQuery('#message').val(),
+									var jContact = jQuery.noConflict();
+									jContact(document).ready(function(){
+										jContact("#contacts_send").click(function(){
+											var name = jContact('#name').val(),
+												email = jContact('#email').val(),
+												message = jContact('#message').val(),
 												errors = 0;
 
-											jQuery(".g-form .g-alert").css({'opacity': '0', 'display': 'none', 'height': '', 'margin': ''});
+											jContact(".g-form .g-alert").css({'opacity': '0', 'display': 'none', 'height': '', 'margin': ''});
 
 											if (name === '') {
-												if ( ! jQuery('#name_row').hasClass('check_wrong')) {
-													jQuery('#name_row').addClass('check_wrong');
+												if ( ! jContact('#name_row').hasClass('check_wrong')) {
+													jContact('#name_row').addClass('check_wrong');
 												}
-												jQuery('#name_state').html('Please, enter your Name!');
+												jContact('#name_state').html('Por favor, ingresa tu Nombre!');
 												errors++;
 											} else {
-												if (jQuery('#name_row').hasClass('check_wrong')) {
-													jQuery('#name_row').removeClass('check_wrong');
+												if (jContact('#name_row').hasClass('check_wrong')) {
+													jContact('#name_row').removeClass('check_wrong');
 												}
-												jQuery('#name_state').html('');
+												jContact('#name_state').html('');
 											}
 											if (email === '') {
-												if ( ! jQuery('#email_row').hasClass('check_wrong')) {
-													jQuery('#email_row').addClass('check_wrong');
+												if ( ! jContact('#email_row').hasClass('check_wrong')) {
+													jContact('#email_row').addClass('check_wrong');
 												}
-												jQuery('#email_state').html('Please, enter your Email!');
+												jContact('#email_state').html('Por favor, ingresa tu Email!');
 												errors++;
 											} else {
-												if (jQuery('#email_row').hasClass('check_wrong')) {
-													jQuery('#email_row').removeClass('check_wrong');
+												if (jContact('#email_row').hasClass('check_wrong')) {
+													jContact('#email_row').removeClass('check_wrong');
 												}
-												jQuery('#email_state').html('');
-											}
-											if (phone === '') {
-												if ( ! jQuery('#phone_row').hasClass('check_wrong')) {
-													jQuery('#phone_row').addClass('check_wrong');
-												}
-												jQuery('#phone_state').html('Please, enter your Phone!');
-												errors++;
-											} else {
-												if (jQuery('#phone_row').hasClass('check_wrong')) {
-													jQuery('#phone_row').removeClass('check_wrong');
-												}
-												jQuery('#phone_state').html('');
+												jContact('#email_state').html('');
 											}
 											if (message === '') {
-												if ( ! jQuery('#message_row').hasClass('check_wrong')) {
-													jQuery('#message_row').addClass('check_wrong');
+												if ( ! jContact('#message_row').hasClass('check_wrong')) {
+													jContact('#message_row').addClass('check_wrong');
 												}
-												jQuery('#message_state').html('Please, enter your Message!');
+												jContact('#message_state').html('Por favor, ingresa tu Mensaje!');
 												errors++;
 											} else {
-												if (jQuery('#message_row').hasClass('check_wrong')) {
-													jQuery('#message_row').removeClass('check_wrong');
+												if (jContact('#message_row').hasClass('check_wrong')) {
+													jContact('#message_row').removeClass('check_wrong');
 												}
-												jQuery('#message_state').html('');
+												jContact('#message_state').html('');
 											}
 
 											if (errors == 0) {
-												jQuery.post("send_contact.php", {name: name, email: email, phone: phone, message: message}, function(data) {
+												jContact.post("send_contact.php", {name: name, email: email, message: message}, function(data) {
 													if (data.success) {
 
-														jQuery('#name').val('');
-														jQuery('#email').val('');
-														jQuery('#phone').val('');
-														jQuery('#message').val('');
+														jContact('#name').val('');
+														jContact('#email').val('');
+														jContact('#message').val('');
 
-														jQuery('#contact_form_success_message').css('display', 'block').animate({opacity:1}, 300);
+														jContact('#contact_form_success_message').css('display', 'block').animate({opacity:1}, 300);
 
 
 													} else {
 														if (data.errors.name !== '' && data.errors.name !== undefined) {
-															if ( ! jQuery('#name_row').hasClass('check_wrong')) {
-																jQuery('#name_row').addClass('check_wrong');
+															if ( ! jContact('#name_row').hasClass('check_wrong')) {
+																jContact('#name_row').addClass('check_wrong');
 															}
-															jQuery('#name_state').html(data.errors.name);
+															jContact('#name_state').html(data.errors.name);
 														}
 														if (data.errors.email !== '' && data.errors.email !== undefined) {
-															if ( ! jQuery('#email_row').hasClass('check_wrong')) {
-																jQuery('#email_row').addClass('check_wrong');
+															if ( ! jContact('#email_row').hasClass('check_wrong')) {
+																jContact('#email_row').addClass('check_wrong');
 															}
-															jQuery('#email_state').html(data.errors.email);
-														}
-														if (data.errors.phone !== '' && data.errors.phone !== undefined) {
-															if ( ! jQuery('#phone_row').hasClass('check_wrong')) {
-																jQuery('#phone_row').addClass('check_wrong');
-															}
-															jQuery('#phone_state').html(data.errors.phone);
+															jContact('#email_state').html(data.errors.email);
 														}
 														if (data.errors.message !== '' && data.errors.message !== undefined) {
-															if ( ! jQuery('#message_row').hasClass('check_wrong')) {
-																jQuery('#message_row').addClass('check_wrong');
+															if ( ! jContact('#message_row').hasClass('check_wrong')) {
+																jContact('#message_row').addClass('check_wrong');
 															}
-															jQuery('#message_state').html(data.errors.message);
+															jContact('#message_state').html(data.errors.message);
 														}
 
 														if (data.errors.sending !== '' && data.errors.sending !== undefined) {
-															jQuery('#contact_form_error_message .g-alert-body p').html(data.errors.sending);
-															jQuery('#contact_form_error_message').css('display', 'block').animate({opacity:1}, 300);
+															jContact('#contact_form_error_message .g-alert-body p').html(data.errors.sending);
+															jContact('#contact_form_error_message').css('display', 'block').animate({opacity:1}, 300);
 														}
 													}
 												}, "json");
@@ -326,7 +313,7 @@ $sc_slider=false;
 
 <?php require_once("wg-script-footer.php"); ?>
 
-<!-- GMap-->
+<!-- GMap
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="js/jquery.gmap.min.js"></script>
 <script type="text/javascript">
@@ -343,7 +330,7 @@ $sc_slider=false;
 			]
 		});
 	});
-</script>
+</script>-->
 
 <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
