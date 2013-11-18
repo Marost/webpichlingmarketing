@@ -23,6 +23,13 @@ global $web_nombre;
 global $web_nosotros;
 global $fechaActual;
 
+//SOCIAL
+global $social_email;
+global $social_facebook;
+global $social_twitter;
+global $social_youtube;
+global $social_palabrasclave;
+
 //VARIABLES
 $carpeta_admin="panel@pmarketing";
 $tabla_suf="pmkt";
@@ -35,6 +42,13 @@ $fila_empresa=mysql_fetch_array($rst_empresa);
 $web=$fila_empresa["web"];
 $web_nombre=$fila_empresa["nombre"];
 $web_nosotros=$fila_empresa["nosotros"];
+
+//SOCIAL
+$social_email=$fila_empresa["social_email"];
+$social_facebook=$fila_empresa["social_facebook"];
+$social_twitter=$fila_empresa["social_twitter"];
+$social_youtube=$fila_empresa["social_youtube"];
+$social_youtube=$fila_empresa["social_youtube"];
 
 //URL DE ARCHIVOS
 $url_admin=$web."".$carpeta_admin."/";
