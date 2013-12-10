@@ -49,6 +49,7 @@ $social_facebook=$fila_empresa["social_facebook"];
 $social_twitter=$fila_empresa["social_twitter"];
 $social_youtube=$fila_empresa["social_youtube"];
 $social_youtube=$fila_empresa["social_youtube"];
+$social_palabrasclave=$fila_empresa["palabras_clave"];
 
 //URL DE ARCHIVOS
 $url_admin=$web."".$carpeta_admin."/";
