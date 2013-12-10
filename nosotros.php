@@ -10,7 +10,7 @@ $sc_home=true;
 <html lang="es-ES">
 <head>
 	<meta charset="UTF-8">
-	<title>Nosotros</title>
+	<title>Nosotros | <?php echo $web_nombre ?></title>
 
 	<?php require_once("wg-script-header.php"); ?>
 

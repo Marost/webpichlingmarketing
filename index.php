@@ -17,7 +17,7 @@ $rst_eventos=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<='$f
 <html lang="es-ES">
 <head>
 	<meta charset="UTF-8">
-	<title>Pichling Sports Marketing</title>
+	<title><?php echo $web_nombre." | ".$social_palabrasclave; ?></title>
 
 	<?php require_once("wg-script-header.php"); ?>
 

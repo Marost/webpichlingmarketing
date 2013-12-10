@@ -14,7 +14,7 @@ $rst_eventos=mysql_query("SELECT * FROM pmkt_evento ORDER BY fecha_publicacion D
 <html lang="es-ES">
 <head>
 	<meta charset="UTF-8">
-	<title>Eventos | Pichling Sports Marketing</title>
+	<title>Eventos | <?php echo $web_nombre ?></title>
 
 	<?php require_once("wg-script-header.php"); ?>
 

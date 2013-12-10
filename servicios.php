@@ -30,7 +30,7 @@ $rst_servicios=mysql_query("SELECT * FROM pmkt_servicios ORDER BY titulo ASC;", 
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
-	<title><?php echo $noticia_titulo; ?></title>
+	<title><?php echo $noticia_titulo; ?> | <?php echo $web_nombre ?></title>
 
 	<?php require_once("wg-script-header.php"); ?>
 	

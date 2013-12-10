@@ -33,7 +33,7 @@ $rst_eventos=mysql_query("SELECT * FROM pmkt_evento WHERE id<>$ReqID AND fecha_p
 <html lang="es-ES">
 <head>
 	<meta charset="UTF-8">
-	<title><?php echo $noticia_titulo; ?></title>
+	<title><?php echo $noticia_titulo; ?> | <?php echo $web_nombre ?></title>
 
 	<?php require_once("wg-script-header.php"); ?>
 	
