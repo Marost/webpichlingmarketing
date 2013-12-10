@@ -551,7 +551,7 @@ hr {
 	height: 320px;
 	width: 100%;
 	background-color: #333;
-	background-image: url(../imagenes/bg.jpg);
+	background-image: url(../imagenes/bg-2.jpg);
 	background-position: center top;
 	background-attachment: fixed;
 	z-index: -1;
@@ -1229,7 +1229,7 @@ hr {
 		
 /* w-logo */
 .w-logo {
-	margin-top: 100px;
+	margin-top: 85px;
 	}
 	.w-logo-title {
 		font: 70px/72px 'Cuprum', sans-serif;
@@ -1361,6 +1361,10 @@ hr {
 
 		
 /* g-pagination */
+.g-pagination{
+	text-align: center;
+}
+
 .g-pagination-item {
 	padding: 0;
 	font-size: 15px;
@@ -3178,4 +3182,39 @@ hr {
 	background-image: url(../imagenes/sprite@2x.png);
 	background-size: 50px 130px;
 	}
+}
+
+/* PAGINACION */
+div.outer_pagination div.pagination span.selected {
+	padding: 5px 15px !important;
+	text-shadow: 1px 1px #3d3b3b !important;
+	color: #fff !important;
+	border: 1px solid #a61c00 !important;
+	background-color: #a61c00 !important;
+}
+
+div.outer_pagination div.pagination span.selected:hover {
+	border: 1px solid #a61c00 !important;
+}
+
+div.outer_pagination div.pagination span {
+	padding: 5px 0px !important;
+	background-color: #fff !important;
+	border: none !important;
+	text-shadow: none !important;
+}
+
+div.outer_pagination div.pagination span:hover {
+	border: none !important;
+	background-color: #a61c00 !important;
+}
+
+div.outer_pagination div.pagination span a {
+	padding: 10px 15px !important;
+	color: #000 !important;
+	border: 1px solid #a61c00 !important;
+}
+
+div.outer_pagination div.pagination span a:hover {
+	color: #000 !important;
 }

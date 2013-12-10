@@ -121,6 +121,7 @@
 							}
 					.w-blog-entry-meta {
 						font-size: 0;
+						text-align: center;
 						}
 						.w-blog-entry-meta-date {
 							display: inline-block;
@@ -193,11 +194,11 @@
 	width: 30%; /* Temp */
 	}
 .w-blog.imgpos_atleft .w-blog-entry-title {
-	margin-left: 35%; /* Temp */
+	margin-left: 32%; /* Temp */
 	padding-top: 0;
 	}
 .w-blog.imgpos_atleft .w-blog-entry-body {
-	margin-left: 35%; /* Temp */
+	margin-left: 32%; /* Temp */
 	}
 
 /*
@@ -1237,7 +1238,7 @@
 			}
 			.w-logo-img {
 				display: block;
-				max-width: 100%;
+				width: 350px;
 				}
 			.w-logo-title {
 				display: none;
