@@ -115,9 +115,9 @@ $rst_servicios_menu=mysql_query("SELECT * FROM pmkt_servicios ORDER BY titulo AS
 				<div class="fullwidthbanner-container">
 					<div class="fullwidthbanner">
 						<ul>
-							<li data-transition="papercut">
+							<li data-transition="random">
 								<!-- THE MAIN IMAGE IN THE 2 SLIDE -->
-								<img src="imagenes/slides/slide3.jpg" alt="" />
+								<img src="imagenes/slides/slide7.jpg" alt="" />
 
 								<div class="caption large_text lfr"
 									 data-x="420"
@@ -137,25 +137,8 @@ $rst_servicios_menu=mysql_query("SELECT * FROM pmkt_servicios ORDER BY titulo AS
 									 data-speed="500"
 									 data-start="1200"
 									 data-easing="easeOutExpo">
-									 	<a href="<?php echo $web."galeria" ?>" target="_blank">Mira nuestros eventos</a>
+									 	<a href="<?php echo $web."eventos" ?>" target="_blank">Mira nuestros eventos</a>
 									 	</div>
-							</li>
-							<li data-transition="random">
-								<!-- THE MAIN IMAGE IN THE 3 SLIDE -->
-								<img src="imagenes/slides/slide7.jpg" alt="" />
-
-								<div class="caption large_text randomrotate"
-									 data-x="480"
-									 data-y="150"
-									 data-speed="500"
-									 data-start="800"
-									 data-easing="easeOutExpo">Incredibly Powerful</div>
-								<div class="caption medium_white randomrotate"
-									 data-x="480"
-									 data-y="220"
-									 data-speed="500"
-									 data-start="1200"
-									 data-easing="easeOutExpo">Modern jQuery Slider Revolution</div>
 							</li>
 						</ul>
 					</div>
