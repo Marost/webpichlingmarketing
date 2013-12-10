@@ -10,7 +10,7 @@ $sc_slider=false;
 <html lang="es-ES">
 <head>
 	<meta charset="UTF-8">
-	<title>Contáctenos | Pichling Sports Marketing</title>
+	<title>Contáctenos | <?php echo $web_nombre ?></title>
 
 	<?php require_once("wg-script-header.php"); ?>
 	
@@ -89,7 +89,7 @@ $sc_slider=false;
 										<div class="w-socials-list">
 
 											<div class="w-socials-item facebook">
-												<a class="w-socials-item-link" target="_blank" href="javascript:void(0);">
+												<a class="w-socials-item-link" target="_blank" href="<?php echo $social_facebook; ?>">
 													<i class="iconsocial-facebook"></i>
 												</a>
 												<div class="w-socials-item-popup">
@@ -99,7 +99,7 @@ $sc_slider=false;
 												</div>
 											</div>
 											<div class="w-socials-item twitter">
-												<a class="w-socials-item-link" target="_blank" href="javascript:void(0);">
+												<a class="w-socials-item-link" target="_blank" href="<?php echo $social_twitter; ?>">
 													<i class="iconsocial-twitter"></i>
 												</a>
 												<div class="w-socials-item-popup">
@@ -110,23 +110,12 @@ $sc_slider=false;
 											</div>
 											
 											<div class="w-socials-item youtube">
-												<a class="w-socials-item-link" target="_blank" href="javascript:void(0);">
+												<a class="w-socials-item-link" target="_blank" href="<?php echo $social_youtube; ?>">
 													<i class="iconsocial-youtube-1"></i>
 												</a>
 												<div class="w-socials-item-popup">
 													<div class="w-socials-item-popup-h">
 														<span class="w-socials-item-popup-text">YouTube</span>
-													</div>
-												</div>
-											</div>
-											
-											<div class="w-socials-item pinterest">
-												<a class="w-socials-item-link" target="_blank" href="javascript:void(0);">
-													<i class="iconsocial-pinterest"></i>
-												</a>
-												<div class="w-socials-item-popup">
-													<div class="w-socials-item-popup-h">
-														<span class="w-socials-item-popup-text">Pinterest</span>
 													</div>
 												</div>
 											</div>
@@ -312,25 +301,6 @@ $sc_slider=false;
 <!-- /FOOTER -->
 
 <?php require_once("wg-script-footer.php"); ?>
-
-<!-- GMap
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-<script type="text/javascript" src="js/jquery.gmap.min.js"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function(){
-		jQuery('.w-map-h').gMap({
-			zoom: 17,
-			markers:[
-				{
-					latitude: -12.108236566532314,
-        			longitude: -76.9694588672508,
-					html: "Av. Primavera 1796 Of. 701 - Surco",
-					popup: true
-				}
-			]
-		});
-	});
-</script>-->
 
 <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
