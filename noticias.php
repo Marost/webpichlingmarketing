@@ -6,16 +6,32 @@ include("panel@pmarketing/conexion/funciones.php");
 $sc_home=false;
 $sc_slider=false;
 
-//NOTICIA INFERIOR
-$rst_noticia=mysql_query("SELECT * FROM pmkt_noticia WHERE fecha_publicacion<='$fechaActual' AND publicar=1 ORDER BY fecha_publicacion DESC LIMIT 4;", $conexion);
+//URL
+$url_web=$web."noticias";
+
+//PAGINACION
+require("libs/pagination/class_pagination.php");
+
+//INICIO DE PAGINACION
+$page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
+$rst_noticia        = mysql_query("SELECT COUNT(*) as count FROM pmkt_noticia WHERE fecha_publicacion<='$fechaActual' AND publicar=1 ORDER BY fecha_publicacion DESC, id DESC", $conexion);
+$fila_noticia       = mysql_fetch_assoc($rst_noticia);
+$generated      = intval($fila_noticia['count']);
+$pagination     = new Pagination("4", $generated, $page, $url_web."?page", 1, 0);
+$start          = $pagination->prePagination();
+$rst_noticia        = mysql_query("SELECT * FROM pmkt_noticia WHERE fecha_publicacion<='$fechaActual' AND publicar=1 ORDER BY fecha_publicacion DESC, id DESC LIMIT $start, 4", $conexion);
+
 ?>
 <!DOCTYPE HTML>
 <html lang="es-ES">
 <head>
 	<meta charset="UTF-8">
-	<title>Noticias</title>
+	<title>Noticias | <?php echo $web_nombre ?></title>
 
 	<?php require_once("wg-script-header.php"); ?>
+
+	<!-- PAGINACION -->
+    <link rel="stylesheet" href="/libs/pagination/pagination.css" media="screen">
 
 </head>
 <body class="l-body">
@@ -51,10 +67,10 @@ $rst_noticia=mysql_query("SELECT * FROM pmkt_noticia WHERE fecha_publicacion<='$
 				
 				<div class="l-submain">
 					<div class="l-submain-h g-html i-cf">
-						<div class="l-content">
+						<div class="l-content" style="width:100%">
 						<div class="l-content-h">
 
-							<div class="w-blog date_atleft meta_all more_hidden">
+							<div class="w-blog imgpos_atleft meta_tagscomments">
 								<div class="w-blog-h">
 									<div class="w-blog-list">
 
@@ -63,36 +79,34 @@ $rst_noticia=mysql_query("SELECT * FROM pmkt_noticia WHERE fecha_publicacion<='$
 												$noticia_url=$fila_noticia["url"];
 												$noticia_titulo=$fila_noticia["titulo"];
 												$noticia_contenido=primerParrafo($fila_noticia["contenido"], 150);
+												$noticia_imagen=$fila_noticia["imagen"];
+												$noticia_imagen_carpeta=$fila_noticia["imagen_carpeta"];
+
+												//FECHA
 												$noticia_fechaGen=explode(" ", $fila_noticia["fecha_publicacion"]);
 												$noticia_fechaPub=explode("-", $noticia_fechaGen[0]);
 
 												//URLS
 												$noticia_WebURL=$web."noticia/".$noticia_id."-".$noticia_url;
+												$noticia_WebURLImg=$web."imagenes/upload/".$noticia_imagen_carpeta."".$noticia_imagen;
 										?>
-									
 										<div class="w-blog-entry">
 											<div class="w-blog-entry-h">
 												<a class="w-blog-entry-link" href="<?php echo $noticia_WebURL; ?>">
+													<span class="w-blog-entry-img animate_afc">
+														<img class="w-blog-entry-img-h" src="<?php echo $noticia_WebURLImg; ?>" alt="">
+													</span>
+
 													<h2 class="w-blog-entry-title">
 														<span class="w-blog-entry-title-h"><?php echo $noticia_titulo; ?></span>
 													</h2>
 												</a>
 												<div class="w-blog-entry-body">
-													<div class="w-blog-entry-meta">
-														<div class="w-blog-entry-meta-date">
-															<i class="icon-time"></i>
-															<span class="w-blog-entry-meta-date-month"><?php echo nombreMesCorto($noticia_fechaPub[1]); ?></span>
-															<span class="w-blog-entry-meta-date-day"><?php echo $noticia_fechaPub[2]; ?></span>
-															<span class="w-blog-entry-meta-date-year"><?php echo $noticia_fechaPub[0]; ?></span>
-														</div>
-
-													</div>
-
 													<div class="w-blog-entry-short">
 														<?php echo $noticia_contenido; ?>
 													</div>
 
-													<a class="w-blog-entry-more g-btn size_small type_color" href="blog-post.html">Leer más...</a>
+													<a class="w-blog-entry-more g-btn size_small type_color" href="<?php echo $noticia_WebURL; ?>">Seguir leyendo...</a>
 												</div>
 											</div>
 										</div>
@@ -100,17 +114,13 @@ $rst_noticia=mysql_query("SELECT * FROM pmkt_noticia WHERE fecha_publicacion<='$
 										<?php } ?>
 
 									</div>
+
 									<div class="w-blog-pagination">
 										<div class="g-pagination">
-											<a href="javascript:void(0);" class="g-pagination-item to_prev">Prev</a>
-											<a href="javascript:void(0);" class="g-pagination-item">1</a>
-											<a href="javascript:void(0);" class="g-pagination-item active">2</a>
-											<a href="javascript:void(0);" class="g-pagination-item">3</a>
-											<a href="javascript:void(0);" class="g-pagination-item">4</a>
-											<a href="javascript:void(0);" class="g-pagination-item">5</a>
-											<a href="javascript:void(0);" class="g-pagination-item to_next">Next</a>
+											<?php $pagination->pagination(); ?>
 										</div>
 									</div>
+
 								</div>
 							</div>
 					
