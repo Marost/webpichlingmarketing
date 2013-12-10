@@ -14,7 +14,7 @@ $rst_galeria=mysql_query("SELECT * FROM pmkt_galeria ORDER BY fecha_publicacion 
 <html lang="es-ES">
 <head>
 	<meta charset="UTF-8">
-	<title>Galería de Fotos | Pichling Sports Marketing</title>
+	<title>Galería de Fotos | <?php echo $web_nombre ?></title>
 
 	<?php require_once("wg-script-header.php"); ?>
 

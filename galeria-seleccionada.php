@@ -25,7 +25,7 @@ $rst_fotos=mysql_query("SELECT * FROM pmkt_galeria_slide WHERE noticia=$ReqID OR
 <html lang="es-ES">
 <head>
 	<meta charset="UTF-8">
-	<title>FOTOS: <?php echo $galeria_titulo; ?> | Pichling Sports Marketing</title>
+	<title>FOTOS: <?php echo $galeria_titulo; ?> | <?php echo $web_nombre ?></title>
 
 	<?php require_once("wg-script-header.php"); ?>
 
