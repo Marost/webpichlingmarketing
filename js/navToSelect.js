@@ -7,7 +7,7 @@
 			'list'   : 'ul', // String: css path to menu list tag
 			'item'   : 'li', // String: css path to menu list tag
 			'active' : 'active', // String: Set the "active" class
-			'header' : 'Main Navigation' // String: Specify text for "header" and show header instead of the active item
+			'header' : 'Menú principal' // String: Specify text for "header" and show header instead of the active item
 		};
 
 		options = $.extend(defaultOptions, options);
