@@ -7,18 +7,6 @@
 
 				<div class="one-third">
 					<div class="widget">
-						
-					</div>
-				</div>
-
-				<div class="one-third">
-					<div class="widget">
-						
-					</div>
-				</div>
-
-				<div class="one-third">
-					<div class="widget">
 						<div class="w-contacts">
 							<div class="w-contacts-h">
 								<h4 class="w-contacts-title">Contactos</h4>
