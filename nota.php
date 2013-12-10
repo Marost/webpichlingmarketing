@@ -37,7 +37,7 @@ $noticia_WebIMG=$web."imagenes/upload/".$noticia_imagen_carpeta."".$noticia_imag
 <html lang="es-ES">
 <head>
 	<meta charset="UTF-8">
-	<title><?php echo $noticia_titulo; ?></title>
+	<title><?php echo $noticia_titulo; ?> | <?php echo $web_nombre ?></title>
 
 	<?php require_once("wg-script-header.php"); ?>
 	
@@ -64,31 +64,24 @@ $noticia_WebIMG=$web."imagenes/upload/".$noticia_imagen_carpeta."".$noticia_imag
 						<div class="l-content-h">
 							<div class="w-blogpost meta_all with_image">
 								<div class="w-blogpost-h">
+									
+									<h1 class="w-blogpost-title"><?php echo $noticia_titulo; ?></h1>
+									
+									<div class="w-blogpost-meta">
+										<div class="w-blogpost-meta-date">
+											<i class="icon-time"></i>
+											<span class="w-blogpost-meta-date-month"><?php echo nombreMesSC($noticia_fechaPub[1]); ?></span>
+											<span class="w-blogpost-meta-date-day"><?php echo $noticia_fechaPub[2]; ?></span>
+											<span class="w-blogpost-meta-date-year"><?php echo $noticia_fechaPub[0]; ?></span>
+										</div>
+
+									</div>
+
 									<div class="w-blogpost-image">
 										<img src="<?php echo $noticia_WebIMG; ?>" alt="">
 									</div>
+									
 									<div class="w-blogpost-content">
-										<h1 class="w-blogpost-title"><?php echo $noticia_titulo; ?></h1>
-										<div class="w-blogpost-meta">
-											<div class="w-blogpost-meta-date">
-												<i class="icon-time"></i>
-												<span class="w-blogpost-meta-date-month"><?php echo nombreMesSC($noticia_fechaPub[1]); ?></span>
-												<span class="w-blogpost-meta-date-day"><?php echo $noticia_fechaPub[2]; ?></span>
-												<span class="w-blogpost-meta-date-year"><?php echo $noticia_fechaPub[0]; ?></span>
-											</div>
-
-											<!-- AddThis Button BEGIN -->
-											<div class="addthis_toolbox addthis_default_style ">
-											<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-											<a class="addthis_button_tweet"></a>
-											<a class="addthis_button_pinterest_pinit"></a>
-											<a class="addthis_counter addthis_pill_style"></a>
-											</div>
-											<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-											<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520a92604c643807"></script>
-											<!-- AddThis Button END -->
-
-										</div>
 										<div class="w-blogpost-text">
 											<?php echo $noticia_contenido; ?>
 										</div>
@@ -105,10 +98,13 @@ $noticia_WebIMG=$web."imagenes/upload/".$noticia_imagen_carpeta."".$noticia_imag
 							                        $tags_id=$fila_tags["id"];
 							                        $tags_url=$fila_tags["url"];
 							                        $tags_nombre=$fila_tags["nombre"];
+
+							                        //URL
+							                        $tags_WebURL=$web."tags/".$tags_id."-".$tags_url;
 							                        if(in_array($tags_id, $tags)){
 								                ?>
 								                <div class="w-tags-item">
-													<a class="w-tags-item-link" href="javascript:void(0);"><?php echo $tags_nombre; ?></a>
+													<a class="w-tags-item-link" href="<?php echo $tags_WebURL; ?>"><?php echo $tags_nombre; ?></a>
 													<span class="w-tags-item-separator">,</span>
 												</div>
 								                <?php }} ?>
@@ -167,6 +163,27 @@ var disqus_shortname = 'pichling';
     (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
 }());
 </script>
+
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520a92604c643807"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }, 
+    'follow' : {
+      'services' : [
+        {'service': 'facebook', 'id': 'pichlingmarketing'},
+        {'service': 'twitter', 'id': 'pichlingmkt'},
+        {'service': 'youtube', 'id': 'pichlingmarketing'}
+      ]
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
 
 </body>
 </html>
