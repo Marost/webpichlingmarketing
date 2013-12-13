@@ -117,7 +117,7 @@ $rst_servicios_menu=mysql_query("SELECT * FROM pmkt_servicios ORDER BY titulo AS
 						<ul>
 							<li data-transition="random">
 								<!-- THE MAIN IMAGE IN THE 2 SLIDE -->
-								<img src="imagenes/slides/slide7.jpg" alt="" />
+								<img src="imagenes/slides/slide6.jpg" alt="" />
 
 								<div class="caption large_text lfr"
 									 data-x="420"
