@@ -83,21 +83,6 @@ $rst_eventos=mysql_query("SELECT * FROM pmkt_evento WHERE id<>$ReqID AND fecha_p
 							<div class="two-thirds">
 								<h3>Descripcion</h3>
 								<?php echo $noticia_contenido; ?>
-								<div class="w-share">
-									<div class="w-share-h">
-										<!-- AddThis Button BEGIN -->
-										<div class="addthis_toolbox addthis_default_style ">
-										<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-										<a class="addthis_button_tweet"></a>
-										<a class="addthis_button_pinterest_pinit"></a>
-										<a class="addthis_counter addthis_pill_style"></a>
-										</div>
-										<script>var addthis_config = {"data_track_addressbar": true};</script>
-            							<script>var addthis_config = {"data_track_clickback": false};</script>
-										<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520a92604c643807"></script>
-										<!-- AddThis Button END -->
-									</div>
-								</div>
 							</div>
 							<div class="one-third">
 								<h3>Detalles</h3>
@@ -203,6 +188,27 @@ JqSlNot(document).ready(function() {
 	});
 });
 </script>
+
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520a92604c643807"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }, 
+    'follow' : {
+      'services' : [
+        {'service': 'facebook', 'id': 'pichlingmarketing'},
+        {'service': 'twitter', 'id': 'pichlingmkt'},
+        {'service': 'youtube', 'id': 'pichlingmarketing'}
+      ]
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
 
 </body>
 </html>
