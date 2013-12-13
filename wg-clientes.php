@@ -1,6 +1,8 @@
 <?php
 //CLIENTES
 $rst_clientes=mysql_query("SELECT * FROM pmkt_clientes ORDER BY titulo ASC", $conexion);
+
+if ($sc_clientes==true){
 ?>
 <div class="l-submain" style="border: none !important; box-shadow: none;">
 	<div class="l-submain-h g-html">
@@ -41,3 +43,6 @@ $rst_clientes=mysql_query("SELECT * FROM pmkt_clientes ORDER BY titulo ASC", $co
 
 	</div>
 </div>
+<?php
+}
+?>
