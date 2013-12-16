@@ -12,6 +12,9 @@ $rst_noticias=mysql_query("SELECT * FROM pmkt_noticia WHERE fecha_publicacion<='
 //EVENTOS
 $rst_eventos=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 4;", $conexion);
 
+//EVENTOS IMAGENES
+$rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 10;", $conexion);
+
 ?>
 <!DOCTYPE HTML>
 <html lang="es-ES">
@@ -39,9 +42,31 @@ $rst_eventos=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<='$f
 				<div class="l-submain type_grey">
 					<div class="l-submain-h g-html i-cf">
 						<div class="g-cols">
+
 							<div class="one-half animate_afl">
-								<img src="http://lorempixel.com/500/500/sports/" alt="" style="display: block; margin: 0 auto;"/>
+								<div class="w-gallery type_slider">
+									<div class="w-gallery-h">
+										<div class="w-gallery-main nav_show">
+											<div class="w-gallery-main-h flexslider flex-loading">
+												<ul class="slides">
+													<?php while($fila_eventos_img=mysql_fetch_array($rst_eventos_img)){
+															$eventosFT_imagen=$fila_eventos_img["imagen"];
+															$eventosFT_imagen_carpeta=$fila_eventos_img["imagen_carpeta"];
+
+															//URL
+															$eventosFT_UrlIMG=$web."imagenes/eventos/".$eventosFT_imagen_carpeta."thumb/".$eventosFT_imagen;
+													?>
+													<li>
+														<img src="<?php echo $eventosFT_UrlIMG; ?>">
+													</li>
+													<?php } ?>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
+
 							<div class="one-half">
 								<h2 style="text-transform:uppercase;">¿Por qué es importante el Marketing Deportivo?</h2>
 								<div class="hr hr_short hr_left">
