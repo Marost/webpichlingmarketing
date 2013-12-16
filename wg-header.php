@@ -120,25 +120,35 @@ $rst_servicios_menu=mysql_query("SELECT * FROM pmkt_servicios ORDER BY titulo AS
 								<img src="imagenes/slides/slide6.jpg" alt="" />
 
 								<div class="caption large_text lfr"
-									 data-x="420"
-									 data-y="130"
+									 data-x="500"
+									 data-y="90"
 									 data-speed="300"
 									 data-start="800"
-									 data-easing="easeOutExpo">Eventos Deportivos</div>
+									 data-easing="easeOutExpo">Servicios</div>
 								<div class="caption medium_text lfr"
-									 data-x="420"
-									 data-y="200"
+									 data-x="500"
+									 data-y="150"
 									 data-speed="400"
 									 data-start="1000"
-									 data-easing="easeOutExpo">Haz que tus colaboradores se indentifiquen con tu empresa</div>
-								<div class="caption button_color lfb"
-									 data-x="420"
-									 data-y="255"
+									 data-easing="easeOutExpo">- Marketing Depotivo</div>
+								<div class="caption medium_text lfr"
+									 data-x="500"
+									 data-y="200"
 									 data-speed="500"
 									 data-start="1200"
-									 data-easing="easeOutExpo">
-									 	<a href="<?php echo $web."eventos" ?>" target="_blank">Mira nuestros eventos</a>
-									 	</div>
+									 data-easing="easeOutExpo">- Eventos Deportivos</div>
+								<div class="caption medium_text lfr"
+									 data-x="500"
+									 data-y="250"
+									 data-speed="600"
+									 data-start="1400"
+									 data-easing="easeOutExpo">- Patrocinio Deportivo</div>
+								<div class="caption medium_text lfr"
+									 data-x="500"
+									 data-y="300"
+									 data-speed="700"
+									 data-start="1600"
+									 data-easing="easeOutExpo">- Coaching Deportivo</div>
 							</li>
 						</ul>
 					</div>
