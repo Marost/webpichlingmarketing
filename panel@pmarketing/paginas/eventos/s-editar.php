@@ -31,8 +31,7 @@ if($_POST['uploader_eventos_0_tmpname']<>""){
 }
 
 //INSERTANDO DATOS
-$rst_guardar=mysql_query("UPDATE ".$tabla_suf."_evento SET url='$url', 
-	titulo='".htmlspecialchars($titulo)."', 
+$rst_guardar=mysql_query("UPDATE ".$tabla_suf."_evento SET titulo='".htmlspecialchars($titulo)."', 
 	contenido='$contenido', 
 	imagen='$imagen', 
 	imagen_carpeta='$imagen_carpeta', 
