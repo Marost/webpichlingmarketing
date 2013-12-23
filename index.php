@@ -22,6 +22,44 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 	<meta charset="UTF-8">
 	<title><?php echo $web_nombre." | ".$social_palabrasclave; ?></title>
 
+	<meta name="keywords" content="<?php echo $social_palabrasclave; ?>">
+	<meta name="description" content="<?php echo $social_nosotros; ?>">
+
+	<!-- TWITTER CARD -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@pichlingmkt">
+	<meta name="twitter:creator" content="@pichlingmkt">
+	<meta name="twitter:title" content="<?php echo $web_nombre." | ".$social_palabrasclave; ?>">
+	<meta name="twitter:description" content="<?php echo $social_nosotros; ?>">
+	<meta name="twitter:image" content="<?php echo $web."imagenes/logo.png" ?>">
+	<meta name="twitter:domain" content="pichlingmarketing.com">
+	<!-- FIN TWITTER CARD -->
+
+	<!-- OPEN GRAPH -->
+	<meta property="og:type" content='website' /> 
+	<meta property="og:site_name" content='<?php echo $web_nombre; ?>' /> 
+	<meta property="og:title" content='<?php echo $web_nombre." | ".$social_palabrasclave; ?>'/> 
+	<meta property="og:description" content='<?php echo $social_nosotros; ?>'/>
+	<meta property="og:url" content='<?php echo $web; ?>' /> 
+	<meta property="og:image" content='<?php echo $web."imagenes/logo.png" ?>' />
+	<!-- FIN OPEN GRAPH -->
+
+	<!-- POPUP -->
+	<link href="libs/popup-reveal/reveal.css" rel="stylesheet" type="text/css" media="all">
+	<script src="http://code.jquery.com/jquery-1.6.min.js"></script>
+	<script src="libs/popup-reveal/jquery.reveal.js"></script>
+	<script>
+		var jPopUp = jQuery.noConflict();
+		jPopUp(document).ready(function(){
+			jPopUp("#myModal").reveal({
+			     animation: 'none',                   //fade, fadeAndPop, none
+			     animationspeed: 300,                       //how fast animtions are
+			     closeonbackgroundclick: true,              //if you click background will modal close?
+			     dismissmodalclass: 'close-reveal-modal'    //the class of a button or element that will close an open modal
+			});
+		});
+	</script>
+
 	<?php require_once("wg-script-header.php"); ?>
 
 </head>
@@ -49,17 +87,26 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 										<div class="w-gallery-main nav_show">
 											<div class="w-gallery-main-h flexslider flex-loading">
 												<ul class="slides">
-													<?php while($fila_eventos_img=mysql_fetch_array($rst_eventos_img)){
+													<?php /*while($fila_eventos_img=mysql_fetch_array($rst_eventos_img)){
 															$eventosFT_imagen=$fila_eventos_img["imagen"];
 															$eventosFT_imagen_carpeta=$fila_eventos_img["imagen_carpeta"];
 
 															//URL
 															$eventosFT_UrlIMG=$web."imagenes/eventos/".$eventosFT_imagen_carpeta."thumb/".$eventosFT_imagen;
+															*/
 													?>
 													<li>
-														<img src="<?php echo $eventosFT_UrlIMG; ?>">
+														<img src="imagenes/slides/logo-psm-slide.jpg">
 													</li>
-													<?php } ?>
+
+													<li>
+														<img src="imagenes/slides/logo-psm-slide.jpg">
+													</li>
+
+													<li>
+														<img src="imagenes/slides/logo-psm-slide.jpg">
+													</li>
+													<?php //} ?>
 												</ul>
 											</div>
 										</div>
@@ -236,6 +283,11 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 <!-- /FOOTER -->
 
 <?php require_once("wg-script-footer.php"); ?>
+
+<div id="myModal" data-reveal-id="myModal" data-animation="none" class="reveal-modal">
+	<img src="imagenes/navidad-2013.jpg" alt="">
+	<a class="close-reveal-modal">&#215;</a>
+</div>
 
 </body>
 </html>
