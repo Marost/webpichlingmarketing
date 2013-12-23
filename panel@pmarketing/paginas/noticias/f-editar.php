@@ -16,6 +16,7 @@ $nota_nombre=$fila_nota["titulo"];
 $nota_imagen=$fila_nota["imagen"];
 $nota_imagen_carpeta=$fila_nota["imagen_carpeta"];
 $nota_contenido=$fila_nota["contenido"];
+$nota_palabras_clave=$fila_nota["palabras_clave"];
 $nota_publicar=$fila_nota["publicar"];
 
 /* FECHA */
@@ -117,6 +118,11 @@ $rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre
 
                             </select>  
                         </div>             
+                    </div>
+
+                    <div class="formRow">
+                        <div class="grid3"><label>Palabras clave:</label></div>
+                        <div class="grid9"><input type="text" name="palabras_clave" value="<?php echo $nota_palabras_clave; ?>" /></div>
                     </div>
 
                     <div class="formRow">

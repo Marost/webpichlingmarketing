@@ -9,6 +9,7 @@ $nota_id=$_REQUEST["id"];
 $nombre=$_POST["nombre"];
 $url=getUrlAmigable(eliminarTextoURL($nombre));
 $contenido=$_POST["contenido"];
+$palabras_clave=$_POST["palabras_clave"];
 $tags=$_POST["tags"];
 
 //FECHA Y HORA
@@ -41,7 +42,8 @@ $rst_guardar=mysql_query("UPDATE ".$tabla_suf."_noticia SET url='$url', titulo='
 	imagen_carpeta='$imagen_carpeta', 
 	fecha_publicacion='$fecha_publicacion', 
 	publicar=$publicar, 
-	tags='0,$union_tags,0' WHERE id=$nota_id;", $conexion);
+	tags='0,$union_tags,0',
+	palabras_clave='$palabras_clave' WHERE id=$nota_id;", $conexion);
 
 if (mysql_errno()!=0){
 	echo "ERROR: <strong>".mysql_errno()."</strong> - ". mysql_error();

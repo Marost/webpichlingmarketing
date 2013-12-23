@@ -95,6 +95,11 @@ $rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre
                     </div>
 
                     <div class="formRow">
+                        <div class="grid3"><label>Palabras clave:</label></div>
+                        <div class="grid9"><input type="text" name="palabras_clave" value="" /></div>
+                    </div>
+
+                    <div class="formRow">
                         <div class="grid3"><label>Fecha de publicación:</label></div>
                         <div class="grid4"><input type="text" class="datepicker" name="pub_fecha" value="<?php echo $pub_fecha; ?>" /></div>
                     </div>
