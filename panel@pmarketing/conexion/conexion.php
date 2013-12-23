@@ -1,7 +1,6 @@
 <?php
 //CONEXION CON EL SERVIDOR
-$conexion=mysql_connect("localhost","marost2_admin","master@18073");
-mysql_select_db("marost2_pchsptmkt2012",$conexion);
+require_once("conBDFL.php");
 
 //ZONA HORARIA
 date_default_timezone_set('America/Lima');
@@ -29,6 +28,7 @@ global $social_facebook;
 global $social_twitter;
 global $social_youtube;
 global $social_palabrasclave;
+global $social_nosotros;
 
 //VARIABLES
 $carpeta_admin="panel@pmarketing";
@@ -50,6 +50,7 @@ $social_twitter=$fila_empresa["social_twitter"];
 $social_youtube=$fila_empresa["social_youtube"];
 $social_youtube=$fila_empresa["social_youtube"];
 $social_palabrasclave=$fila_empresa["palabras_clave"];
+$social_nosotros=$fila_empresa["nosotros"];
 
 //URL DE ARCHIVOS
 $url_admin=$web."".$carpeta_admin."/";
