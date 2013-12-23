@@ -19,6 +19,7 @@ $nota_facebook=$fila_nota["social_facebook"];
 $nota_twitter=$fila_nota["social_twitter"];
 $nota_youtube=$fila_nota["social_youtube"];
 $nota_palabras_clave=$fila_nota["palabras_clave"];
+$nota_nosotros=$fila_nota["nosotros"];
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -101,6 +102,11 @@ $nota_palabras_clave=$fila_nota["palabras_clave"];
                     <div class="formRow">
                         <div class="grid3"><label>Palabras clave (separar por comas):</label></div>
                         <div class="grid9"><input type="text" name="palabras-clave" value="<?php echo $nota_palabras_clave; ?>"/></div>
+                    </div>
+
+                    <div class="formRow">
+                        <div class="grid3"><label>Nosotros:</label></div>
+                        <div class="grid9"><input type="text" name="nosotros" value="<?php echo $nota_nosotros; ?>"/></div>
                     </div>
                     
                     <div class="formRow">
