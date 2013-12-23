@@ -12,6 +12,28 @@ $sc_slider=false;
 	<meta charset="UTF-8">
 	<title>Contáctenos | <?php echo $web_nombre ?></title>
 
+	<meta name="keywords" content="<?php echo $social_palabrasclave; ?>">
+	<meta name="description" content="<?php echo $social_nosotros; ?>">
+
+	<!-- TWITTER CARD -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@pichlingmkt">
+	<meta name="twitter:creator" content="@pichlingmkt">
+	<meta name="twitter:title" content="<?php echo $web_nombre." | ".$social_palabrasclave; ?>">
+	<meta name="twitter:description" content="<?php echo $social_nosotros; ?>">
+	<meta name="twitter:image" content="<?php echo $web."imagenes/logo.png" ?>">
+	<meta name="twitter:domain" content="pichlingmarketing.com">
+	<!-- FIN TWITTER CARD -->
+
+	<!-- OPEN GRAPH -->
+	<meta property="og:type" content='website' /> 
+	<meta property="og:site_name" content='<?php echo $web_nombre; ?>' /> 
+	<meta property="og:title" content='<?php echo $web_nombre." | ".$social_palabrasclave; ?>'/> 
+	<meta property="og:description" content='<?php echo $social_nosotros; ?>'/>
+	<meta property="og:url" content='<?php echo $web; ?>' /> 
+	<meta property="og:image" content='<?php echo $web."imagenes/logo.png" ?>' />
+	<!-- FIN OPEN GRAPH -->
+
 	<?php require_once("wg-script-header.php"); ?>
 	
 </head>

@@ -25,12 +25,17 @@ $noticia_fechapub=$fila_noticia["fecha_publicacion"];
 $noticia_fechaGen=explode(" ", $noticia_fechapub);
 $noticia_fechaPub=explode("-", $noticia_fechaGen[0]);
 
+//META
+$noticia_palabrasclave=$fila_noticia["palabras_clave"];
+$noticia_descripcion=soloDescripcion($fila_noticia["contenido"]);
+
 //TAGS
 $tags=explode(",", $noticia_tags);    //SEPARACION DE ARRAY CON COMAS
 $rst_tags=mysql_query("SELECT * FROM pmkt_noticia_tags ORDER BY nombre ASC;", $conexion);
 
 //URLS
 $noticia_WebIMG=$web."imagenes/upload/".$noticia_imagen_carpeta."".$noticia_imagen;
+$noticia_WebURL=$web."noticia/".$ReqID."-".$ReqURL;
 
 ?>
 <!DOCTYPE HTML>
@@ -38,6 +43,28 @@ $noticia_WebIMG=$web."imagenes/upload/".$noticia_imagen_carpeta."".$noticia_imag
 <head>
 	<meta charset="UTF-8">
 	<title><?php echo $noticia_titulo; ?> | <?php echo $web_nombre ?></title>
+
+	<meta name="keywords" content="<?php echo $noticia_palabrasclave; ?>">
+	<meta name="description" content="<?php echo $noticia_descripcion; ?>">
+
+	<!-- TWITTER CARD -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@pichlingmkt">
+	<meta name="twitter:creator" content="@pichlingmkt">
+	<meta name="twitter:title" content="<?php echo $noticia_titulo; ?> | <?php echo $web_nombre; ?>">
+	<meta name="twitter:description" content="<?php echo $noticia_descripcion; ?>">
+	<meta name="twitter:image" content="<?php echo $noticia_WebIMG; ?>">
+	<meta name="twitter:domain" content="pichlingmarketing.com">
+	<!-- FIN TWITTER CARD -->
+
+	<!-- OPEN GRAPH -->
+	<meta property="og:type" content='article' /> 
+	<meta property="og:site_name" content='<?php echo $web_nombre; ?>' /> 
+	<meta property="og:title" content='<?php echo $noticia_titulo; ?> | <?php echo $web_nombre ?>'/> 
+	<meta property="og:description" content='<?php echo $noticia_descripcion; ?>'/>
+	<meta property="og:url" content='<?php echo $noticia_WebURL; ?>' /> 
+	<meta property="og:image" content='<?php echo $noticia_WebIMG; ?>' />
+	<!-- FIN OPEN GRAPH -->
 
 	<?php require_once("wg-script-header.php"); ?>
 	

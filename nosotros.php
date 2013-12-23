@@ -14,6 +14,25 @@ $sc_home=true;
 
 	<?php require_once("wg-script-header.php"); ?>
 
+	<!-- TWITTER CARD -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@pichlingmkt">
+	<meta name="twitter:creator" content="@pichlingmkt">
+	<meta name="twitter:title" content="<?php echo $web_nombre." | ".$social_palabrasclave; ?>">
+	<meta name="twitter:description" content="<?php echo $social_nosotros; ?>">
+	<meta name="twitter:image" content="<?php echo $web."imagenes/logo.png" ?>">
+	<meta name="twitter:domain" content="pichlingmarketing.com">
+	<!-- FIN TWITTER CARD -->
+
+	<!-- OPEN GRAPH -->
+	<meta property="og:type" content='website' /> 
+	<meta property="og:site_name" content='<?php echo $web_nombre; ?>' /> 
+	<meta property="og:title" content='<?php echo $web_nombre." | ".$social_palabrasclave; ?>'/> 
+	<meta property="og:description" content='<?php echo $social_nosotros; ?>'/>
+	<meta property="og:url" content='<?php echo $web; ?>' /> 
+	<meta property="og:image" content='<?php echo $web."imagenes/logo.png" ?>' />
+	<!-- FIN OPEN GRAPH -->
+
 </head>
 <body class="l-body">
 
@@ -59,7 +78,7 @@ $sc_home=true;
 											<div class="w-timeline-section-content">
 												<div class="g-cols">
 													<div class="one-third">
-														<p>Somos una Agencia de Marketing Deportivo con años de experiencia en el mercado, gestionando negocios, patrocinios, activaciones BTL y siendo también representantes de deportistas.</p>
+														<p><?php echo $social_nosotros; ?></p>
 													</div>
 													<div class="two-thirds">
 														<img src="imagenes/oficina/oficina-interior.jpg" alt="">
