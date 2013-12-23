@@ -31,11 +31,12 @@
 <script src="js/jquery.carousello.js"></script>
 <script src="js/jquery.flexslider.js"></script>
 <script type="text/javascript">
-	jQuery(window).load(function() {
-		jQuery('.flexslider').flexslider({
+	var jSlider = jQuery.noConflict();
+	jSlider(window).load(function() {
+		jSlider('.flexslider').flexslider({
 			controlNav: false,
 			smoothHeight: true,
-			animation: "slide",
+			animation: "random",
 			directionNav: false,  
 			start: function() {
 				slider.removeClass('flex-loading');
