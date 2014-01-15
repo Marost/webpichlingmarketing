@@ -116,39 +116,13 @@ $rst_servicios_menu=mysql_query("SELECT * FROM pmkt_servicios ORDER BY titulo AS
 					<div class="fullwidthbanner">
 						<ul>
 							<li data-transition="random">
-								<!-- THE MAIN IMAGE IN THE 2 SLIDE -->
-								<img src="imagenes/slides/slide6.jpg" alt="" />
-
-								<div class="caption large_text lfr"
-									 data-x="500"
-									 data-y="90"
-									 data-speed="300"
-									 data-start="800"
-									 data-easing="easeOutExpo">Servicios</div>
-								<div class="caption medium_text lfr"
-									 data-x="500"
-									 data-y="150"
-									 data-speed="400"
-									 data-start="1000"
-									 data-easing="easeOutExpo">- Marketing Depotivo</div>
-								<div class="caption medium_text lfr"
-									 data-x="500"
-									 data-y="200"
-									 data-speed="500"
-									 data-start="1200"
-									 data-easing="easeOutExpo">- Eventos Deportivos</div>
-								<div class="caption medium_text lfr"
-									 data-x="500"
-									 data-y="250"
-									 data-speed="600"
-									 data-start="1400"
-									 data-easing="easeOutExpo">- Patrocinio Deportivo</div>
-								<div class="caption medium_text lfr"
-									 data-x="500"
-									 data-y="300"
-									 data-speed="700"
-									 data-start="1600"
-									 data-easing="easeOutExpo">- Coaching Deportivo</div>
+								<img src="imagenes/slides/slide1.jpg" alt="" />
+							</li>
+							<li data-transition="random">
+								<img src="imagenes/slides/slide2.jpg" alt="" />
+							</li>
+							<li data-transition="random">
+								<img src="imagenes/slides/slide3.jpg" alt="" />
 							</li>
 						</ul>
 					</div>

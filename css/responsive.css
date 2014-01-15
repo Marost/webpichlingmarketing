@@ -281,10 +281,11 @@ hr,
     height: 190px;
 	}
 .l-body.home .w-logo {
-    top: 110px;
+    top: 75px;
 	}
 .l-body.home .w-logo-link {
-    width: 70px;
+    width: 250px;
+    text-align: center;
 	}
 .w-intro-button {
     margin-bottom: 10px;

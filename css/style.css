@@ -582,7 +582,7 @@ hr {
 	height: 214px;
 	}
 	.l-body.home .l-subheader.at_middle {
-		height: 380px;
+		height: 595px;
 		}
 	.l-subheader.at_middle .l-subheader-h {
 		position: relative;
@@ -1254,11 +1254,16 @@ hr {
 			opacity: 0.7;
 			}
 .l-body.home .w-logo {
-	position: absolute;
-	margin: 0;
-	left: 0;
-	top: 170px;
-	z-index: 25;
+	position: relative;
+	margin: 0 auto;
+	top: 65px;
+	z-index: 1;
+	background: url(../imagenes/fondo-trans-bl.png);
+	width: 350px;
+	padding: 15px 45px;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
 	}
 
 

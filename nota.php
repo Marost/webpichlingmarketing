@@ -42,7 +42,7 @@ $noticia_WebURL=$web."noticia/".$ReqID."-".$ReqURL;
 <html lang="es-ES">
 <head>
 	<meta charset="UTF-8">
-	<title><?php echo $noticia_titulo; ?> | <?php echo $web_nombre ?></title>
+	<title><?php echo $noticia_titulo; ?></title>
 
 	<meta name="keywords" content="<?php echo $noticia_palabrasclave; ?>">
 	<meta name="description" content="<?php echo $noticia_descripcion; ?>">

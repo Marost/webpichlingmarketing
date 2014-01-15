@@ -44,7 +44,7 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 	<meta property="og:image" content='<?php echo $web."imagenes/logo.png" ?>' />
 	<!-- FIN OPEN GRAPH -->
 
-	<!-- POPUP -->
+	<!-- POPUP 
 	<link href="libs/popup-reveal/reveal.css" rel="stylesheet" type="text/css" media="all">
 	<script src="http://code.jquery.com/jquery-1.6.min.js"></script>
 	<script src="libs/popup-reveal/jquery.reveal.js"></script>
@@ -58,7 +58,7 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 			     dismissmodalclass: 'close-reveal-modal'    //the class of a button or element that will close an open modal
 			});
 		});
-	</script>
+	</script>-->
 
 	<?php require_once("wg-script-header.php"); ?>
 
@@ -100,11 +100,7 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 													</li>
 
 													<li>
-														<img src="imagenes/slides/logo-psm-slide.jpg">
-													</li>
-
-													<li>
-														<img src="imagenes/slides/logo-psm-slide.jpg">
+														<img src="imagenes/slides/edificio.jpg">
 													</li>
 													<?php //} ?>
 												</ul>
@@ -284,10 +280,12 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 
 <?php require_once("wg-script-footer.php"); ?>
 
+<!--
 <div id="myModal" data-reveal-id="myModal" data-animation="none" class="reveal-modal">
 	<img src="imagenes/navidad-2013.jpg" alt="">
 	<a class="close-reveal-modal">&#215;</a>
 </div>
+-->
 
 </body>
 </html>
