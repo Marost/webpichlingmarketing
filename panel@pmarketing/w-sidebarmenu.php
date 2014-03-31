@@ -9,6 +9,7 @@
         <li><a href="<?php echo $url_admin; ?>paginas/empresa/lista.php" title=""><span class="icos-frames"></span>Empresa</a></li>
         <li><a href="<?php echo $url_admin; ?>paginas/clientes/lista.php" title=""><span class="icos-frames"></span>Relaciones comerciales</a></li>
         <li><a href="<?php echo $url_admin; ?>paginas/eventos/lista.php" title=""><span class="icos-frames"></span>Eventos</a></li>
+        <li><a href="<?php echo $url_admin; ?>paginas/eventos-proximos/lista.php" title=""><span class="icos-frames"></span>Próximos Eventos</a></li>
         <li><a href="<?php echo $url_admin; ?>paginas/galeria/lista.php" title=""><span class="icos-frames"></span>Galería de Fotos</a></li>
         <li><a href="<?php echo $url_admin; ?>paginas/noticias/lista.php" title=""><span class="icos-frames"></span>Noticias</a></li>
         <li><a href="<?php echo $url_admin; ?>paginas/noticias-tag/lista.php" title=""><span class="icos-frames"></span>Noticias - Etiquetas</a></li>
