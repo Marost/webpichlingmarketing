@@ -352,6 +352,7 @@ RewriteRule ^tags/([0-9]*)-(.*)$                          /etiquetas.php?id=$1&u
 
 RewriteRule ^eventos$                                     /eventos.php
 RewriteRule ^eventos/([0-9]*)-(.*)$                       /eventos-nota.php?id=$1&url=$2
+RewriteRule ^proximos-eventos/([0-9]*)-(.*)$              /eventospro-nota.php?id=$1&url=$2
 
 RewriteRule ^galeria$                                     /galeria.php
 RewriteRule ^galeria/([0-9]*)-(.*)$                       /galeria-seleccionada.php?id=$1&url=$2
