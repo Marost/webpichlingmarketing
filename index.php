@@ -12,6 +12,9 @@ $rst_noticias=mysql_query("SELECT * FROM pmkt_noticia WHERE fecha_publicacion<='
 //EVENTOS
 $rst_eventos=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 4;", $conexion);
 
+//PROXIMOS EVENTOS
+$rst_proeventos=mysql_query("SELECT * FROM pmkt_evento_proximos WHERE fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 4;", $conexion);
+
 //EVENTOS IMAGENES
 $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 10;", $conexion);
 
@@ -138,6 +141,60 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 				</div>
 				
 				<div class="l-submain with_shadow">
+					
+					<div class="l-submain-h g-html">
+					
+						<h1 style="text-align: center;">Próximos Eventos</h1>
+						
+						<div class="hr hr_short">
+							<span class="hr-h">
+								<span class="hr-hh"></span>
+							</span>
+						</div>
+					
+						<div class="w-portfolio columns_4">
+							<div class="w-portfolio-h">
+								<div class="w-portfolio-list">
+									<div class="w-portfolio-list-h">
+
+										<?php while($fila_proeventos=mysql_fetch_array($rst_proeventos)){
+												$proeventos_id=$fila_proeventos["id"];
+												$proeventos_url=$fila_proeventos["url"];
+												$proeventos_titulo=$fila_proeventos["titulo"];
+												$proeventos_imagen=$fila_proeventos["imagen"];
+												$proeventos_imagen_carpeta=$fila_proeventos["imagen_carpeta"];
+
+												//URLS
+												$proeventos_UrlWeb=$web."proximos-eventos/".$proeventos_id."-".$proeventos_url;
+												$proeventos_UrlImagen=$web."imagenes/eventos/".$proeventos_imagen_carpeta."thumb/".$proeventos_imagen;
+										?>
+										<div class="w-portfolio-item order_1 naming webdesign">
+											<div class="w-portfolio-item-h animate_wfc">
+												<a class="w-portfolio-item-anchor" href="<?php echo $proeventos_UrlWeb; ?>">
+													<div class="w-portfolio-item-image">
+														<img src="<?php echo $proeventos_UrlImagen; ?>" alt="<?php echo $proeventos_titulo; ?>"/>
+														<div class="w-portfolio-item-meta">
+															<h2 class="w-portfolio-item-title"><?php echo $proeventos_titulo; ?></h2>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<?php } ?>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="hr hr_short">
+							<span class="hr-h">
+								<span class="hr-hh"></span>
+							</span>
+						</div>
+
+					</div>
+
 					<div class="l-submain-h g-html">
 					
 						<h1 style="text-align: center;">Últimos Eventos Producidos</h1>
