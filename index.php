@@ -14,6 +14,7 @@ $rst_eventos=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<='$f
 
 //PROXIMOS EVENTOS
 $rst_proeventos=mysql_query("SELECT * FROM pmkt_evento_proximos WHERE fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 4;", $conexion);
+$num_proeventos=mysql_num_rows($rst_proeventos);
 
 //EVENTOS IMAGENES
 $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 10;", $conexion);
@@ -142,6 +143,7 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 				
 				<div class="l-submain with_shadow">
 					
+					<?php if($num_proeventos>0){ ?>
 					<div class="l-submain-h g-html">
 					
 						<h1 style="text-align: center;">Próximos Eventos</h1>
@@ -194,6 +196,7 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 						</div>
 
 					</div>
+					<?php } ?>
 
 					<div class="l-submain-h g-html">
 					
