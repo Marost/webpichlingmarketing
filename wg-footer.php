@@ -16,7 +16,7 @@
 									<dt class="w-contacts-list-key for_phone">Teléfono:</dt>
 									<dd class="w-contacts-list-value">(511) 344-2459</dd>
 									<dt class="w-contacts-list-key for_email">Email:</dt>
-									<dd class="w-contacts-list-value"><a href="mailto:<?php echo $social_email; ?>">contacto@pichlingmarketing.com</a></dd>
+									<dd class="w-contacts-list-value"><a href="mailto:<?php echo $social_email; ?>">contacto@psportsm.com</a></dd>
 								</dl>
 							</div>
 						</div>

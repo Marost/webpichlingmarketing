@@ -1,24 +1,18 @@
 <?php
 include("panel@pmarketing/conexion/conexion.php");
 include("panel@pmarketing/conexion/funciones.php");
-
 //VARIABLES
 $sc_home=true;
 $sc_slider=true;
-
 //NOTICIAS
 $rst_noticias=mysql_query("SELECT * FROM pmkt_noticia WHERE fecha_publicacion<='$fechaActual' AND publicar=1 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
-
 //EVENTOS
 $rst_eventos=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 4;", $conexion);
-
 //PROXIMOS EVENTOS
 $rst_proeventos=mysql_query("SELECT * FROM pmkt_evento_proximos WHERE fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 4;", $conexion);
 $num_proeventos=mysql_num_rows($rst_proeventos);
-
 //EVENTOS IMAGENES
 $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 10;", $conexion);
-
 ?>
 <!DOCTYPE HTML>
 <html lang="es-ES">
@@ -94,7 +88,6 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 													<?php /*while($fila_eventos_img=mysql_fetch_array($rst_eventos_img)){
 															$eventosFT_imagen=$fila_eventos_img["imagen"];
 															$eventosFT_imagen_carpeta=$fila_eventos_img["imagen_carpeta"];
-
 															//URL
 															$eventosFT_UrlIMG=$web."imagenes/eventos/".$eventosFT_imagen_carpeta."thumb/".$eventosFT_imagen;
 															*/
@@ -165,7 +158,6 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 												$proeventos_titulo=$fila_proeventos["titulo"];
 												$proeventos_imagen=$fila_proeventos["imagen"];
 												$proeventos_imagen_carpeta=$fila_proeventos["imagen_carpeta"];
-
 												//URLS
 												$proeventos_UrlWeb=$web."proximos-eventos/".$proeventos_id."-".$proeventos_url;
 												$proeventos_UrlImagen=$web."imagenes/eventos/".$proeventos_imagen_carpeta."thumb/".$proeventos_imagen;
@@ -201,7 +193,7 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 					<div class="l-submain-h g-html">
 					
 						<h1 style="text-align: center;">Últimos Eventos Producidos</h1>
-						<p style="text-align: center;">En <strong>Pichling Sports Marketing</strong> desarrollamos TÚ evento</p>
+						<p style="text-align: center;">En <strong>PSM Sports Marketing</strong> desarrollamos TÚ evento</p>
 						
 						<div class="hr hr_short">
 							<span class="hr-h">
@@ -220,7 +212,6 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 												$eventos_titulo=$fila_eventos["titulo"];
 												$eventos_imagen=$fila_eventos["imagen"];
 												$eventos_imagen_carpeta=$fila_eventos["imagen_carpeta"];
-
 												//URLS
 												$eventos_UrlWeb=$web."eventos/".$eventos_id."-".$eventos_url;
 												$eventos_UrlImagen=$web."imagenes/eventos/".$eventos_imagen_carpeta."thumb/".$eventos_imagen;
@@ -272,7 +263,6 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 										$noticias_contenido=primerParrafo($fila_noticias["contenido"]);
 										$noticias_fechaGen=explode(" ", $fila_noticias["fecha_publicacion"]);
 										$noticias_fechaPub=explode("-", $noticias_fechaGen[0]);
-
 										//URL
 										$noticias_UrlWeb=$web."noticia/".$noticias_id."-".$noticias_url;
 									?>

@@ -97,9 +97,9 @@ $rst_servicios_menu=mysql_query("SELECT * FROM pmkt_servicios ORDER BY titulo AS
 				<div class="w-logo sloganat_bottom">
 					<div class="w-logo-h">
 						<a class="w-logo-link" href="/">
-							<img class="w-logo-img" src="imagenes/logo.png" alt="Pichling Sports Marketing">
+							<img class="w-logo-img" src="imagenes/logo.png" alt="PSM Sports Marketing">
 							<span class="w-logo-title">
-								<span class="w-logo-title-h">Pichling Sports Marketing</span>
+								<span class="w-logo-title-h">PSM Sports Marketing</span>
 							</span>
 						</a>
 					</div>

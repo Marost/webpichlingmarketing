@@ -97,7 +97,7 @@ $sc_slider=false;
 											<dt class="w-contacts-list-key for_phone">Teléfono:</dt>
 											<dd class="w-contacts-list-value">(511) 344-2459</dd>
 											<dt class="w-contacts-list-key for_email">Email:</dt>
-											<dd class="w-contacts-list-value"><a href="mailto:contacto@pichlingmarketing.com">contacto@pichlingmarketing.com</a></dd>
+											<dd class="w-contacts-list-value"><a href="mailto:contacto@psportsm.com">contacto@psportsm.com</a></dd>
 										</dl>
 									</div>
 								</div>
