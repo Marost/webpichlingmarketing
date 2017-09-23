@@ -1,0 +1,10 @@
+<?php
+session_start();
+$_SESSION["facebook_id"]=null;
+$_SESSION["name"]=null;
+$_SESSION["username"]=null;
+$_SESSION["email"]=null;
+$_SESSION["asistencia"]=null;
+$_SESSION["camiseta"]=null;
+session_destroy();
+header("Location:social.php");
