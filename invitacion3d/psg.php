@@ -130,7 +130,7 @@ if(isset($_POST['enviar']))
     } 
     else 
     { 
-        $sql = 'SELECT * FROM ysdt_registro'; 
+        $sql = 'SELECT * FROM pmkt_registro'; 
         $rec = mysql_query($sql); 
         $verificar_usuario = 0; 
   
@@ -149,7 +149,7 @@ if(isset($_POST['enviar']))
                 $nombre = $_POST['nombre_apellido']; 
                 $talla = $_POST['talla']; 
 				$equipo=$_POST['equipo'];
-                $sql = "INSERT INTO ysdt_registro (nombre_apellido, equipo, talla) VALUES ('$nombre', '$equipo', '$talla')"; 
+                $sql = "INSERT INTO pmkt_registro (nombre_apellido, equipo, talla) VALUES ('$nombre', '$equipo', '$talla')"; 
                 mysql_query($sql); 
 				
 				//$sel=mysql_query("SELECT email, password FROM cdsm_registro WHERE email = '$_POST[email]'");
@@ -171,7 +171,7 @@ if(isset($_POST['enviar']))
 		$nombre=$_POST['nombre_apellido'];
 		$talla=$_POST['talla'];
 		$equipo=$_POST['equipo'];
-		$query = $mysqli->query("SELECT nombre_apellido, equipo, talla FROM ysdt_registro WHERE nombre_apellido='$nombre' and equipo='$equipo'"); 
+		$query = $mysqli->query("SELECT nombre_apellido, equipo, talla FROM pmkt_registro WHERE nombre_apellido='$nombre' and equipo='$equipo'"); 
   
   		if ($query->num_row<>0){
 				$datos=$query->fetch_array(MYSQLI_ASSOC);

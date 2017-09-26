@@ -16,7 +16,7 @@
 <dd><h4>Lista de Jugadores Inscritos</h4></dd>
 <dd><img src="images/logo.jpg"/></dd>
 	<?php
-$jugadores=mysql_query("SELECT * FROM ysdt_registro order by `equipo` asc");
+$jugadores=mysql_query("SELECT * FROM pmkt_registro order by `equipo` asc");
 while($filas=mysql_fetch_array($jugadores)){
 $equipo=$filas['equipo'];
 $nombre_apellido=$filas['nombre_apellido'];
