@@ -20,7 +20,6 @@
 				if (mysql_num_rows($log)>0) {
 					$row = mysql_fetch_array($log);
 					$_SESSION["email"] = $row['email']; 
-					$_SESSION["dni"] = $row['dni']; 
 				  	echo 'Iniciando sesión para '.$_SESSION['email'].' <p>';
 					echo '<script> window.location="panel.php"; </script>';
 				}

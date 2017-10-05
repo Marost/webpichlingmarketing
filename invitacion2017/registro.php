@@ -1,7 +1,9 @@
 <?php
+session_start();
 	include("../panel@pmarketing/conexion/conexion.php");
 	include("../panel@pmarketing/conexion/funciones.php");
-?>
+
+if(isset($_SESSION['email'])) {?>
 <!DOCTYPE HTML>
 <html lang="es-ES">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -46,3 +48,8 @@ $dni=$filas['dni'];
 </table>
 </body>
 </html>
+<?php
+}else{
+	echo '<script> window.location="login.php"; </script>';
+}
+?>

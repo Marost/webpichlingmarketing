@@ -35,7 +35,7 @@ if(isset($_SESSION['email'])) {?>
 	echo '<p>Presenta esta pantalla al ingresar</p>';
 	echo '<p>'.$_SESSION["email"].'</p>';
 	echo '<p>'.$_SESSION["dni"].'</p>';
-	echo '<p><a href="salir.php"><button>Cerrar Sesión</button></a> | <a href="salir.php"><button>Actualizar Datos</button></a></p>';
+	echo '<p><a href="salir.php"><button>Cerrar Sesión</button></a> | <a href="update.php"><button>Actualizar Datos</button></a></p>';
 				}
 ?>
 </section>
