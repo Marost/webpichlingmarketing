@@ -34,8 +34,9 @@
 									<h3>Julio &amp; Luis Felipe<br/> Pichling Villegas</h3>
 
 									<a href="#" class="rm-button-open">Abrir Invitación</a>
-									<div class="rm-info">
-										<?php //require_once("registro.php"); ?>
+                                    
+                                	<div class="rm-info">
+										<p><a href="login.php"><button>Iniciar Sesión</button></a></p>
 									</div>
 
 								</div><!-- /rm-content -->
@@ -59,7 +60,7 @@
 								<div class="rm-content">
 									<h4>Invitación</h4>
 									<dl>
-                                    	<!--<dt><a href="#" class="rm-viewdetails" data-thumb="images/13.jpg">Hola!!!</a></dt>-->
+                                    	<!--<dt><a href="#" class="rm-viewdetails" data-thumb="images/13.jpg">para mostrar enlace mas bonito</a></dt>-->
 										<dt>Hola!!!</dt>
 										<dd>Te invitamos a acompañarnos a celebrar nuestro cumpleaños</dd>
 

@@ -23,7 +23,7 @@
             </span>
             <span>
             	<fieldset class="sin_borde">
-                <label for="imagen"><strong>Foto: </strong></label>
+                <label for="imagen"><strong>No olvides subir tu Foto: </strong></label>
                 <input name='uploadedfile' type='file' style="font-size:10.3px">
                 </fieldset>
             </span>
