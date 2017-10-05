@@ -21,6 +21,7 @@ if(isset($_SESSION['email'])) {?>
 		$_SESSION["dni"] = $row['dni']; 
 		$_SESSION["nombre_apellido"] = $row['nombre_apellido']; 
 		$_SESSION["equipo"] = $row['equipo']; 
+		$_SESSION["id"] = $row['id'];
 
 	echo '<p><br></p>';
 	echo '<h4>Registro Confirmado</h4>';
@@ -35,8 +36,14 @@ if(isset($_SESSION['email'])) {?>
 	echo '<p>Presenta esta pantalla al ingresar</p>';
 	echo '<p>'.$_SESSION["email"].'</p>';
 	echo '<p>'.$_SESSION["dni"].'</p>';
-	echo '<p><a href="salir.php"><button>Cerrar Sesión</button></a> | <a href="update.php"><button>Actualizar Datos</button></a></p>';
-				}
+
+	if($_SESSION["dni"] == '43747097' or $_SESSION["dni"] == '74295450' or $_SESSION["dni"] == '74295452') 
+		{ 
+		echo '<p><a href="salir.php"><button>Cerrar Sesión</button></a> | <a href="update.php"><button>Actualizar Datos</button></a> | <a href="registro.php"><button>Lista de Participantes</button></a></p>';
+		}else{
+		echo '<p><a href="salir.php"><button>Cerrar Sesión</button></a> | <a href="update.php"><button>Actualizar Datos</button></a></p>';
+		}
+	}
 ?>
 </section>
 </body>

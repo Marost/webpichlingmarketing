@@ -9,6 +9,7 @@ if(isset($_SESSION['email'])) {?>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>Invitación Julio &amp; LuisFe</title>
 <body>
+<a href="salir.php"><button>Cerrar Sesión</button></a> | <a href="panel.php"><button>Volver</button></a></p>
 <h4>Lista de Registrados<h4>
 <table>
 <tr>
