@@ -9,7 +9,8 @@ if(isset($_SESSION['email'])) {?>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>Invitación Julio &amp; LuisFe</title>
 <body>
-<a href="salir.php"><button>Cerrar Sesión</button></a> | <a href="panel.php"><button>Volver</button></a></p>
+<p><a href="salir.php"><button>Cerrar Sesión</button></a> | <a href="panel.php"><button>Volver</button></a></p>
+
 <h4>Lista de Registrados<h4>
 <table>
 <tr>
@@ -20,9 +21,10 @@ if(isset($_SESSION['email'])) {?>
 	<td><strong>Foto</strong></td>
 </tr>
 <?php
+
 /*$i=rand(0,12);
 $consultaCategoria=mysql_query("select * from sqtx_categoria order by `id` asc limit  $i , 6 ");*/
-$consultaCategoria=mysql_query("select * from pmkt_registro where id <> 0 order by `id` asc");
+$consultaCategoria=mysql_query("select * from pmkt_registro where id <> 0 and id <> 92 and id <> 93 and id <> 94 order by `id` asc");
 
 while($filas=mysql_fetch_array($consultaCategoria)){
 $id=$filas['id'];
