@@ -116,13 +116,16 @@ $rst_servicios_menu=mysql_query("SELECT * FROM pmkt_servicios ORDER BY titulo AS
 					<div class="fullwidthbanner">
 						<ul>
 							<li data-transition="random">
-								<img src="imagenes/slides/slide1.jpg" alt="" />
+								<img src="imagenes/eventos/junio2017/p1bihc9lo6ergbp31tbsr9eb6b3.JPG" alt="" />
 							</li>
 							<li data-transition="random">
-								<img src="imagenes/slides/slide2.jpg" alt="" />
+								<img src="imagenes/eventos/junio2017/p1bi79hmf9oh01cni10n91cpc1fpg3.JPG" alt="" />
 							</li>
 							<li data-transition="random">
-								<img src="imagenes/slides/slide3.jpg" alt="" />
+								<img src="imagenes/eventos/mayo2017/p1bguvpt5v12fd4bi1j43mipfe94.jpg" alt="" />
+							</li>
+							<li data-transition="random">
+								<img src="imagenes/eventos/marzo2017/p1bb4dsn3qceo9l3no5sm41dh23.JPG" alt="" />
 							</li>
 						</ul>
 					</div>
