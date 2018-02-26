@@ -1,6 +1,6 @@
 <h4>REGISTRARSE</h4>
 <dl>
-    <strong style="font-size:12px">Completa tus datos y confirma tu participación</strong>
+    <strong style="font-size:12px;">Completa tus datos y confirma tu participación</strong>
     <dd>
         <form enctype='multipart/form-data' action="" method="post" id="subscribe-form" style="display:block">
             <span>
@@ -21,13 +21,13 @@
                 <input type="text" name="DNI" id="DNI" onkeyUp="return ValNumero(this);" maxlength="8" size="30" />
                 </fieldset>
             </span>
-            <span>
+            <!--<span>
             	<fieldset class="sin_borde">
                 <label for="imagen"><strong>No olvides subir tu Foto: </strong></label>
                 <input name='uploadedfile' type='file' style="font-size:10.3px">
                 </fieldset>
             </span>
-            <!--<span>
+            <span>
                 <input type="hidden" name="equipo" value="FC Barcelona">
             </span>-->
             <span>
