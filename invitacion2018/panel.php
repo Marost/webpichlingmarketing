@@ -10,34 +10,37 @@ if(isset($_SESSION['email'])) {?>
 <link rel="shortcut icon" href="../favicon.ico"> 
 <link rel="stylesheet" type="text/css" href="css/estilo.css" />
 <link href='http://fonts.googleapis.com/css?family=Raleway:300,500|Arvo:700' rel='stylesheet' type='text/css'>
-<title>Invitación Julio &amp; LuisFe</title>
+<title>Michele & William 50 Años</title>
 <body>
 <section class="main">
 <?php
 	$log = mysql_query("SELECT * FROM pmkt_registro WHERE email='".$_SESSION['email']."'");
 	if (mysql_num_rows($log)>0) {
 		$row = mysql_fetch_array($log);
-		$_SESSION["email"] = $row['email']; 
-		$_SESSION["dni"] = $row['dni']; 
-		$_SESSION["nombre_apellido"] = $row['nombre_apellido']; 
-		$_SESSION["equipo"] = $row['equipo']; 
 		$_SESSION["id"] = $row['id'];
+		$_SESSION["nombre_apellido"] = $row['nombre_apellido'];
+		$_SESSION["email"] = $row['email'];
+		$_SESSION["foto"] = $row['foto']; 
+		$_SESSION["dni"] = $row['dni']; 
+		$_SESSION["asistencia"] = $row['asistencia']; 
 
 	echo '<p><br></p>';
 	echo '<h4>Registro Confirmado</h4>';
-	if($_SESSION["equipo"]=="")
+	if($_SESSION["foto"]=="43747097.jpg")
 	  {
-		  echo '<p><img src="uploads/'.$_SESSION["equipo"].'" title="No ingreso foto"></p>';
+		  echo '<p><img src="../invitacion2017/uploads/'.$_SESSION["foto"].'" height="200" title="No ingreso foto"></p>';
 	  }else{
-			  echo '<p><img src="uploads/'.$_SESSION["equipo"].'" height="200px" title="'.$_SESSION["nombre_apellido"].'"></p>';
+			  //echo '<p><img src="../invitacion2017/uploads/'.$_SESSION["foto"].'" height="100" title="'.$_SESSION["nombre_apellido"].'"></p>';
 		  }
 	echo '<h1>Hola '.$_SESSION["nombre_apellido"].'</h1>';
-	echo '<p>Te esperamos este viernes 06 de Octubre a partir de las 20:00 horas</p>';
-	echo '<p>Presenta esta pantalla al ingresar</p>';
-	echo '<p>'.$_SESSION["email"].'</p>';
-	echo '<p>'.$_SESSION["dni"].'</p>';
+	echo '<p>Te esperamos este Sábado 05 de Mayo a partir de las 16:00 horas</p>';
+	echo '<p>Tus datos ingresados son:</p>';
+	//echo '<p>Presenta esta pantalla al ingresar</p>';
+	echo '<p><strong>Email: </strong>'.$_SESSION["email"].'</p>';
+	echo '<p><strong>DNI: </strong>'.$_SESSION["dni"].'</p>';
+	echo '<p><strong>Asistirás: </strong>'.$_SESSION["asistencia"].'</p>';
 
-	if($_SESSION["dni"] == '43747097' or $_SESSION["dni"] == '74295450' or $_SESSION["dni"] == '74295452' or $_SESSION["dni"] == '07852811') 
+	if($_SESSION["dni"] == '43747097' or $_SESSION["dni"] == '74295450' or $_SESSION["dni"] == '74295452' or $_SESSION["dni"] == '07748152') 
 		{ 
 		echo '<p><a href="salir.php"><button>Cerrar Sesión</button></a> | <a href="update.php"><button>Actualizar Datos</button></a> | <a href="registro.php"><button>Lista de Participantes</button></a> | <a href="buscador.php"><button>Buscar Registro</button></a></p>';
 		}else{

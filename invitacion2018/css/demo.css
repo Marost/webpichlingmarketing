@@ -63,7 +63,7 @@ strong {
     font-weight: 500;
     margin: 0;
     padding: 15px 30px 10px;
-    color: #f0f0f0;
+    color: #000040;
     width: 75%;
     margin: 0 auto;
 }
@@ -73,7 +73,7 @@ strong {
 }
 
 .container > header h2 a:hover {
-    color: #e6b741;
+    color: #000040;
 }
 
 /* Header Style */
@@ -124,7 +124,7 @@ strong {
 
 .support-note span,
 .demo-note {
-    color: #e07870;
+    color: #000040;
     font-size: 16px;
     display: none;
     font-weight: 500;

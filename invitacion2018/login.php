@@ -14,8 +14,8 @@
 <link rel="shortcut icon" href="../favicon.ico"> 
 <link rel="stylesheet" type="text/css" href="css/estilo.css" />
 <link href='http://fonts.googleapis.com/css?family=Raleway:300,500|Arvo:700' rel='stylesheet' type='text/css'>
-<title>Invitación Julio &amp; LuisFe</title>
-	<meta charset="utf-8">
+<title>Michele & William 50 Años</title>
+<meta charset="utf-8">
 </head>
 <body>
 <section class="main">
@@ -25,13 +25,13 @@
     	<span>
             <fieldset class="sin_borde">
             <label for="email">Email: </label><br>
-            <input type="email" class="form-control" name="email" id="email" size="50" autocomplete="off" required><br>
+            <input type="email" class="form-control" name="email" id="email" size="50" required><br>
             </fieldset>
         </span>
         <span>
             <fieldset class="sin_borde">
             <label for="dni">DNI: </label><br>
-        	<input type="text" class="form-control" name="dni" id="dni" size="50" onkeyUp="return ValNumero(this);" maxlength="8" autocomplete="off" required><br>
+        	<input type="text" class="form-control" name="dni" id="dni" size="50" maxlength="8" required><br>
             </fieldset>
         </span>
         <span>
@@ -40,6 +40,7 @@
         	</fieldset>
         </span>
     </form>
+    <p><a href="index.php"><button>Regresar</button></a></p>
 </section>
 </body>
 </html>

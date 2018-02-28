@@ -23,7 +23,7 @@
 	-o-perspective: 1600px;
 	-ms-perspective: 1600px;
 	perspective: 1600px;
-	color: #2a323f;
+	color: #000040;
 }
 
 .rm-wrapper,
@@ -170,7 +170,7 @@ a.rm-button-open,
 	font-size: 13px;
 	margin: 40px 0;
 	padding: 20px 40px;
-	color: #323b4c;
+	color: #000040;
 	font-weight: 500;
 	border-top: 4px double #323b4c;
 	text-transform: uppercase;
@@ -182,7 +182,7 @@ a.rm-button-open,
 	margin: 0 0 20px 0;
 	font-size: 16px;
 	padding-bottom: 10px;
-	color: #323b4c;
+	color: #000040;
 	border-bottom: 4px double #323b4c;
 	text-shadow: 1px 1px 0 #fff, 2px 2px 0 #e6b741;
 	letter-spacing: 2px;
@@ -193,7 +193,7 @@ a.rm-button-open,
 }
 
 a.rm-button-open {
-	color: #323b4c;	
+	color: #000040;	
 	font-size: 16px;
 	line-height: 45px;
 	margin: auto;
@@ -202,7 +202,7 @@ a.rm-button-open {
 }
 
 a.rm-button-open:hover {
-	color: #000066;
+	color: #000040;
 }
 
 .rm-info p {
@@ -281,7 +281,7 @@ a.rm-viewdetails:before{
 .rm-modal h5 {
 	margin: 0;
 	font-size: 20px;
-	text-shadow: 1px 1px 0 #fff, 2px 2px 0 #000066;
+	text-shadow: 1px 1px 0 #fff, 2px 2px 0 #000040;
 }
 
 .rm-modal .rm-thumb {
@@ -306,7 +306,7 @@ a.rm-viewdetails:before{
 
 a.rm-viewdetails,
 .rm-modal a {
-	color: #000066;
+	color: #000040;
 	font-weight: 500;
 }
 
@@ -321,7 +321,7 @@ a.rm-viewdetails:hover,
 }
 
 .rm-close {
-	background: #000066;
+	background: #000040;
 	text-transform: uppercase;
 	display: block;
 	position: absolute;

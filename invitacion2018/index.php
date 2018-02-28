@@ -33,10 +33,6 @@
 									<img src="images/texto_intro.png" width="200px">
 
 									<a href="#" class="rm-button-open">Abrir Invitación</a>
-                                    
-                                	<div class="rm-info">
-										<p><a href="login.php"><button>Iniciar Sesión</button></a></p>
-									</div>
 
 								</div><!-- /rm-content -->
 							</div><!-- /rm-front -->
@@ -72,10 +68,8 @@
 										<dt>Dresscode</dt>
 										<dd><strong>Fiesta de Blanco y Negro</strong></dd>
 									</dl>-->
-                                    <h4>Invitación</h4>
-                                    <dl>
-                                        <dt><img src="images/texto_invitacion.png" width="270px"></dt>
-                                    </dl>
+                                    <p style="font-size:24px; font-family:'Comic Sans MS', cursive; font-weight:bold;">NACIDOS EN 1968</p>
+                                    <dt><img src="images/texto_invitacion.png" width="260px"></dt>
 								</div><!-- /rm-content -->
 								<div class="rm-overlay"></div>
 							</div><!-- /rm-inner -->
@@ -92,6 +86,13 @@
 								<div class="rm-content">
                                     <?php require_once("caja-inscripcion.php"); ?>
 								</div><!-- /rm-content -->
+                                <div class="rm-info">
+                                	<strong style="font-size:12px;">Inicie Sesión para modificar sus datos</strong>
+                                    <p><a href="login.php"><button>Iniciar Sesión</button></a></p>
+                                </div>
+                                <dl>
+                                    <dt><img src="images/isotipo_negro.png" width="270px"></dt>
+                                </dl>
 							</div><!-- /rm-back -->
 
 						</div><!-- /rm-right -->

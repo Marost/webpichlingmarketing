@@ -31,13 +31,13 @@ if($_POST){
 		 $registros = '<p>HEMOS ENCONTRADO ' . mysql_num_rows($resultado) . ' registros </p>';
 	     // Se almacenan las cadenas de resultado
 		 while($fila = mysql_fetch_assoc($resultado)){ 
-		 	$imagen .= $fila['equipo'] ;
-		 	$texto.= '<img src="uploads/'.$imagen.'" height="400"><br />';
-			$texto .= $fila['nombre_apellido'] . '<br />';
-              $texto .= $fila['dni'] . '<br />';
-			  $texto .= $fila['email'] . '<br />';
-			  
-			 }
+			$imagen .= $fila['foto'] ;
+			$texto  .= '<img src="uploads/'.$imagen.'" height="400"><br />';
+			$texto  .= $fila['nombre_apellido'] . '<br />';
+			$texto  .= $fila['dni'] . '<br />';
+			$texto  .= $fila['email'] . '<br />';
+			$texto  .= $fila['asistencia'];			  
+			}
 	  
 	  }else{
 			   $texto = "NO HAY RESULTADOS EN LA BBDD";	
@@ -51,12 +51,13 @@ if($_POST){
 <html lang="es-ES">
 <head> 
 <meta charset='utf-8'>
+<title>Michele & William 50 Años</title>
 <head> 
 <body>
-<!--<p><a href="salir.php"><button>Cerrar Sesión</button></a> | <a href="panel.php"><button>Volver</button></a></p>-->
+<p><a href="salir.php"><button>Cerrar Sesión</button></a> | <a href="panel.php"><button>Volver</button></a></p>
 
 <form id="buscador" name="buscador" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>"> 
-    <input id="buscar" name="buscar" type="search" placeholder="Buscar aquí..." autofocus size="50">
+    <input id="buscar" name="buscar" type="search" placeholder="Buscar aquí..." autofocus size="50" maxlength="8">
     <input type="submit" name="buscador" class="boton peque aceptar" value="buscar">
 </form>
 <?php 

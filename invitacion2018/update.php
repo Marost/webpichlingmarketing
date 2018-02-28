@@ -10,18 +10,19 @@ if(isset($_SESSION['email'])) {?>
 <link rel="shortcut icon" href="../favicon.ico"> 
 <link rel="stylesheet" type="text/css" href="css/estilo.css" />
 <link href='http://fonts.googleapis.com/css?family=Raleway:300,500|Arvo:700' rel='stylesheet' type='text/css'>
-<title>Invitación Julio &amp; LuisFe</title>
+<title>Michele & William 50 Años</title>
 <body>
 <section class="main">
 <?php
 	$log = mysql_query("SELECT * FROM pmkt_registro WHERE email='".$_SESSION['email']."'");
 	if (mysql_num_rows($log)>0) {
 		$row = mysql_fetch_array($log);
-		$_SESSION["email"] = $row['email']; 
-		$_SESSION["dni"] = $row['dni']; 
-		$_SESSION["nombre_apellido"] = $row['nombre_apellido']; 
-		$_SESSION["equipo"] = $row['equipo']; 
-		$_SESSION["id"] = $row['id'];
+		$id=$filas['id'];
+		$nombre_apellido=$filas['nombre_apellido'];
+		$email=$filas['email'];
+		$foto=$filas['foto'];
+		$dni=$filas['dni'];
+		$asistencia=$filas['asistencia'];
 		
 	echo '<p><br></p>';
 	echo '<h4>Actualizar Datos</h4>';
@@ -44,21 +45,28 @@ if(isset($_SESSION['email'])) {?>
             <span>
                 <fieldset class="sin_borde">
                 <label for="DNI">DNI: </label><br>
-                <input type="text" name="dni" id="dni" onkeyUp="return ValNumero(this);" maxlength="8" size="50" value="<? echo $_SESSION["dni"];?>" />
+                <input type="text" name="dni" id="dni" maxlength="8" size="50" value="<? echo $_SESSION["dni"];?>" />
                 </fieldset>
             </span>
-            <span>
+            <!--<span>
             	<fieldset class="sin_borde">
                 <?php
-					if($_SESSION["equipo"]=="")
+					/*if($_SESSION["foto"]=="")
 					{
-					echo '<p><img src="uploads/'.$_SESSION["equipo"].'" title="No ingreso foto"></p>';
+					echo '<p><img src="uploads/'.$_SESSION["foto"].'" title="No ingreso foto"></p>';
 					}else{
-					echo '<p><img src="uploads/'.$_SESSION["equipo"].'" height="100px" title="'.$_SESSION["nombre_apellido"].'"></p>';
-					}
+					echo '<p><img src="uploads/'.$_SESSION["foto"].'" height="100px" title="'.$_SESSION["nombre_apellido"].'"></p>';
+					}*/
 				?>
                 <label for="imagen"><strong>No olvides subir tu Foto: </strong></label><br>
                 <input name='uploadedfile' type='file'>
+                </fieldset>
+            </span>-->
+            <span>
+                <fieldset class="sin_borde">
+                    <input type="radio" name="asistencia" <?php if($_SESSION["asistencia"]=="Solo(a)"){echo 'checked="true"';}	?>value="Solo(a)"/> Asistiré solo(a)</br></br>
+                    <input type="radio" name="asistencia" <?php if($_SESSION["asistencia"]=="Acompañado(a)"){echo 'checked="true"';}	?> value="Acompañado(a)"  /> Asistiré con pareja</br></br>
+                    <input type="radio" name="asistencia" <?php if($_SESSION["asistencia"]=="No Irás"){echo 'checked="true"';}	?> value="No Irás" /> No podré asistir
                 </fieldset>
             </span>
             <span>
@@ -103,8 +111,15 @@ if(isset($_POST['enviar']))
         { 
             if($result->email == $_POST['email']) 
             { 
-                $verificar_usuario = 1; 
-            } 
+                $verificar_usuario = 1;
+				}
+			else
+			{
+				if ($result->dni == $_POST['DNI']) 
+				{
+					$verificar_usuario = 1; 
+					}
+				}
         } 
   
         if($verificar_usuario == 0) 
@@ -118,16 +133,19 @@ if(isset($_POST['enviar']))
 		{ 
 		echo "El archivo ". basename( $_FILES['uploadedfile']['name']). " ha sido subido";
 		}			
-			$nombre = $_POST['nombre_apellido'];
-			$email = $_POST['email']; 
-			$dni = $_POST['dni'];
-			$equipo=basename( $_FILES['uploadedfile']['name']);
-	$sql = "UPDATE pmkt_registro SET nombre_apellido='$nombre', email='$email', dni='$dni', equipo='$equipo' WHERE id='$id'"; 
+			 	$nombre = $_POST['nombre_apellido'];
+				$email = $_POST['email'];
+                $DNI = $_POST['dni'];
+				$foto=basename( $_FILES['uploadedfile']['name']);
+				$asistencia=$_POST['asistencia'];
+	$sql = "UPDATE pmkt_registro SET nombre_apellido='$nombre', email='$email', dni='$DNI', foto='$foto', asistencia='$asistencia' WHERE id='$id'"; 
 			mysql_query($sql); 
-			$_SESSION["email"] = $email; 
-			$_SESSION["dni"] = $dni; 
-			$_SESSION["nombre_apellido"] = $nombre; 
-			$_SESSION["equipo"] = $equipo;
+				$_SESSION["nombre_apellido"]=$nombre;
+				$_SESSION['email']=$email;
+				$_SESSION["dni"]=$DNI;
+				$_SESSION["foto"]=$foto;
+				$_SESSION["asistencia"]=$asistencia;
+				$_SESSION["evento"]=$evento;
 			
 			echo "<script type=\"text/javascript\">alert('Datos actualizados correctamente.'); window.location='panel.php';</script>";
         } 
