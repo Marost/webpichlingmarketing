@@ -1,4 +1,4 @@
-<h4>REGISTRARSE</h4>
+<h4>CONFIRMACIÓN</h4>
 <dl>
     <strong style="font-size:12px;">Completa tus datos y confirma tu asistencia</strong>
     <dd>
