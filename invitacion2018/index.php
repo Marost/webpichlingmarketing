@@ -87,8 +87,7 @@
                                     <?php require_once("caja-inscripcion.php"); ?>
 								</div><!-- /rm-content -->
                                 <div class="rm-info">
-                                	<strong style="font-size:12px;">Inicie Sesión para modificar sus datos</strong>
-                                    <p><a href="login.php"><button>Iniciar Sesión</button></a></p>
+                                    <p><a href="login.php"><button>Modificar Datos</button></a></p>
                                 </div>
                                 <dl>
                                     <dt><img src="images/isotipo_negro.png" width="270px"></dt>
