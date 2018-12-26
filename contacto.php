@@ -22,7 +22,7 @@ $sc_slider=false;
 	<meta name="twitter:title" content="<?php echo $web_nombre." | ".$social_palabrasclave; ?>">
 	<meta name="twitter:description" content="<?php echo $social_nosotros; ?>">
 	<meta name="twitter:image" content="<?php echo $web."imagenes/logo.png" ?>">
-	<meta name="twitter:domain" content="pichlingmarketing.com">
+	<meta name="twitter:domain" content="psportsm.com">
 	<!-- FIN TWITTER CARD -->
 
 	<!-- OPEN GRAPH -->

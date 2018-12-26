@@ -40,7 +40,7 @@ if(isset($_SESSION['email'])) {?>
 	echo '<p><strong>DNI: </strong>'.$_SESSION["dni"].'</p>';
 	echo '<p><strong>Asistirás: </strong>'.$_SESSION["asistencia"].'</p>';
 
-	if($_SESSION["dni"] == '43747097' or $_SESSION["dni"] == '74295450' or $_SESSION["dni"] == '74295452' or $_SESSION["dni"] == '07748152') 
+	if($_SESSION["dni"] == '43747097' or $_SESSION["dni"] == '74295450' or $_SESSION["dni"] == '74295452' or $_SESSION["dni"] == '07748152' or $_SESSION["dni"] == '07966869')
 		{ 
 		echo '<p><a href="salir.php"><button>Cerrar Sesión</button></a> | <a href="update.php"><button>Actualizar Datos</button></a> | <a href="registro.php"><button>Lista de Participantes</button></a> | <a href="buscador.php"><button>Buscar Registro</button></a></p>';
 		}else{

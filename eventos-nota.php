@@ -81,7 +81,7 @@ $rst_eventos=mysql_query("SELECT * FROM pmkt_evento WHERE id<>$ReqID AND fecha_p
 						
 						<div class="g-cols">
 							<div class="two-thirds">
-								<h3>Descripcion</h3>
+								<h3>Descripción</h3>
 								<?php echo $noticia_contenido; ?>
 							</div>
 							<div class="one-third">
@@ -201,8 +201,8 @@ JqSlNot(document).ready(function() {
     }, 
     'follow' : {
       'services' : [
-        {'service': 'facebook', 'id': 'pichlingmarketing'},
-        {'service': 'twitter', 'id': 'pichlingmkt'},
+        {'service': 'facebook', 'id': 'psportsm'},
+        {'service': 'twitter', 'id': 'psportsmkt'},
         {'service': 'youtube', 'id': 'pichlingmarketing'}
       ]
     }   

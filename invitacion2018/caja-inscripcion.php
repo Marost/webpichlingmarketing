@@ -38,7 +38,8 @@
                 <input type="hidden" name="evento" value="50 Anos">
             </span>
             <span>
-                <input type="submit" name="enviar" value="Clic para confirmar">
+            	<br />
+                <input type="submit" name="enviar" value="Confirmar">-->
             </span>
         </form>
     </dd>

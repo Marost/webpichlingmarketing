@@ -81,7 +81,7 @@ $rst_eventos=mysql_query("SELECT * FROM pmkt_evento_proximos WHERE id<>$ReqID AN
 						
 						<div class="g-cols">
 							<div class="two-thirds">
-								<h3>Descripcion</h3>
+								<h3>Descripción</h3>
 								<?php echo $noticia_contenido; ?>
 							</div>
 							<div class="one-third">

@@ -32,7 +32,7 @@
 									<h2>Invitación</h2>
 									<img src="images/texto_intro.png" width="200px">
 
-									<a href="#" class="rm-button-open">Abrir Invitación</a>
+									<a href="#" class="rm-button-open"><button>Abrir</button></a>
 
 								</div><!-- /rm-content -->
 							</div><!-- /rm-front -->
@@ -68,8 +68,7 @@
 										<dt>Dresscode</dt>
 										<dd><strong>Fiesta de Blanco y Negro</strong></dd>
 									</dl>-->
-                                    <p style="font-size:24px; font-family:'Comic Sans MS', cursive; font-weight:bold;">NACIDOS EN 1968</p>
-                                    <dt><img src="images/texto_invitacion.png" width="260px"></dt>
+                                    <dt><img src="images/otro_texto_nuevo.png" width="260px"></dt>
 								</div><!-- /rm-content -->
 								<div class="rm-overlay"></div>
 							</div><!-- /rm-inner -->
@@ -87,10 +86,11 @@
                                     <?php require_once("caja-inscripcion.php"); ?>
 								</div><!-- /rm-content -->
                                 <div class="rm-info">
-                                    <p><a href="login.php"><button>Modificar Datos</button></a></p>
+                                    <p><a href="login.php" class="rm-button-open"><button>Modificar Datos</button></a></p>
+                                    <p>Tenemos estacionamientos disponibles para ti en Av. Primavera 1796 - Surco</p>
                                 </div>
                                 <dl>
-                                    <dt><img src="images/isotipo_negro.png" width="270px"></dt>
+                                    <dt><img src="images/isotipo_negro.png" width="150px"></dt>
                                 </dl>
 							</div><!-- /rm-back -->
 
