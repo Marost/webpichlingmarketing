@@ -63,7 +63,7 @@
 							<div class="rm-back">
 								<span class="rm-close">Cerrar</span>
 								<div class="rm-content">
-                                    <?php require_once("caja-inscripcion.php"); ?>
+                                    <?php require_once("caja-inscripcion2.php"); ?>
 								</div>
                                 <div class="rm-info">
                                     <a href="login.php"><button>Modificar Datos</button></a>

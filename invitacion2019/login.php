@@ -14,7 +14,7 @@
 <link rel="shortcut icon" href="../favicon.ico"> 
 <link rel="stylesheet" type="text/css" href="css/estilo.css" />
 <link href='http://fonts.googleapis.com/css?family=Raleway:300,500|Arvo:700' rel='stylesheet' type='text/css'>
-<title>Michele & William 50 Años</title>
+<title>Michele & William 25 Años</title>
 <meta charset="utf-8">
 </head>
 <body>

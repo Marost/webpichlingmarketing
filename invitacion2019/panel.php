@@ -34,7 +34,7 @@ if(isset($_SESSION['email'])) {?>
 			  //echo '<p><img src="../invitacion2017/uploads/'.$_SESSION["foto"].'" height="100" title="'.$_SESSION["nombre_apellido"].'"></p>';
 		  }
 	echo '<h1>Hola '.$_SESSION["nombre_apellido"].'</h1>';
-	echo '<p>Te esperamos este Sábado 21 de Diciembre a partir de las 19:00 horas</p>';
+	echo '<p>Te esperamos este Sábado 21 de Diciembre a partir de las 18:00 horas</p>';
 	echo '<p>Tus datos ingresados son:</p>';
 	//echo '<p>Presenta esta pantalla al ingresar</p>';
 	echo '<p><strong>Email: </strong>'.$_SESSION["email"].'</p>';
