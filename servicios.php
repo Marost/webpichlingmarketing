@@ -23,7 +23,7 @@ $noticia_fechaGen=explode(" ", $noticia_fechapub);
 $noticia_fechaPub=explode("-", $noticia_fechaGen[0]);
 
 //SERVICIOS
-$rst_servicios=mysql_query("SELECT * FROM pmkt_servicios ORDER BY titulo ASC;", $conexion);
+$rst_servicios=mysql_query("SELECT * FROM pmkt_servicios;", $conexion);
 
 ?>
 <!DOCTYPE HTML>

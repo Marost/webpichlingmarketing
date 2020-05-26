@@ -357,6 +357,8 @@ RewriteRule ^proximos-eventos/([0-9]*)-(.*)$              /eventospro-nota.php?i
 RewriteRule ^galeria$                                     /galeria.php
 RewriteRule ^galeria/([0-9]*)-(.*)$                       /galeria-seleccionada.php?id=$1&url=$2
 
+RewriteRule ^clientes$                                    /clientes.php
+
 RewriteRule ^servicios/(.*)$                              /servicios.php?url=$1
 
 # ----------------------------------------------------------------------

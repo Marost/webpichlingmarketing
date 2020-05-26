@@ -67,6 +67,8 @@ $noticia_WebURL=$web."noticia/".$ReqID."-".$ReqURL;
 	<!-- FIN OPEN GRAPH -->
 
 	<?php require_once("wg-script-header.php"); ?>
+    
+    <script data-ad-client="ca-pub-1054063152096160" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	
 </head>
 <body class="l-body">

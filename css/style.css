@@ -692,7 +692,7 @@ hr {
 		color: #fff;
 		}
 		.l-submain.type_colored + .l-submain.with_arrow:after {
-			border-top-color: #f26500;
+			background-color: #f26500;
 			}
 		.l-submain.type_colored + .l-submain.with_arrow:before {
 			display: none;
@@ -715,6 +715,112 @@ hr {
 		.l-submain.type_colored + .l-submain {
 			border-top: 0;
 			}
+			
+/*----VISION-----*/
+
+.l-submain.type_colored_vision {
+		background:url(../imagenes/slides/vision.jpg) no-repeat;
+		border-color: #f26500;
+		color: #fff;
+		}
+		.l-submain.type_colored_vision + .l-submain.with_arrow:after {
+			background-color: transparent;
+			}
+		.l-submain.type_colored_vision + .l-submain.with_arrow:before {
+			display: none;
+			}
+		.l-submain.type_colored_vision.with_arrow:before {
+			display: none;
+			}
+		.l-submain.type_colored_vision  h1,
+		.l-submain.type_colored_vision  h2,
+		.l-submain.type_colored_vision  h3,
+		.l-submain.type_colored_vision  h4,
+		.l-submain.type_colored_vision  ul,
+		.l-submain.type_colored_vision  ol,
+		.l-submain.type_colored_vision  p {
+			text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+			padding-left:320px;
+			}
+		.l-submain.type_colored_vision .g-btn {
+			border: none;
+			}
+		.l-submain.type_colored_vision + .l-submain {
+			border-top: 0;
+			}
+			
+/*---FIN VISION---*/
+			
+/*----MISION-----*/
+
+.l-submain.type_colored_mision {
+		background:url(../imagenes/slides/mision.jpg) no-repeat;
+		border-color: #f26500;
+		color: #fff;
+		}
+		.l-submain.type_colored_mision + .l-submain.with_arrow:after {
+			background-color: transparent;
+			}
+		.l-submain.type_colored_mision + .l-submain.with_arrow:before {
+			display: none;
+			}
+		.l-submain.type_colored_mision.with_arrow:before {
+			display: none;
+			}
+		.l-submain.type_colored_mision  h1,
+		.l-submain.type_colored_mision  h2,
+		.l-submain.type_colored_mision  h3,
+		.l-submain.type_colored_mision  h4,
+		.l-submain.type_colored_mision  ul,
+		.l-submain.type_colored_mision  ol,
+		.l-submain.type_colored_mision  p {
+			text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+			padding-left:320px;
+			}
+		.l-submain.type_colored_mision .g-btn {
+			border: none;
+			}
+		.l-submain.type_colored_mision + .l-submain {
+			border-top: 0;
+			}
+			
+/*---FIN MISION---*/	
+
+/*----VALORES-----*/
+
+.l-submain.type_colored_valores {
+		background:url(../imagenes/slides/valores.jpg) no-repeat;
+		border-color: #f26500;
+		color: #fff;
+		}
+		.l-submain.type_colored_valores + .l-submain.with_arrow:after {
+			background-color: transparent;
+			}
+		.l-submain.type_colored_valores + .l-submain.with_arrow:before {
+			display: none;
+			}
+		.l-submain.type_colored_valores.with_arrow:before {
+			display: none;
+			}
+		.l-submain.type_colored_valores  h1,
+		.l-submain.type_colored_valores  h2,
+		.l-submain.type_colored_valores  h3,
+		.l-submain.type_colored_valores  h4,
+		.l-submain.type_colored_valores  ul,
+		.l-submain.type_colored_valores  ol,
+		.l-submain.type_colored_valores  p {
+			text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+			padding-left:320px;
+			}
+		.l-submain.type_colored_valores .g-btn {
+			border: none;
+			}
+		.l-submain.type_colored_valores + .l-submain {
+			border-top: 0;
+			}
+			
+/*---FIN VALORES---*/
+
 
 	.l-submain.for_pagehead {
 		padding: 30px 0;
@@ -1312,6 +1418,56 @@ hr {
 	background: none;
 	}
 
+/*---VISION PARTE 2---*/
+
+.w-actionbox.type_colored_vision {
+	background:url(../imagenes/slides/vision.jpg) no-repeat;
+	color: #fff;
+	}
+	.w-actionbox.type_colored_vision .g-btn.type_inverse {
+		border-color: #fff;
+		}
+.l-submain.type_grey .w-actionbox,
+.l-submain.type_colored_vision .w-actionbox {
+	padding: 0;
+	background: none;
+	}
+
+/*---FIN VISION PARTE 2---*/
+	
+/*---MISION PARTE 2---*/
+
+.w-actionbox.type_colored_mision {
+	background:url(../imagenes/slides/mision.jpg) no-repeat;
+	color: #fff;
+	}
+	.w-actionbox.type_colored_mision .g-btn.type_inverse {
+		border-color: #fff;
+		}
+.l-submain.type_grey .w-actionbox,
+.l-submain.type_colored_mision .w-actionbox {
+	padding: 0;
+	background: none;
+	}
+
+/*---FIN MISION PARTE 2---*/
+
+/*---VALORES PARTE 2---*/
+
+.w-actionbox.type_colored_valores {
+	background:url(../imagenes/slides/valores.jpg) no-repeat;
+	color: #fff;
+	}
+	.w-actionbox.type_colored_valores .g-btn.type_inverse {
+		border-color: #fff;
+		}
+.l-submain.type_grey .w-actionbox,
+.l-submain.type_colored_valores .w-actionbox {
+	padding: 0;
+	background: none;
+	}
+
+/*---FIN VALORES PARTE 2---*/
 	
 /* w-portfolio */
 	.w-portfolio-title {
@@ -2634,15 +2790,16 @@ hr {
 	
 /* w-mission */
 .w-mission {
-	text-align: center;
+	
 	margin-top: -10px;
 	}
 	.w-mission-title {
+		text-align: center;
 		display: block;
-		font-size: 17px;
+		font-size: 20px;
 		padding-bottom: 5px;
 		filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80); /* hack for IE8 */
-		opacity: 0.8;
+		/*opacity: 0.8;*/
 		}
 	.w-mission h1,
 	.w-mission h2,

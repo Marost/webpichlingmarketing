@@ -2,7 +2,7 @@
 $urlMenu=$_SERVER["REQUEST_URI"];
 
 //SERVICIOS
-$rst_servicios_menu=mysql_query("SELECT * FROM pmkt_servicios ORDER BY titulo ASC;", $conexion);
+$rst_servicios_menu=mysql_query("SELECT * FROM pmkt_servicios;", $conexion);
 
 ?>
 <div class="l-header type_normal">
@@ -71,6 +71,12 @@ $rst_servicios_menu=mysql_query("SELECT * FROM pmkt_servicios ORDER BY titulo AS
 										<a href="galeria" class="w-nav-anchor level_1">Galería de Fotos</a>
 									</div>
 								</div>
+                                
+								<div class="w-nav-item level_1 <?php if($urlMenu=="/clientes"){ ?>active<?php } ?>">
+									<div class="w-nav-item-h">
+										<a href="clientes" class="w-nav-anchor level_1">Clientes</a>
+									</div>
+								</div>
 								
 								<div class="w-nav-item level_1 <?php if($urlMenu=="/noticias"){ ?>active<?php } ?>">
 									<div class="w-nav-item-h">
@@ -120,6 +126,21 @@ $rst_servicios_menu=mysql_query("SELECT * FROM pmkt_servicios ORDER BY titulo AS
 							</li>
 							<li data-transition="random">
 								<img src="imagenes/slide/Slide02.jpg" alt="" />
+							</li>
+                            <li data-transition="random">
+								<img src="imagenes/slide/Slide03.jpg" alt="" />
+							</li>
+                            <li data-transition="random">
+								<img src="imagenes/slide/Slide04.jpg" alt="" />
+							</li>
+							<li data-transition="random">
+								<img src="imagenes/slide/Slide05.jpg" alt="" />
+							</li>
+                            <li data-transition="random">
+								<img src="imagenes/slide/Slide06.jpg" alt="" />
+							</li>
+                            <li data-transition="random">
+								<img src="imagenes/slide/Slide07.jpg" alt="" />
 							</li>
 						</ul>
 					</div>

@@ -4,6 +4,7 @@ include("panel@pmarketing/conexion/funciones.php");
 //VARIABLES
 $sc_home=true;
 $sc_slider=true;
+$sc_clientes=true;
 //NOTICIAS
 $rst_noticias=mysql_query("SELECT * FROM pmkt_noticia WHERE fecha_publicacion<='$fechaActual' AND publicar=1 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
 //EVENTOS
@@ -72,9 +73,23 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 		<!-- /HEADER -->
 
 		<!-- MAIN -->
+        <div class="l-submain type_colored">
+            <div class="l-submain-h g-html">
+                <div class="w-actionbox controls_aside">
+                    <div class="w-actionbox-h">
+                        <div class="w-actionbox-text">
+                            <h2>
+                                "El deporte está ligado a las emociones más fieles, apasionadas y reconfortantes de las personas… es justamente ahí donde tiene que estar presente TU MARCA".<br><br>
+                                <div style="text-align:right;">G. Polastri</div>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
 		<div class="l-main">
 			<div class="l-main-h">
-
 				<div class="l-submain type_grey">
 					<div class="l-submain-h g-html i-cf">
 						<div class="g-cols">
@@ -85,13 +100,6 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 										<div class="w-gallery-main nav_show">
 											<div class="w-gallery-main-h flexslider flex-loading">
 												<ul class="slides">
-													<?php /*while($fila_eventos_img=mysql_fetch_array($rst_eventos_img)){
-															$eventosFT_imagen=$fila_eventos_img["imagen"];
-															$eventosFT_imagen_carpeta=$fila_eventos_img["imagen_carpeta"];
-															//URL
-															$eventosFT_UrlIMG=$web."imagenes/eventos/".$eventosFT_imagen_carpeta."thumb/".$eventosFT_imagen;
-															*/
-													?>
 													<li>
 														<img src="imagenes/slides/logo-psm-slide.jpg">
 													</li>
@@ -99,7 +107,6 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 													<li>
 														<img src="imagenes/slides/edificio.jpg">
 													</li>
-													<?php //} ?>
 												</ul>
 											</div>
 										</div>
@@ -107,21 +114,41 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 								</div>
 							</div>
 
-							<div class="one-half">
-								<h2 style="text-transform:uppercase;">¿Por qué es importante el Marketing Deportivo?</h2>
+							<div class="one-half animate_afl">
+								<div class="w-gallery type_slider">
+									<div class="w-gallery-h">
+										<div class="w-gallery-main nav_show">
+											<div class="w-gallery-main-h flexslider flex-loading">
+												<ul class="slides">
+													<li>
+														<img src="imagenes/slides/texto1.jpg">
+													</li>
+
+													<li>
+														<img src="imagenes/slides/texto2.jpg">
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!--<div class="one-half">
+								<h2 style="text-transform:uppercase;"><strong>¿Por qu&eacute; es importante mejorar el Clima Laboral en su Organizaci&oacute;n?</strong></h2>
 								<div class="hr hr_short hr_left">
 									<span class="hr-h">
 										<span class="hr-hh"></span>
 									</span>
 								</div>
-								<p>Permite a las empresas una oportunidad &uacute;nica de comunicaci&oacute;n y fidelizaci&oacute;n:</p>
+                                
+								<p style="font-size:16px;"><strong>Mediante la organización de eventos o actividades recreativas que incentiven la participaci&oacute;n de los colaboradores, lograremos mejorar el Clima Laboral de su Empresa, el cual originará en los colaboradores:</strong></p>
 								<ul>
-									<li>Supera las barreras culturales y del idioma.</li>
-									<li>Plataforma para la confecci&oacute;n de planes estrat&eacute;gicos.</li>
-									<li>Importante cobertura publicitaria.</li>
-									<li>Entretiene al p&uacute;blico, conexi&oacute;n con las emociones.</li>
-									<li>Mejora la recordaci&oacute;n de la marca.</li>
-									<li>Multiplica contactos con consumidores.</li>
+									<li>Mejorar el Rendimiento y Productividad.</li>
+									<li>Mejorar el Sentido de Pertenencia.</li>
+									<li>Mejorar la Motivación.</li>
+									<li>Mejorar la Integración y Confraternidad.</li>
+									<li>Mejorar el Espiritu de Trabajo en Equipo.</li>
 								</ul>
 
 								<div class="hr hr_short hr_left">
@@ -129,7 +156,7 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 										<span class="hr-hh"></span>
 									</span>
 								</div>
-							</div>
+							</div>-->
 						</div>
 					</div>
 				</div>
@@ -189,11 +216,102 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 
 					</div>
 					<?php } ?>
+                    
+					<div class="l-submain-h g-html">
+					
+						<h1 style="text-align: center;">Marketing Digital</h1>
+						<p style="text-align: center;"><strong>Redes Sociales</strong> para Empresas</p>
+						
+						<div class="hr hr_short">
+							<span class="hr-h">
+								<span class="hr-hh"></span>
+							</span>
+						</div>
+					
+						<div class="w-portfolio columns_4">
+							<div class="w-portfolio-h">
+								<div class="w-portfolio-list">
+									<div class="w-portfolio-list-h">
+                                        <p>Brindamos Soluciones Informáticas y de Gestión personalizadas para cada cliente, utilizando tecnologías y metodologías avanzadas. Usamos las Redes Sociales para mejorar tu imagen empresarial, interacción y proximidad con tus clientes, mejorar reconocimiento de marca, captación de seguidores y potenciales clientes, fidelización de clientes y en general todo tipo de acciones para lograr un incremento significativo de tus ventas.</p>
+                                        
+										<div class="w-portfolio-item order_1 naming webdesign">
+											<div class="w-portfolio-item-h animate_wfc">
+												<a class="w-portfolio-item-anchor">
+													<div class="w-portfolio-item-image">
+														<img src="http://pichlingmarketing.com/imagenes/servicios/marketing-digital-redes-sociales-empresas.jpg" alt="Desarrollo Web Empresarial"/>
+														<div class="w-portfolio-item-meta">
+															<h2 class="w-portfolio-item-title">Desarrollo Web Empresarial</h2>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+                                        
+										<div class="w-portfolio-item order_1 naming webdesign">
+											<div class="w-portfolio-item-h animate_wfc">
+												<a class="w-portfolio-item-anchor">
+													<div class="w-portfolio-item-image">
+														<img src="http://pichlingmarketing.com/imagenes/servicios/community-manager.jpg" alt="Community Manager"/>
+														<div class="w-portfolio-item-meta">
+															<h2 class="w-portfolio-item-title">Community Manager</h2>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+                                        
+										<div class="w-portfolio-item order_1 naming webdesign">
+											<div class="w-portfolio-item-h animate_wfc">
+												<a class="w-portfolio-item-anchor">
+													<div class="w-portfolio-item-image">
+														<img src="http://pichlingmarketing.com/imagenes/servicios/email-marketing.jpg" alt="Email Marketing"/>
+														<div class="w-portfolio-item-meta">
+															<h2 class="w-portfolio-item-title">Email Marketing</h2>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+                                        
+										<div class="w-portfolio-item order_1 naming webdesign">
+											<div class="w-portfolio-item-h animate_wfc">
+												<a class="w-portfolio-item-anchor">
+													<div class="w-portfolio-item-image">
+														<img src="http://pichlingmarketing.com/imagenes/servicios/seo-sem.jpg" alt="SEO & SEM"/>
+														<div class="w-portfolio-item-meta">
+															<h2 class="w-portfolio-item-title">SEO & SEM</h2>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+                                        
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="hr hr_short">
+							<span class="hr-h">
+								<span class="hr-hh"></span>
+							</span>
+						</div>
+						
+						<p style="text-align: center;"><a class="g-btn type_color" href="servicios/marketing-digital-redes-sociales-empresas">Ir al servicio</a></p>
+
+                        <div class="hr">
+                            <span class="hr-h">
+                                <span class="hr-hh"></span>
+                            </span>
+                        </div>
+					</div>
+	
+
 
 					<div class="l-submain-h g-html">
 					
 						<h1 style="text-align: center;">Últimos Eventos Producidos</h1>
-						<p style="text-align: center;">En <strong>PSM Sports Marketing</strong> desarrollamos TÚ evento</p>
+						<p style="text-align: center;">En <strong>PSM Sports Marketing</strong> desarrollamos TU evento</p>
 						
 						<div class="hr hr_short">
 							<span class="hr-h">
@@ -299,20 +417,6 @@ $rst_eventos_img=mysql_query("SELECT * FROM pmkt_evento WHERE fecha_publicacion<
 						
 						<?php require_once("wg-clientes.php"); ?>
 						
-					</div>
-				</div>
-				
-				<div class="l-submain type_colored with_arrow">
-					<div class="l-submain-h g-html">
-
-						<div class="w-actionbox controls_aside">
-							<div class="w-actionbox-h">
-								<div class="w-actionbox-text">
-									<h2>El Deporte está ligado a las emociones mas fieles, apasionadas y reconfortantes de las personas… es justamente ahí donde tiene que estar presente TÚ marca.</h2>
-								</div>
-							</div>
-						</div>
-
 					</div>
 				</div>
 				

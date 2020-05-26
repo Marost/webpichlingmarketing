@@ -95,15 +95,42 @@ $sc_home=true;
 
 					</div>
 				</div>
+                
+            	<div class="l-submain type_colored_vision with_arrow">
+					<div class="l-submain-h g-html">
+                        
+                        <div class="w-mission">
+							<span class="w-mission-title">Nuestra Visión</span>
+							<h2 style="font-size:20px;">Ser líderes referentes en la conceptualización y ejecución de negocios deportivos.</h2>
+						</div>
+
+					</div>
+				</div>
 								
-				<div class="l-submain type_colored with_arrow">
+				<div class="l-submain type_colored_mision with_arrow">
 					<div class="l-submain-h g-html">
 
 						<div class="w-mission">
 							<span class="w-mission-title">Nuestra Misión</span>
-							<h2>Crear permanentemente herramientas originales que ayuden a relacionar el marketing empresarial y el deporte en una sola industria, buscando principalmente la fidelización de las marcas a través del deporte.</h2>
+							<h2 style="font-size:20px;">Potenciamos los negocios de nuestros clientes, brindándoles soluciones profesionales, creativas, innovadoras y personalizadas con el fin de que logren sus objetivos.</h2>
 						</div>
 
+					</div>
+				</div>
+                
+				<div class="l-submain type_colored_valores with_arrow">
+					<div class="l-submain-h g-html">
+						<!--<div style="float: right;">-->
+                            <div class="w-mission">
+                                <span class="w-mission-title">Nuestros Valores</span>
+                                <h2 style="font-size:18px;">
+                                   * <strong>PROFESIONALISMO,</strong> buscamos la mejor alternativa a tus necesidades.<br>
+                                   * <strong>CONFIANZA,</strong> somos la solución para tus problemas.<br>
+                                   * <strong>HONESTIDAD,</strong> ofrecemos lo mejor a un precio justo.<br>
+                                   * <strong>RESPONSABILIDAD,</strong> nuestro trabajo bien ejecutado en el tiempo oportuno.
+                                </h2>
+                            </div>
+						<!--</div>-->
 					</div>
 				</div>
 
