@@ -71,6 +71,7 @@ $rst_servicios=mysql_query("SELECT * FROM pmkt_servicios;", $conexion);
 						<div class="l-content-h">
 
 							<?php echo $noticia_contenido; ?>
+                            <p style="text-align: center;"><a class="g-btn type_color" href="contacto">Contáctanos</a></p>
 
 						</div>
 						</div>
@@ -101,7 +102,7 @@ $rst_servicios=mysql_query("SELECT * FROM pmkt_servicios;", $conexion);
 															</a>
 														</div>
 													</div>
-													<?php } ?>													
+													<?php } ?>
 
 												</div>
 											</div>
@@ -115,7 +116,6 @@ $rst_servicios=mysql_query("SELECT * FROM pmkt_servicios;", $conexion);
 						
 						<div class="l-sidebar at_right">
 							<div class="l-sidebar-h">
-							
 							</div>
 						</div>
 						
