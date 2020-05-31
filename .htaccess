@@ -358,6 +358,8 @@ RewriteRule ^galeria$                                     /galeria.php
 RewriteRule ^galeria/([0-9]*)-(.*)$                       /galeria-seleccionada.php?id=$1&url=$2
 
 RewriteRule ^clientes$                                    /clientes.php
+RewriteRule ^privacidad$                                  /privacidad.php
+RewriteRule ^terminos-condiciones$                        /terminos-condiciones.php
 
 RewriteRule ^servicios/(.*)$                              /servicios.php?url=$1
 

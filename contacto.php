@@ -301,6 +301,12 @@ $sc_slider=false;
 													<button class="g-btn type_color" id="contacts_send">Enviar mensaje</button>
 												</div>
 											</div>
+											<div class="g-form-row" id="message_row">
+												<div class="g-form-row-label">
+													<label class="g-form-row-label-h" style="font-size:12px;">Al presionar <strong>Enviar mensaje</strong> acepta los <a href="terminos-condiciones">Términos y condiciones</a> y <a href="privacidad">Políticas de privacidad</a></label>
+												</div>
+												<div class="g-form-row-state" id="message_state"></div>
+											</div>
 										</div>
 									</div>
 								</form>
