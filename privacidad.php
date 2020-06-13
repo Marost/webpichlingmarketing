@@ -132,7 +132,6 @@ $sc_home=true;
                                                     </ol>
                                                     <!--
 
-
 ¿CÓMO RESGUARDAMOS LA INFORMACIÓN DEL USUARIO?
 
 El Grupo El Comercio adopta las medidas técnicas y organizativas necesarias para garantizar la protección de la Información del Usuario y evitar su alteración, pérdida, tratamiento y/o acceso no autorizado, habida cuenta del estado de la técnica, la naturaleza de los datos almacenados y los riesgos a que están expuestos, todo ello, conforme a lo establecido por la Ley de Protección de Datos Personales, su Reglamento y la Directiva de Seguridad. En este sentido, Grupo El Comercio usará los estándares de la industria en materia de protección de la confidencialidad de la Información del Usuario.
